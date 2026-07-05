@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Morocco Tours – RodoTours</title>
+  <meta name="description" content="Explore our full range of Morocco tours – desert adventures, imperial cities, mountain treks, luxury experiences and more."/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Lato:wght@300;400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- Navigation (same as index) -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="img/logo.png" alt="RodoTours Logo" class="logo-img"/>
+      <div class="logo-text"></div>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" data-i18n="nav_home">Home</a>
+      <a href="tours.html" data-i18n="nav_tours">Tours</a>
+      <a href="destinations.html" data-i18n="nav_destinations">Destinations</a>
+      <a href="gallery.html" data-i18n="nav_gallery">Gallery</a>
+      <a href="testimonials.html" data-i18n="nav_testimonials">Testimonials</a>
+      <a href="blog.html" data-i18n="nav_blog">Blog</a>
+      <a href="contact.html" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+      <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="nav_book">Book Now</a>
+    </div>
+    <button class="nav-toggle"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-nav">
+  <a href="index.html" data-i18n="nav_home">Home</a>
+  <a href="tours.html" data-i18n="nav_tours">Tours</a>
+  <a href="destinations.html" data-i18n="nav_destinations">Destinations</a>
+  <a href="gallery.html" data-i18n="nav_gallery">Gallery</a>
+  <a href="testimonials.html" data-i18n="nav_testimonials">Testimonials</a>
+  <a href="blog.html" data-i18n="nav_blog">Blog</a>
+  <a href="contact.html" data-i18n="nav_contact">Contact</a>
+  <a href="contact.html" class="btn btn-primary" data-i18n="nav_book">Book Now</a>
+</div>
+
+<!-- Page Header -->
+<header class="page-header" style="background-image: url('img/sahara-camel-sunset.jpg')">
+  <div class="container">
+    <div class="page-header-content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fas fa-chevron-right"></i>
+        <span data-i18n="nav_tours">Tours</span>
+      </nav>
+      <h1 data-i18n="nav_tours">Our Morocco Tours</h1>
+      <p style="color:rgba(255,255,255,.75);margin:0;font-size:1.05rem" data-i18n="tours_sub">Hand-picked tours that showcase the very best of Morocco.</p>
+    </div>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="section-pad bg-light">
+  <div class="container">
+
+    <!-- Filter Bar -->
+    <div class="tours-filter-bar" role="group" aria-label="Filter tours by category">
+      <button class="filter-btn active" data-filter="all">🌍 All Tours</button>
+      <button class="filter-btn" data-filter="desert">🏜️ Desert</button>
+      <button class="filter-btn" data-filter="cultural">🏛️ Cultural</button>
+      <button class="filter-btn" data-filter="adventure">🏔️ Adventure</button>
+      <button class="filter-btn" data-filter="luxury">💎 Luxury</button>
+      <button class="filter-btn" data-filter="family">👨‍👩‍👧 Family</button>
+      <button class="filter-btn" data-filter="honeymoon">💑 Honeymoon</button>
+      <button class="filter-btn" data-filter="daytrip">🌅 Day Trips</button>
+    </div>
+
+    <div class="tours-full-grid">
+
+      <!-- TOUR 1: Marrakech to Merzouga -->
+      <article class="tour-full-card" data-category="desert" data-reveal>
+        <div class="tour-full-img">
+          <img src="img/sahara-camel-sunset.jpg" alt="Marrakech to Merzouga desert tour camel ride" loading="lazy"/>
+          <div class="tour-badge">🏜️ Best Seller</div>
+        </div>
+        <div class="tour-full-body">
+          <div class="tour-meta">
+            <span><i class="fas fa-clock"></i> 3 Days / 2 Nights</span>
+            <span><i class="fas fa-users"></i> Max 12</span>
+            <span><i class="fas fa-map-marker-alt"></i> Marrakech → Merzouga</span>
+          </div>
+          <h3>Marrakech to Merzouga Desert Tour</h3>
+          <p class="tour-desc">Experience the ultimate Saharan adventure. Drive through the scenic Draa Valley, visit the UNESCO-listed Ait Ben Haddou kasbah, and arrive at the breathtaking Erg Chebbi dunes for a magical camel ride at sunset and a night under a billion stars.</p>
+
+          <div class="tour-highlights">
+            <span class="tour-tag">🐪 Camel Trek</span>
+            <span class="tour-tag">🌅 Sunrise Dunes</span>
+            <span class="tour-tag">⭐ Desert Camp</span>
+            <span class="tour-tag">🏛️ Ait Ben Haddou</span>
+            <span class="tour-tag">🎵 Berber Music</span>
+          </div>
+
+          <!-- Itinerary -->
+          <div class="itinerary">
+            <div class="itinerary-item">
+              <div class="itinerary-header">
+                <span>📅 Day 1 – Marrakech → Ait Ben Haddou → Merzouga</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="itinerary-body">
+                <p>Early morning departure from Marrakech heading south via the High Atlas Mountains and Tizi N'Tichka pass (2,260m). Visit the UNESCO World Heritage site of Ait Ben Haddou kasbah. Continue through the Draa Valley to reach Merzouga village at the edge of the Sahara.</p>
+              </div>
+            </div>
+            <div class="itinerary-item">
+              <div class="itinerary-header">
+                <span>📅 Day 2 – Sahara Desert Camel Trek &amp; Camp</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="itinerary-body">
+                <p>Morning exploration of Merzouga village. Afternoon camel trek into the Erg Chebbi dunes. Watch the spectacular sunset from the top of the dunes. Overnight in a traditional Berber desert camp with dinner and traditional music around the campfire under an incredible starry sky.</p>
+              </div>
+            </div>
+            <div class="itinerary-item">
+              <div class="itinerary-header">
+                <span>📅 Day 3 – Sunrise &amp; Return to Marrakech</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="itinerary-body">
+                <p>Wake up before dawn to watch the magical sunrise over the golden dunes. Camel ride back to the hotel for breakfast. Visit the Erfoud fossil market and Todra Gorge en route. Return to Marrakech in the evening.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tour-includes" style="margin-top:1rem">
+            <span class="include-tag yes"><i class="fas fa-check"></i> Private transport</span>
+            <span class="include-tag yes"><i class="fas fa-check"></i> Accommodation</span>
+            <span class="include-tag yes"><i class="fas fa-check"></i> Camel trek</span>
+            <span class="include-tag yes"><i class="fas fa-check"></i> Guide</span>
+            <span class="include-tag no"><i class="fas fa-times"></i> Flights</span>
+            <span class="include-tag no"><i class="fas fa-times"></i> Personal expenses</span>
+          </div>
+
+          <div class="tour-full-footer">
+            <div class="tour-price-big">$299 <span>/ per person</span></div>
+            <div style="display:flex;gap:.5rem">
+              <button class="btn btn-outline-gold btn-sm open-booking-modal" data-tour="marrakech-merzouga" data-i18n="tour_quote">Request Quote</button>
+              <button class="btn btn-primary btn-sm open-booking-modal" data-tour="marrakech-merzouga" data-i18n="tour_book">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- TOUR 2: Imperial Cities -->
+      <article class="tour-full-card" data-category="cultural" data-reveal>
+        <div class="tour-full-img">
+          <img src="img/marrakech-souks.jpg" alt="Imperial Cities Tour Fes ancient medina" loading="lazy"/>
+          <div class="tour-badge">🏛️ Cultural</div>
+        </div>
+        <div class="tour-full-body">
+          <div class="tour-meta">
+            <span><i class="fas fa-clock"></i> 7 Days / 6 Nights</span>
+            <span><i class="fas fa-users"></i> Max 10</span>
+            <span><i class="fas fa-map-marker-alt"></i> 4 Imperial Cities</span>
+          </div>
+          <h3>Imperial Cities Grand Tour</h3>
+          <p class="tour-desc">Journey through Morocco's four magnificent imperial cities – Marrakech, Fes, Meknes, and Rabat. Discover ancient medinas, royal palaces, intricate mosques, and vibrant souks filled with artisans and the scents of exotic spices.</p>
+
+          <div class="tour-highlights">
+            <span class="tour-tag">🕌 4 Medinas</span>
+            <span class="tour-tag">🎨 Souks</span>
+            <span class="tour-tag">🏰 Royal Palaces</span>
+            <span class="tour-tag">🍵 Tea Ceremony</span>
+            <span class="tour-tag">🎭 Gnawa Music</span>
+          </div>
+
+          <div class="itinerary">
+            <div class="itinerary-item">
+              <div class="itinerary-header">
+                <span>📅 Days 1–2 – Marrakech: Jemaa el-Fna &amp; Souks</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="itinerary-body">
+                <p>Explore Jemaa el-Fna square, the Koutoubia Mosque, the Bahia Palace, Saadian Tombs, and the colorful souks of the ancient medina. Evening food tour at the famous night market.</p>
+              </div>
+            </div>
+            <div class="itinerary-item">
+              <div class="itinerary-header">
+                <span>📅 Days 3–4 – Fes: The Ancient Medina</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="itinerary-body">
+                <p>Discover Fes el-Bali – the world's largest car-free urban area. Visit the Chouara Tanneries, Bou Inania Madrasa, Al-Qarawiyyin University (the world's oldest), and the vibrant souks of the old medina.</p>
+              </div>
+            </div>
+            <div class="itinerary-item">
+              <div class="itinerary-header">
+                <span>📅 Day 5 – Meknes &amp; Volubilis Roman Ruins</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="itinerary-body">
+                <p>Visit the imperial city of Meknes – Bab Mansour gate, Moulay Ismail Mausoleum, Heri es-Souani granaries. Excursion to Volubilis, Morocco's best-preserved Roman ruins (UNESCO site).</p>
+              </div>
+            </div>
+            <div class="itinerary-item">
+              <div class="itinerary-header">
+                <span>📅 Days 6–7 – Rabat: Morocco's Capital</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="itinerary-body">
+                <p>Explore Rabat's Kasbah des Oudaias, Hassan Tower, Mohammed V Mausoleum, and the Chellah necropolis. Free afternoon in the vibrant Avenue Mohammed V before departure.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tour-includes">
+            <span class="include-tag yes"><i class="fas fa-check"></i> Private transport</span>
+            <span class="include-tag yes"><i class="fas fa-check"></i> 6 nights accommodation</span>
+            <span class="include-tag yes"><i class="fas fa-check"></i> Licensed guide</span>
+            <span class="include-tag yes"><i class="fas fa-check"></i> Breakfast daily</span>
+            <span class="include-tag no"><i class="fas fa-times"></i> Lunches/Dinners</span>
+            <span class="include-tag no"><i class="fas fa-times"></i> Entry fees</span>
+          </div>
+
+          <div class="tour-full-footer">
+            <div class="tour-price-big">$449 <span>/ per person</span></div>
+            <div style="display:flex;gap:.5rem">
+              <button class="btn btn-outline-gold btn-sm open-booking-modal" data-tour="imperial-cities" data-i18n="tour_quote">Request Quote</button>
+              <button class="btn btn-primary btn-sm open-booking-modal" data-tour="imperial-cities" data-i18n="tour_book">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- TOUR 3: Morocco Grand Tour -->
+      <article class="tour-full-card" data-category="cultural" data-reveal>
+        <div class="tour-full-img">
+          <img src="img/ait-benhaddou.jpg" alt="Morocco Grand Tour Ait Ben Haddou" loading="lazy"/>
+          <div class="tour-badge">🌟 Most Complete</div>
+        </div>
+        <div class="tour-full-body">
+          <div class="tour-meta">
+            <span><i class="fas fa-clock"></i> 10 Days / 9 Nights</span>
+            <span><i class="fas fa-users"></i> Max 12</span>
+            <span><i class="fas fa-map-marker-alt"></i> Full Morocco Circuit</span>
+          </div>
+          <h3>Morocco Grand Tour</h3>
+          <p class="tour-desc">The most comprehensive Morocco experience. This epic journey covers imperial cities, kasbahs, the Sahara desert, Atlas Mountains, and the blue city of Chefchaouen – everything Morocco has to offer in one unforgettable trip.</p>
+
+          <div class="tour-highlights">
+            <span class="tour-tag">🏛️ UNESCO Sites</span>
+            <span class="tour-tag">🏜️ Sahara Desert</span>
+            <span class="tour-tag">🔵 Chefchaouen</span>
+            <span class="tour-tag">🏙️ 6 Cities</span>
+            <span class="tour-tag">🏔️ Mountains</span>
+          </div>
+
+          <div class="itinerary">
+            <div class="itinerary-item">
+              <div class="itinerary-header">
+                <span>📅 Days 1–2 – Marrakech Discovery</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="itinerary-body">
+                <p>Arrive in Marrakech. Explore Jemaa el-Fna, Koutoubia Mosque, Bahia Palace, Saadian Tombs, Majorelle Garden. Evening in the famous night market.</p>
+              </div>
+            </div>
+            <div class="itinerary-item">
+              <div class="itinerary-header">
+                <span>📅 Days 3–5 – Desert Adventure (Merzouga)</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="itinerary-body">
+                <p>Drive through Ait Ben Haddou, Draa Valley, Todra Gorge to reach Merzouga. Camel trek and overnight desert camp. Return via Erfoud and Midelt.</p>
+              </div>
+            </div>
+            <div class="itinerary-item">
+              <div class="itinerary-header">
+                <span>📅 Days 6–7 – Fes Imperial City</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="itinerary-body">
+                <p>Two full days in Fes – ancient medina, tanneries, madrasas, souks. Day trip to Meknes and Volubilis Roman ruins.</p>
+              </div>
+            </div>
+            <div class="itinerary-item">
+              <div class="itinerary-header">
+                <span>📅 Days 8–10 – Chefchaouen &amp; Return</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="itinerary-body">
+                <p>Scenic drive to Chefchaouen – the magical blue city. Explore the medina, Ras el Ma waterfall, and the Spanish mosque viewpoint. Return via Rabat and Casablanca.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tour-includes">
+            <span class="include-tag yes"><i class="fas fa-check"></i> Private AC transport</span>
+            <span class="include-tag yes"><i class="fas fa-check"></i> 9 nights accommodation</span>
+            <span class="include-tag yes"><i class="fas fa-check"></i> All breakfasts</span>
+            <span class="include-tag yes"><i class="fas fa-check"></i> Camel trek &amp; camp</span>
+            <span class="include-tag no"><i class="fas fa-times"></i> Flights</span>
+            <span class="include-tag no"><i class="fas fa-times"></i> Lunches/Dinners</span>
+          </div>
+
+          <div class="tour-full-footer">
+            <div class="tour-price-big">$349 <span>/ per person</span></div>
+            <div style="display:flex;gap:.5rem">
+              <button class="btn btn-outline-gold btn-sm open-booking-modal" data-tour="grand-tour" data-i18n="tour_quote">Request Quote</button>
+              <button class="btn btn-primary btn-sm open-booking-modal" data-tour="grand-tour" data-i18n="tour_book">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- TOUR 4: Atlas Mountains -->
+      <article class="tour-full-card" data-category="adventure" data-reveal>
+        <div class="tour-full-img">
+          <img src="img/essaouira-port.jpg" alt="Atlas Mountains excursion trekking Berber village" loading="lazy"/>
+          <div class="tour-badge">🏔️ Adventure</div>
+        </div>
+        <div class="tour-full-body">
+          <div class="tour-meta">
+            <span><i class="fas fa-clock"></i> 2 Days / 1 Night</span>
+            <span><i class="fas fa-users"></i> Max 8</span>
+            <span><i class="fas fa-map-marker-alt"></i> High Atlas</span>
+          </div>
+          <h3>Atlas Mountains Excursion</h3>
+          <p class="tour-desc">Escape the city and immerse yourself in the breathtaking High Atlas Mountains. Trek through traditional Berber villages, visit spectacular waterfalls, and enjoy panoramic views of Morocco's highest peaks including Jbel Toubkal (4,167m).</p>
+
+          <div class="tour-highlights">
+            <span class="tour-tag">🥾 Trekking</span>
+            <span class="tour-tag">🏘️ Berber Villages</span>
+            <span class="tour-tag">💧 Ouzoud Waterfalls</span>
+            <span class="tour-tag">🎒 Hiking</span>
+            <span class="tour-tag">🏔️ Toubkal Views</span>
+          </div>
+
+          <div class="itinerary">
+            <div class="itinerary-item">
+              <div class="itinerary-header">
+                <span>📅 Day 1 – Marrakech to Imlil Valley</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="itinerary-body">
+                <p>Drive from Marrakech through the Asni valley to Imlil (1,740m). Trek to Berber villages of Aroumd and Sidi Chamharouch. Traditional Berber lunch with local family. Overnight in mountain gîte or riad.</p>
+              </div>
+            </div>
+            <div class="itinerary-item">
+              <div class="itinerary-header">
+                <span>📅 Day 2 – Mountain Trek &amp; Return</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="itinerary-body">
+                <p>Morning trek to the Tacheddirt plateau for spectacular Atlas panoramas. Visit the Ourika Valley and Setti Fatma waterfalls. Return to Marrakech in the afternoon with unforgettable mountain memories.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tour-includes">
+            <span class="include-tag yes"><i class="fas fa-check"></i> Transport from Marrakech</span>
+            <span class="include-tag yes"><i class="fas fa-check"></i> Mountain guide</span>
+            <span class="include-tag yes"><i class="fas fa-check"></i> Berber lunch</span>
+            <span class="include-tag yes"><i class="fas fa-check"></i> Overnight gîte</span>
+            <span class="include-tag no"><i class="fas fa-times"></i> Mules (optional extra)</span>
+          </div>
+
+          <div class="tour-full-footer">
+            <div class="tour-price-big">$189 <span>/ per person</span></div>
+            <div style="display:flex;gap:.5rem">
+              <button class="btn btn-outline-gold btn-sm open-booking-modal" data-tour="atlas-mountains" data-i18n="tour_quote">Request Quote</button>
+              <button class="btn btn-primary btn-sm open-booking-modal" data-tour="atlas-mountains" data-i18n="tour_book">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- TOUR 5: Sahara Luxury -->
+      <article class="tour-full-card" data-category="luxury honeymoon" data-reveal>
+        <div class="tour-full-img">
+          <img src="img/jemaa-el-fna.jpg" alt="Sahara Luxury Experience private desert camp" loading="lazy"/>
+          <div class="tour-badge">💎 Luxury</div>
+        </div>
+        <div class="tour-full-body">
+          <div class="tour-meta">
+            <span><i class="fas fa-clock"></i> 5 Days / 4 Nights</span>
+            <span><i class="fas fa-users"></i> Max 6</span>
+            <span><i class="fas fa-map-marker-alt"></i> Private Journey</span>
+          </div>
+          <h3>Sahara Luxury Experience</h3>
+          <p class="tour-desc">The ultimate premium Morocco experience. Private vehicle, 5-star riads, gourmet dining, exclusive desert glamping, and a dedicated personal guide. Perfect for honeymooners, anniversaries, or those who simply demand the very best.</p>
+
+          <div class="tour-highlights">
+            <span class="tour-tag">💎 5-Star Riads</span>
+            <span class="tour-tag">🏕️ Luxury Glamping</span>
+            <span class="tour-tag">🍽️ Gourmet Dining</span>
+            <span class="tour-tag">🚐 Private Transfer</span>
+            <span class="tour-tag">💑 Perfect for Honeymoon</span>
+          </div>
+
+          <div class="itinerary">
+            <div class="itinerary-item">
+              <div class="itinerary-header">
+                <span>📅 Day 1 – Arrival in Marrakech</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="itinerary-body">
+                <p>Airport VIP pickup. Check in to luxury riad in the medina. Welcome dinner at rooftop restaurant. Private guided evening tour of Jemaa el-Fna.</p>
+              </div>
+            </div>
+            <div class="itinerary-item">
+              <div class="itinerary-header">
+                <span>📅 Days 2–3 – Private Desert Journey</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="itinerary-body">
+                <p>Private luxury vehicle to Merzouga. Exclusive stops at Ait Ben Haddou, Todra Gorge. Private camel trek at sunset. Luxury desert glamping with gourmet dinner, live music, and telescope stargazing.</p>
+              </div>
+            </div>
+            <div class="itinerary-item">
+              <div class="itinerary-header">
+                <span>📅 Days 4–5 – Fes &amp; Departure</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="itinerary-body">
+                <p>Private tour of Fes medina with expert local guide. Exclusive tannery viewing platform. Cooking class with renowned chef. Farewell dinner at historic riad. Airport transfer.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tour-includes">
+            <span class="include-tag yes"><i class="fas fa-check"></i> Luxury private transport</span>
+            <span class="include-tag yes"><i class="fas fa-check"></i> 5-star accommodation</span>
+            <span class="include-tag yes"><i class="fas fa-check"></i> All meals included</span>
+            <span class="include-tag yes"><i class="fas fa-check"></i> Private guide</span>
+            <span class="include-tag yes"><i class="fas fa-check"></i> Airport transfers</span>
+            <span class="include-tag no"><i class="fas fa-times"></i> International flights</span>
+          </div>
+
+          <div class="tour-full-footer">
+            <div class="tour-price-big">$799 <span>/ per person</span></div>
+            <div style="display:flex;gap:.5rem">
+              <button class="btn btn-outline-gold btn-sm open-booking-modal" data-tour="sahara-luxury" data-i18n="tour_quote">Request Quote</button>
+              <button class="btn btn-primary btn-sm open-booking-modal" data-tour="sahara-luxury" data-i18n="tour_book">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- TOUR 6: Chefchaouen -->
+      <article class="tour-full-card" data-category="cultural family" data-reveal>
+        <div class="tour-full-img">
+          <img src="img/casablanca-tajine.jpg" alt="Chefchaouen blue city Morocco streets" loading="lazy"/>
+          <div class="tour-badge">🔵 Iconic</div>
+        </div>
+        <div class="tour-full-body">
+          <div class="tour-meta">
+            <span><i class="fas fa-clock"></i> 4 Days / 3 Nights</span>
+            <span><i class="fas fa-users"></i> Max 10</span>
+            <span><i class="fas fa-map-marker-alt"></i> Northern Morocco</span>
+          </div>
+          <h3>Chefchaouen &amp; Rif Mountains Tour</h3>
+          <p class="tour-desc">Discover Chefchaouen – Morocco's most photographed city with its iconic blue-painted streets. Explore the Rif Mountains, visit Tangier on the Mediterranean, and discover the charming coastal city of Asilah with its painted murals.</p>
+
+          <div class="tour-highlights">
+            <span class="tour-tag">🔵 Blue Medina</span>
+            <span class="tour-tag">📸 Photography</span>
+            <span class="tour-tag">🏔️ Rif Mountains</span>
+            <span class="tour-tag">🌊 Tangier</span>
+            <span class="tour-tag">🎨 Asilah Murals</span>
+          </div>
+
+          <div class="itinerary">
+            <div class="itinerary-item">
+              <div class="itinerary-header">
+                <span>📅 Day 1 – Fes to Chefchaouen</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="itinerary-body">
+                <p>Drive from Fes through the Middle Atlas to Chefchaouen. Check in to traditional riad. Afternoon free to explore the magical blue medina. Sunset views from the Spanish mosque.</p>
+              </div>
+            </div>
+            <div class="itinerary-item">
+              <div class="itinerary-header">
+                <span>📅 Day 2 – Chefchaouen Exploration</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="itinerary-body">
+                <p>Full day exploring Chefchaouen's medina with guide. Visit Ras el Ma waterfall, the Kasbah museum, and artisan workshops. Photography walk through the most scenic blue alleyways.</p>
+              </div>
+            </div>
+            <div class="itinerary-item">
+              <div class="itinerary-header">
+                <span>📅 Days 3–4 – Tangier &amp; Asilah</span>
+                <i class="fas fa-chevron-down"></i>
+              </div>
+              <div class="itinerary-body">
+                <p>Drive to Tangier – visit the Kasbah, American Legation, and Cap Spartel (where Atlantic meets Mediterranean). Next day, visit the artistic coastal town of Asilah with its painted medina walls before returning to your starting point.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tour-includes">
+            <span class="include-tag yes"><i class="fas fa-check"></i> Private transport</span>
+            <span class="include-tag yes"><i class="fas fa-check"></i> 3 nights in riads</span>
+            <span class="include-tag yes"><i class="fas fa-check"></i> English/Spanish guide</span>
+            <span class="include-tag yes"><i class="fas fa-check"></i> Breakfasts</span>
+            <span class="include-tag no"><i class="fas fa-times"></i> Entry fees</span>
+            <span class="include-tag no"><i class="fas fa-times"></i> Lunches/Dinners</span>
+          </div>
+
+          <div class="tour-full-footer">
+            <div class="tour-price-big">$249 <span>/ per person</span></div>
+            <div style="display:flex;gap:.5rem">
+              <button class="btn btn-outline-gold btn-sm open-booking-modal" data-tour="chefchaouen" data-i18n="tour_quote">Request Quote</button>
+              <button class="btn btn-primary btn-sm open-booking-modal" data-tour="chefchaouen" data-i18n="tour_book">Book Now</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- CTA Box -->
+    <div style="background:linear-gradient(135deg,var(--clr-dark),var(--clr-dark2));border-radius:var(--radius-lg);padding:40px;text-align:center;margin-top:3rem;position:relative;overflow:hidden" data-reveal>
+      <h3 style="color:var(--clr-white);margin-bottom:.75rem">Can't Find the Perfect Tour?</h3>
+      <p style="color:rgba(255,255,255,.7);max-width:500px;margin:0 auto 1.5rem">We specialize in creating 100% customized private tours tailored exactly to your group, dates, and interests.</p>
+      <a href="contact.html" class="btn btn-primary btn-lg">Request Custom Tour</a>
+    </div>
+
+  </div>
+</main>
+
+<!-- Footer (include same footer as index) -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <img src="img/logo.png" alt="RodoTours Logo" class="logo-img"/>
+          <div class="logo-text"></div>
+        </a>
+        <p data-i18n="footer_desc">Your trusted Moroccan travel partner for authentic, personalized adventures.</p>
+        <div class="footer-social">
+          <a href="https://facebook.com/rodotours" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com/rodotours" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://tiktok.com/@rodotours" aria-label="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
+          <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+          <a href="https://wa.me/212600000000" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_quick_links">Quick Links</h4>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+          <li><a href="tours.html"><i class="fas fa-chevron-right"></i> Tours</a></li>
+          <li><a href="destinations.html"><i class="fas fa-chevron-right"></i> Destinations</a></li>
+          <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><p>+212 600 000 000</p></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><p>info@rodotours.com</p></div>
+        <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><p>+212 600 000 000</p></div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_newsletter">Newsletter</h4>
+        <p style="font-size:.8rem;margin-bottom:.6rem" data-i18n="footer_newsletter_sub">Get exclusive deals and travel tips.</p>
+        <form class="newsletter-form" style="display:flex;gap:.4rem">
+          <input type="email" name="newsletter_email" placeholder="Your email" style="flex:1;padding:.5rem .8rem;border-radius:4px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-size:.82rem" required/>
+          <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> RodoTours. <span data-i18n="footer_rights">All rights reserved.</span></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Booking Modal -->
+<div id="modal-overlay" class="modal-overlay">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 data-i18n="modal_title">Book Your Tour</h3>
+      <button class="modal-close"><i class="fas fa-times"></i></button>
+    </div>
+    <form id="booking-form" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label data-i18n="contact_name">Full Name *</label>
+          <input type="text" name="bk_name" required placeholder="Your full name"/>
+        </div>
+        <div class="form-group">
+          <label data-i18n="contact_email">Email *</label>
+          <input type="email" name="bk_email" required placeholder="your@email.com"/>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label data-i18n="contact_phone">WhatsApp</label>
+          <input type="tel" name="bk_phone" placeholder="+1 234 567"/>
+        </div>
+        <div class="form-group">
+          <label>Select Tour</label>
+          <select name="bk_tour" id="modal-tour-select">
+            <option value="">Select a tour...</option>
+            <option value="marrakech-merzouga">Marrakech to Merzouga</option>
+            <option value="imperial-cities">Imperial Cities Tour</option>
+            <option value="atlas-mountains">Atlas Mountains</option>
+            <option value="sahara-luxury">Sahara Luxury</option>
+            <option value="chefchaouen">Chefchaouen Tour</option>
+            <option value="grand-tour">Morocco Grand Tour</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label data-i18n="contact_date">Travel Date</label>
+          <input type="date" name="bk_date"/>
+        </div>
+        <div class="form-group">
+          <label data-i18n="contact_travelers">Travelers</label>
+          <select name="bk_travelers">
+            <option value="1">1 person</option>
+            <option value="2" selected>2 people</option>
+            <option value="3-5">3–5 people</option>
+            <option value="6+">6+ people</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%" data-i18n="modal_book_btn">Confirm Booking</button>
+    </form>
+  </div>
+</div>
+
+<a href="https://wa.me/212600000000" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+<button id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<script src="js/translations.js"></script>
+<script src="js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

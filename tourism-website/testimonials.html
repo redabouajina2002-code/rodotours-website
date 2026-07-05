@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customer Reviews – RodoTours</title>
+  <meta name="description" content="Read authentic reviews from travelers who experienced Morocco with RodoTours. 5-star reviews from around the world."/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Lato:wght@300;400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="img/logo.png" alt="RodoTours Logo" class="logo-img"/>
+      <div class="logo-text"></div>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" data-i18n="nav_home">Home</a>
+      <a href="tours.html" data-i18n="nav_tours">Tours</a>
+      <a href="destinations.html" data-i18n="nav_destinations">Destinations</a>
+      <a href="gallery.html" data-i18n="nav_gallery">Gallery</a>
+      <a href="testimonials.html" data-i18n="nav_testimonials">Testimonials</a>
+      <a href="blog.html" data-i18n="nav_blog">Blog</a>
+      <a href="contact.html" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+      <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="nav_book">Book Now</a>
+    </div>
+    <button class="nav-toggle"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-nav">
+  <a href="index.html" data-i18n="nav_home">Home</a>
+  <a href="tours.html" data-i18n="nav_tours">Tours</a>
+  <a href="destinations.html" data-i18n="nav_destinations">Destinations</a>
+  <a href="gallery.html" data-i18n="nav_gallery">Gallery</a>
+  <a href="testimonials.html" data-i18n="nav_testimonials">Testimonials</a>
+  <a href="blog.html" data-i18n="nav_blog">Blog</a>
+  <a href="contact.html" data-i18n="nav_contact">Contact</a>
+  <a href="contact.html" class="btn btn-primary" data-i18n="nav_book">Book Now</a>
+</div>
+
+<!-- Page Header -->
+<header class="page-header" style="background-image: url('img/sahara-camel-sunset.jpg')">
+  <div class="container">
+    <div class="page-header-content">
+      <nav class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span data-i18n="nav_testimonials">Testimonials</span></nav>
+      <h1 data-i18n="test_title">What Travelers Say</h1>
+      <p style="color:rgba(255,255,255,.75);margin:0">Real experiences from real travelers</p>
+    </div>
+  </div>
+</header>
+
+<main class="section-pad">
+  <div class="container">
+
+    <!-- Rating Overview -->
+    <div style="background:var(--clr-primary);border-radius:var(--radius-lg);padding:40px;color:white;text-align:center;margin-bottom:3rem" data-reveal>
+      <div style="display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap">
+        <div>
+          <div style="font-size:4rem;font-weight:900;font-family:var(--font-heading);line-height:1">4.9</div>
+          <div style="color:rgba(255,255,255,.85);font-size:.95rem;margin:.3rem 0">Average Rating</div>
+          <div style="color:#FFD700;font-size:1.3rem">★★★★★</div>
+        </div>
+        <div style="width:1px;height:80px;background:rgba(255,255,255,.3);display:none"></div>
+        <div>
+          <div style="font-size:3rem;font-weight:700;font-family:var(--font-heading);line-height:1">8,700+</div>
+          <div style="color:rgba(255,255,255,.85);font-size:.95rem;margin:.3rem 0">Happy Travelers</div>
+          <div style="font-size:.8rem;color:rgba(255,255,255,.65)">From 42 countries</div>
+        </div>
+        <div>
+          <div style="font-size:3rem;font-weight:700;font-family:var(--font-heading);line-height:1">98%</div>
+          <div style="color:rgba(255,255,255,.85);font-size:.95rem;margin:.3rem 0">Would Recommend</div>
+          <div style="font-size:.8rem;color:rgba(255,255,255,.65)">Verified reviews</div>
+        </div>
+        <div>
+          <div style="font-size:3rem;font-weight:700;font-family:var(--font-heading);line-height:1">12+</div>
+          <div style="color:rgba(255,255,255,.85);font-size:.95rem;margin:.3rem 0">Years of Excellence</div>
+          <div style="font-size:.8rem;color:rgba(255,255,255,.65)">Since 2012</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center" style="margin-bottom:2.5rem" data-reveal>
+      <span class="section-label" data-i18n="test_label">Testimonials</span>
+      <h2 class="section-title" data-i18n="test_title">What Travelers Say</h2>
+      <div class="divider centered"></div>
+      <p class="section-sub" style="margin:0 auto" data-i18n="test_sub">Join thousands of happy travelers who discovered Morocco with us.</p>
+    </div>
+
+    <!-- Reviews Grid -->
+    <div class="testimonials-page-grid">
+
+      <div class="testimonial-page-card" data-reveal>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Absolutely incredible experience! Our guide Mohamed was knowledgeable, funny, and showed us the real Morocco. The Sahara night under the stars was the most magical thing I've ever experienced. Cannot recommend RodoTours enough to anyone visiting Morocco!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SM</div>
+          <div class="author-info">
+            <strong>Sarah Mitchell</strong>
+            <span>United States 🇺🇸 · Marrakech to Merzouga Tour</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-page-card" data-reveal>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"¡Una experiencia de viaje perfecta! El equipo habla español perfectamente y organizó todo de maravilla. El tour al desierto del Sáhara fue espectacular. Los guías son increíbles y los hoteles riad fueron de ensueño. ¡Definitivamente volveré con mi familia!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">CG</div>
+          <div class="author-info">
+            <strong>Carlos García</strong>
+            <span>España 🇪🇸 · Imperial Cities Tour</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-page-card" data-reveal>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Voyage exceptionnel ! L'équipe a été aux petits soins tout au long de notre séjour. Chefchaouen et le désert étaient absolument magnifiques. Notre guide parlait un français parfait et connaissait chaque coin et recoin du pays. Je recommande vivement!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">ML</div>
+          <div class="author-info">
+            <strong>Marie Laurent</strong>
+            <span>France 🇫🇷 · Chefchaouen & Rif Tour</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-page-card" data-reveal>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"RodoTours organized our honeymoon perfectly. Every single detail was thoughtfully arranged – from the luxury riad in Marrakech with rose petals on arrival, to our private desert camp with candlelit dinner under the stars. Absolutely a dream come true for us!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">JL</div>
+          <div class="author-info">
+            <strong>James & Lucy Thompson</strong>
+            <span>United Kingdom 🇬🇧 · Sahara Luxury Honeymoon</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-page-card" data-reveal>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"We traveled as a family with 3 young children (ages 5, 8, and 11) and RodoTours made everything seamless and fun for all ages. The kids absolutely loved the camel ride, the Berber village visit, and the desert stargazing. A true education AND an adventure!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">AK</div>
+          <div class="author-info">
+            <strong>Anna Kowalski</strong>
+            <span>Germany 🇩🇪 · Morocco Family Grand Tour</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-page-card" data-reveal>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"As a solo female traveler, safety was my absolute priority. RodoTours exceeded ALL expectations. I felt completely safe, genuinely welcomed, and wonderfully cared for throughout. The Fes medina walking tour with Hassan was simply unforgettable."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">TP</div>
+          <div class="author-info">
+            <strong>Tomoko Patel</strong>
+            <span>Australia 🇦🇺 · Solo Imperial Cities Tour</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-page-card" data-reveal>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Absolutely the best travel decision we made! From the moment we were picked up at the airport to the final farewell, everything was perfection. The Atlas Mountains day trip with the Berber family lunch was a highlight we'll never forget."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">RB</div>
+          <div class="author-info">
+            <strong>Robert & Beatriz Chen</strong>
+            <span>Canada 🇨🇦 · Atlas Mountains & Desert</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-page-card" data-reveal>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Marrakech to Merzouga in 3 days – absolutely breathtaking. Our driver/guide Youssef was outstanding. He adjusted the itinerary when we asked to linger longer in Ait Ben Haddou. That flexibility and genuine care for the traveler's experience is what sets RodoTours apart!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">LP</div>
+          <div class="author-info">
+            <strong>Laura Petersen</strong>
+            <span>Denmark 🇩🇰 · Marrakech Desert Tour</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-page-card" data-reveal>
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Our group of 8 friends had the most amazing time. RodoTours handled everything from logistics to accommodation to experiences. The group cooking class in Marrakech and the Fes tannery visit were highlights. Highly professional and genuinely passionate team!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">MR</div>
+          <div class="author-info">
+            <strong>Marco Romano</strong>
+            <span>Italy 🇮🇹 · Group Morocco Grand Tour</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Share Your Experience -->
+    <div style="background:linear-gradient(135deg,var(--clr-dark),var(--clr-dark2));border-radius:var(--radius-lg);padding:40px;text-align:center;margin-top:3rem;color:white" data-reveal>
+      <h3 style="color:white;margin-bottom:.5rem">Traveled with Us? Share Your Experience!</h3>
+      <p style="color:rgba(255,255,255,.7);max-width:500px;margin:0 auto 1.5rem">We'd love to hear about your Morocco adventure. Leave a review on TripAdvisor or Google!</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <a href="#" class="btn" style="background:#00A854;color:white;padding:.75rem 1.8rem;border-radius:50px;font-weight:600">
+          <i class="fab fa-tripadvisor" style="margin-right:.4rem"></i> Review on TripAdvisor
+        </a>
+        <a href="#" class="btn" style="background:#4285F4;color:white;padding:.75rem 1.8rem;border-radius:50px;font-weight:600">
+          <i class="fab fa-google" style="margin-right:.4rem"></i> Review on Google
+        </a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <img src="img/logo.png" alt="RodoTours Logo" class="logo-img"/>
+          <div class="logo-text"></div>
+        </a>
+        <p>Your trusted Moroccan travel partner for authentic, personalized adventures.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tripadvisor"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+          <li><a href="tours.html"><i class="fas fa-chevron-right"></i> Tours</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><p>+212 600 000 000</p></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><p>info@rodotours.com</p></div>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <form class="newsletter-form" style="display:flex;flex-direction:column;gap:.4rem">
+          <input type="email" name="newsletter_email" placeholder="Your email" style="padding:.5rem .8rem;border-radius:4px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-size:.82rem" required/>
+          <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> RodoTours. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/212600000000" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+<button id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<script src="js/translations.js"></script>
+<script src="js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

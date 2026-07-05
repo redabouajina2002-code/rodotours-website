@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Morocco Destinations – RodoTours</title>
+  <meta name="description" content="Explore Morocco's top destinations: Marrakech, Merzouga, Fes, Chefchaouen, Casablanca, Atlas Mountains, Ouarzazate and more."/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Lato:wght@300;400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="img/logo.png" alt="RodoTours Logo" class="logo-img"/>
+      <div class="logo-text"></div>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" data-i18n="nav_home">Home</a>
+      <a href="tours.html" data-i18n="nav_tours">Tours</a>
+      <a href="destinations.html" data-i18n="nav_destinations">Destinations</a>
+      <a href="gallery.html" data-i18n="nav_gallery">Gallery</a>
+      <a href="testimonials.html" data-i18n="nav_testimonials">Testimonials</a>
+      <a href="blog.html" data-i18n="nav_blog">Blog</a>
+      <a href="contact.html" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+      <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="nav_book">Book Now</a>
+    </div>
+    <button class="nav-toggle"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-nav">
+  <a href="index.html" data-i18n="nav_home">Home</a>
+  <a href="tours.html" data-i18n="nav_tours">Tours</a>
+  <a href="destinations.html" data-i18n="nav_destinations">Destinations</a>
+  <a href="gallery.html" data-i18n="nav_gallery">Gallery</a>
+  <a href="testimonials.html" data-i18n="nav_testimonials">Testimonials</a>
+  <a href="blog.html" data-i18n="nav_blog">Blog</a>
+  <a href="contact.html" data-i18n="nav_contact">Contact</a>
+  <a href="contact.html" class="btn btn-primary" data-i18n="nav_book">Book Now</a>
+</div>
+
+<!-- Page Header -->
+<header class="page-header" style="background-image: url('img/sahara-camel-sunset.jpg')">
+  <div class="container">
+    <div class="page-header-content">
+      <nav class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span>Destinations</span></nav>
+      <h1 data-i18n="dest_title">Explore Morocco's Finest</h1>
+      <p style="color:rgba(255,255,255,.75);margin:0">Discover the incredible diversity of Morocco's landscapes, cities, and cultures.</p>
+    </div>
+  </div>
+</header>
+
+<main class="section-pad">
+  <div class="container">
+
+    <div class="text-center" style="margin-bottom:3rem" data-reveal>
+      <span class="section-label" data-i18n="dest_label">Destinations</span>
+      <h2 class="section-title">Morocco's Most Beautiful Places</h2>
+      <div class="divider centered"></div>
+      <p class="section-sub" style="margin:0 auto">From imperial cities to desert dunes, blue-painted alleys to snow-capped peaks — Morocco is a world of wonders.</p>
+    </div>
+
+    <!-- DESTINATIONS GRID -->
+    <div class="destinations-grid">
+
+      <!-- Marrakech -->
+      <div class="destination-card" style="grid-column: span 2; min-height: 420px;" data-reveal>
+        <img src="img/marrakech-souks.jpg" alt="Marrakech medina night market Jemaa el-Fna" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
+        <div class="destination-overlay">
+          <div class="destination-country">🇲🇦 Morocco</div>
+          <h3 style="font-size:1.8rem">Marrakech</h3>
+          <p>The Red City – Morocco's most vibrant destination. Jemaa el-Fna square buzzes with storytellers, musicians, and food stalls. Lose yourself in the colorful souks, visit stunning palaces, and sip mint tea in ancient riads. Marrakech is a sensory explosion like no other.</p>
+          <div style="display:flex;gap:.5rem;margin-top:.75rem;flex-wrap:wrap">
+            <span style="background:rgba(200,137,42,.3);color:#F0C060;font-size:.72rem;padding:.2rem .6rem;border-radius:50px">🕌 Koutoubia Mosque</span>
+            <span style="background:rgba(200,137,42,.3);color:#F0C060;font-size:.72rem;padding:.2rem .6rem;border-radius:50px">🏛️ Bahia Palace</span>
+            <span style="background:rgba(200,137,42,.3);color:#F0C060;font-size:.72rem;padding:.2rem .6rem;border-radius:50px">🌿 Majorelle Garden</span>
+            <span style="background:rgba(200,137,42,.3);color:#F0C060;font-size:.72rem;padding:.2rem .6rem;border-radius:50px">🎭 Jemaa el-Fna</span>
+          </div>
+          <a href="tours.html" class="btn btn-primary btn-sm" style="margin-top:1rem">See Marrakech Tours</a>
+        </div>
+      </div>
+
+      <!-- Merzouga -->
+      <div class="destination-card" data-reveal>
+        <img src="img/ait-benhaddou.jpg" alt="Merzouga Sahara desert dunes at sunrise" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
+        <div class="destination-overlay">
+          <div class="destination-country">🏜️ Sahara Desert</div>
+          <h3>Merzouga</h3>
+          <p>Gateway to the Sahara's Erg Chebbi dunes. The ultimate desert adventure – camel treks, stargazing, traditional Berber camps, and unforgettable sunrises over towering golden dunes.</p>
+          <a href="tours.html" class="btn btn-primary btn-sm" style="margin-top:.75rem">Book Desert Tour</a>
+        </div>
+      </div>
+
+      <!-- Fes -->
+      <div class="destination-card" data-reveal>
+        <img src="img/essaouira-port.jpg" alt="Fes ancient medina Morocco" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
+        <div class="destination-overlay">
+          <div class="destination-country">🏛️ Imperial City</div>
+          <h3>Fes</h3>
+          <p>The world's largest car-free urban area. Fes el-Bali UNESCO medina is a living medieval city with 9,000 labyrinthine streets, ancient madrasas, and the famous Chouara tanneries.</p>
+          <a href="tours.html" class="btn btn-primary btn-sm" style="margin-top:.75rem">Explore Fes Tours</a>
+        </div>
+      </div>
+
+      <!-- Chefchaouen -->
+      <div class="destination-card" data-reveal>
+        <img src="img/jemaa-el-fna.jpg" alt="Chefchaouen blue painted streets Morocco" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
+        <div class="destination-overlay">
+          <div class="destination-country">🔵 Blue City</div>
+          <h3>Chefchaouen</h3>
+          <p>The enchanting blue city of northern Morocco. Every street, wall, and staircase is painted in shades of blue. A paradise for photographers and a tranquil escape in the Rif Mountains.</p>
+          <a href="tours.html" class="btn btn-primary btn-sm" style="margin-top:.75rem">Book Blue City Tour</a>
+        </div>
+      </div>
+
+      <!-- Ait Ben Haddou -->
+      <div class="destination-card" data-reveal>
+        <img src="img/casablanca-tajine.jpg" alt="Ait Ben Haddou UNESCO kasbah Morocco" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
+        <div class="destination-overlay">
+          <div class="destination-country">🎬 UNESCO World Heritage</div>
+          <h3>Aït Ben Haddou</h3>
+          <p>A fortified ksar on the ancient caravan route between the Sahara and Marrakech. Used as a film location for Game of Thrones, Gladiator, and countless Hollywood productions.</p>
+          <a href="tours.html" class="btn btn-primary btn-sm" style="margin-top:.75rem">Visit Kasbah</a>
+        </div>
+      </div>
+
+      <!-- Atlas Mountains -->
+      <div class="destination-card" style="grid-column: span 2; min-height: 380px;" data-reveal>
+        <img src="img/hercules-cave-coast.jpg" alt="Atlas Mountains trekking Morocco Berber village" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
+        <div class="destination-overlay">
+          <div class="destination-country">🏔️ North Africa's Highest Peaks</div>
+          <h3 style="font-size:1.6rem">Atlas Mountains</h3>
+          <p>The backbone of Morocco. Three ranges – High Atlas, Middle Atlas, and Anti-Atlas – offer spectacular trekking, skiing, and cultural experiences. Jbel Toubkal (4,167m) is Africa's highest peak north of the Sahara. Traditional Berber villages dot the valleys, offering authentic homestay experiences and incredible Moroccan hospitality.</p>
+          <div style="display:flex;gap:.5rem;margin-top:.75rem;flex-wrap:wrap">
+            <span style="background:rgba(200,137,42,.3);color:#F0C060;font-size:.72rem;padding:.2rem .6rem;border-radius:50px">🥾 Toubkal Trek</span>
+            <span style="background:rgba(200,137,42,.3);color:#F0C060;font-size:.72rem;padding:.2rem .6rem;border-radius:50px">🏘️ Berber Villages</span>
+            <span style="background:rgba(200,137,42,.3);color:#F0C060;font-size:.72rem;padding:.2rem .6rem;border-radius:50px">💧 Ouzoud Falls</span>
+            <span style="background:rgba(200,137,42,.3);color:#F0C060;font-size:.72rem;padding:.2rem .6rem;border-radius:50px">❄️ Oukaimeden Ski</span>
+          </div>
+          <a href="tours.html" class="btn btn-primary btn-sm" style="margin-top:1rem">Mountain Tours</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Destination Info Cards -->
+    <section style="margin-top:4rem" aria-label="More destinations">
+      <div class="text-center" data-reveal>
+        <span class="section-label">More Destinations</span>
+        <h2 class="section-title">More Hidden Gems</h2>
+        <div class="divider centered"></div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:2rem">
+
+        <!-- Casablanca -->
+        <div style="background:var(--clr-white);border-radius:var(--radius-md);padding:24px;box-shadow:var(--shadow-sm);border-top:4px solid var(--clr-primary)" data-reveal>
+          <div style="font-size:2rem;margin-bottom:.5rem">🌆</div>
+          <h3 style="font-size:1.2rem;margin-bottom:.5rem">Casablanca</h3>
+          <p style="font-size:.85rem">Morocco's economic capital and largest city. Visit the stunning Hassan II Mosque (one of the world's largest), explore the Art Deco architecture, and stroll along the Corniche seafront.</p>
+          <div style="margin-top:.75rem;display:flex;flex-wrap:wrap;gap:.3rem">
+            <span class="tour-tag">🕌 Hassan II Mosque</span>
+            <span class="tour-tag">🎨 Art Deco</span>
+            <span class="tour-tag">🌊 Corniche</span>
+          </div>
+        </div>
+
+        <!-- Essaouira -->
+        <div style="background:var(--clr-white);border-radius:var(--radius-md);padding:24px;box-shadow:var(--shadow-sm);border-top:4px solid var(--clr-accent2)" data-reveal>
+          <div style="font-size:2rem;margin-bottom:.5rem">⚓</div>
+          <h3 style="font-size:1.2rem;margin-bottom:.5rem">Essaouira</h3>
+          <p style="font-size:.85rem">The enchanting "Wind City of Africa" – a UNESCO-listed coastal medina with blue and white streets, fresh seafood, art galleries, and world-class windsurfing on the Atlantic coast.</p>
+          <div style="margin-top:.75rem;display:flex;flex-wrap:wrap;gap:.3rem">
+            <span class="tour-tag">🌊 Atlantic Coast</span>
+            <span class="tour-tag">🎨 Art Scene</span>
+            <span class="tour-tag">🐟 Seafood</span>
+          </div>
+        </div>
+
+        <!-- Ouarzazate -->
+        <div style="background:var(--clr-white);border-radius:var(--radius-md);padding:24px;box-shadow:var(--shadow-sm);border-top:4px solid var(--clr-accent)" data-reveal>
+          <div style="font-size:2rem;margin-bottom:.5rem">🎬</div>
+          <h3 style="font-size:1.2rem;margin-bottom:.5rem">Ouarzazate</h3>
+          <p style="font-size:.85rem">Known as the "Hollywood of Africa", this gateway to the Sahara is famous for its Atlas Film Studios, the Taourirt Kasbah, and dramatic landscapes used in countless international films.</p>
+          <div style="margin-top:.75rem;display:flex;flex-wrap:wrap;gap:.3rem">
+            <span class="tour-tag">🎬 Film Studios</span>
+            <span class="tour-tag">🏯 Kasbah</span>
+            <span class="tour-tag">🏜️ Desert Edge</span>
+          </div>
+        </div>
+
+        <!-- Rabat -->
+        <div style="background:var(--clr-white);border-radius:var(--radius-md);padding:24px;box-shadow:var(--shadow-sm);border-top:4px solid var(--clr-primary)" data-reveal>
+          <div style="font-size:2rem;margin-bottom:.5rem">🦁</div>
+          <h3 style="font-size:1.2rem;margin-bottom:.5rem">Rabat</h3>
+          <p style="font-size:.85rem">Morocco's elegant capital. Visit the Kasbah of the Udayas, the Hassan Tower, Mohammed V Mausoleum, the Chellah necropolis, and the modern, tree-lined boulevards of this refined imperial city.</p>
+          <div style="margin-top:.75rem;display:flex;flex-wrap:wrap;gap:.3rem">
+            <span class="tour-tag">🏰 Kasbah</span>
+            <span class="tour-tag">🕌 Hassan Tower</span>
+            <span class="tour-tag">🦁 Zoo</span>
+          </div>
+        </div>
+
+        <!-- Meknes -->
+        <div style="background:var(--clr-white);border-radius:var(--radius-md);padding:24px;box-shadow:var(--shadow-sm);border-top:4px solid var(--clr-accent2)" data-reveal>
+          <div style="font-size:2rem;margin-bottom:.5rem">🏛️</div>
+          <h3 style="font-size:1.2rem;margin-bottom:.5rem">Meknes</h3>
+          <p style="font-size:.85rem">The forgotten imperial city. Less crowded than Fes or Marrakech, Meknes offers authentic Morocco – the monumental Bab Mansour gate, Moulay Ismail's imperial palace, and the nearby Roman ruins of Volubilis.</p>
+          <div style="margin-top:.75rem;display:flex;flex-wrap:wrap;gap:.3rem">
+            <span class="tour-tag">🏛️ Bab Mansour</span>
+            <span class="tour-tag">🏺 Volubilis Ruins</span>
+            <span class="tour-tag">🍇 Wine Region</span>
+          </div>
+        </div>
+
+        <!-- Todra Gorge -->
+        <div style="background:var(--clr-white);border-radius:var(--radius-md);padding:24px;box-shadow:var(--shadow-sm);border-top:4px solid var(--clr-accent)" data-reveal>
+          <div style="font-size:2rem;margin-bottom:.5rem">🪨</div>
+          <h3 style="font-size:1.2rem;margin-bottom:.5rem">Todra Gorge</h3>
+          <p style="font-size:.85rem">One of Morocco's most dramatic natural spectacles – towering 300-meter limestone canyon walls carved by the Todra River. A paradise for rock climbers and nature lovers, with traditional Berber settlements nearby.</p>
+          <div style="margin-top:.75rem;display:flex;flex-wrap:wrap;gap:.3rem">
+            <span class="tour-tag">🧗 Rock Climbing</span>
+            <span class="tour-tag">🚶 Canyon Walk</span>
+            <span class="tour-tag">💧 River Oasis</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Travel Tips -->
+    <section style="margin-top:4rem;background:var(--clr-light);border-radius:var(--radius-lg);padding:40px" data-reveal>
+      <div class="text-center" style="margin-bottom:2rem">
+        <span class="section-label">🧳 Essential Tips</span>
+        <h2 class="section-title">Morocco Travel Tips</h2>
+        <div class="divider centered"></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+        <div style="text-align:center;padding:20px">
+          <div style="font-size:2.5rem;margin-bottom:.75rem">☀️</div>
+          <h4>Best Time to Visit</h4>
+          <p style="font-size:.85rem">March–May and September–November offer the most pleasant weather. Avoid July–August for desert regions (very hot). Winter is great for cities.</p>
+        </div>
+        <div style="text-align:center;padding:20px">
+          <div style="font-size:2.5rem;margin-bottom:.75rem">💰</div>
+          <h4>Currency & Payments</h4>
+          <p style="font-size:.85rem">Moroccan Dirham (MAD). Cash is king in markets and souks. Major hotels and restaurants accept cards. ATMs widely available in cities.</p>
+        </div>
+        <div style="text-align:center;padding:20px">
+          <div style="font-size:2.5rem;margin-bottom:.75rem">👔</div>
+          <h4>Dress Code</h4>
+          <p style="font-size:.85rem">Morocco is a Muslim country. Dress modestly outside tourist areas – cover shoulders and knees. In riads and beach areas, Western dress is fine.</p>
+        </div>
+        <div style="text-align:center;padding:20px">
+          <div style="font-size:2.5rem;margin-bottom:.75rem">🍽️</div>
+          <h4>Moroccan Food</h4>
+          <p style="font-size:.85rem">Don't miss tagine, couscous, harira soup, pastilla, and fresh-squeezed orange juice. Ramadan affects restaurant hours – check dates before booking.</p>
+        </div>
+        <div style="text-align:center;padding:20px">
+          <div style="font-size:2.5rem;margin-bottom:.75rem">🗣️</div>
+          <h4>Language</h4>
+          <p style="font-size:.85rem">Arabic and Berber (Tamazight) are official languages. French is widely spoken. Spanish is common in northern Morocco. English is spoken in tourist areas.</p>
+        </div>
+        <div style="text-align:center;padding:20px">
+          <div style="font-size:2.5rem;margin-bottom:.75rem">🛡️</div>
+          <h4>Safety</h4>
+          <p style="font-size:.85rem">Morocco is generally very safe for tourists. Use reputable guides (like ours!), keep valuables secure in medinas, and agree on taxi prices before riding.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <div style="background:linear-gradient(135deg,var(--clr-primary-dk),var(--clr-primary));border-radius:var(--radius-lg);padding:40px;text-align:center;margin-top:3rem;color:white" data-reveal>
+      <h3 style="color:white;margin-bottom:.75rem">Ready to Explore Morocco?</h3>
+      <p style="color:rgba(255,255,255,.85);max-width:500px;margin:0 auto 1.5rem">Let us create the perfect itinerary to explore these incredible destinations.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <a href="tours.html" class="btn" style="background:white;color:var(--clr-primary);font-weight:700;padding:.75rem 1.8rem;border-radius:50px">See Our Tours</a>
+        <a href="contact.html" class="btn btn-outline btn-lg">Custom Itinerary</a>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <img src="img/logo.png" alt="RodoTours Logo" class="logo-img"/>
+          <div class="logo-text"></div>
+        </a>
+        <p>Your trusted Moroccan travel partner for authentic, personalized adventures.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tripadvisor"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+          <li><a href="tours.html"><i class="fas fa-chevron-right"></i> Tours</a></li>
+          <li><a href="destinations.html"><i class="fas fa-chevron-right"></i> Destinations</a></li>
+          <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><p>+212 600 000 000</p></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><p>info@rodotours.com</p></div>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <form class="newsletter-form" style="display:flex;flex-direction:column;gap:.4rem">
+          <input type="email" name="newsletter_email" placeholder="Your email" style="padding:.5rem .8rem;border-radius:4px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-size:.82rem" required/>
+          <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> RodoTours. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/212600000000" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+<button id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<script src="js/translations.js"></script>
+<script src="js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,462 @@
+/* ============================================
+   TOURS ROJA MARRUECOS - Translation System
+   Supports: English (en), Spanish (es), French (fr)
+   ============================================ */
+
+const translations = {
+  en: {
+    // Navigation
+    nav_home: "Home",
+    nav_tours: "Tours",
+    nav_destinations: "Destinations",
+    nav_gallery: "Gallery",
+    nav_testimonials: "Testimonials",
+    nav_blog: "Blog",
+    nav_contact: "Contact",
+    nav_book: "Book Now",
+
+    // Hero
+    hero_badge: "✨ Authentic Moroccan Experiences",
+    hero_title: "Discover the Magic of",
+    hero_title_accent: "Morocco",
+    hero_sub: "Explore ancient medinas, golden deserts, and majestic mountains with your trusted local guide. Personalized tours crafted for unforgettable memories.",
+    hero_cta_book: "Book Your Tour",
+    hero_cta_contact: "Contact Us",
+
+    // Stats
+    stat_tours: "Tours Completed",
+    stat_countries: "Countries Served",
+    stat_guests: "Happy Travelers",
+    stat_years: "Years Experience",
+
+    // About
+    about_label: "About Us",
+    about_title: "Your Trusted Moroccan Travel Experts",
+    about_text1: "RodoTours is a premier Moroccan travel agency dedicated to providing authentic, memorable, and fully customized travel experiences. We are passionate local experts who know every corner of this magnificent country.",
+    about_text2: "From the golden dunes of the Sahara to the blue streets of Chefchaouen, from the imperial grandeur of Fes to the vibrant souks of Marrakech — we craft every journey with care, expertise, and genuine Moroccan hospitality.",
+    about_years: "Years of Excellence",
+    about_v1: "Local Expert Guides",
+    about_v2: "Personalized Service",
+    about_v3: "Safe & Reliable",
+    about_v4: "Transparent Pricing",
+    about_v5: "24/7 Support",
+    about_v6: "Multilingual Team",
+    about_read_more: "Learn More About Us",
+
+    // Featured Tours
+    tours_label: "Our Tours",
+    tours_title: "Most Popular Experiences",
+    tours_sub: "Hand-picked tours that showcase the very best of Morocco's culture, landscapes, and traditions.",
+    tours_view_all: "View All Tours",
+    tour_days: "days",
+    tour_from: "From",
+    tour_quote: "Request Quote",
+    tour_book: "Book Now",
+    tour_duration: "Duration",
+    tour_difficulty: "Difficulty",
+    tour_max_group: "Max Group",
+
+    // Why Choose Us
+    why_label: "Why Choose Us",
+    why_title: "The RodoTours Difference",
+    why_sub: "We go beyond ordinary tourism to deliver extraordinary Moroccan experiences.",
+    why1_title: "Local Expert Guides",
+    why1_text: "Born and raised in Morocco, our guides share authentic stories and hidden gems.",
+    why2_title: "Fully Customized",
+    why2_text: "Every tour tailored to your interests, pace, and preferences.",
+    why3_title: "Safe Travel",
+    why3_text: "Licensed, insured, and committed to your safety throughout every journey.",
+    why4_title: "Comfortable Transport",
+    why4_text: "Air-conditioned vehicles, experienced drivers, premium comfort.",
+    why5_title: "Multilingual Team",
+    why5_text: "Fluent in English, Spanish, French, Arabic, and Berber.",
+    why6_title: "Transparent Pricing",
+    why6_text: "No hidden fees, no surprises. Clear pricing from the start.",
+    why7_title: "24/7 Support",
+    why7_text: "Round-the-clock assistance before, during, and after your trip.",
+    why8_title: "Handpicked Hotels",
+    why8_text: "Carefully selected riads and hotels for authentic comfort.",
+
+    // Destinations
+    dest_label: "Destinations",
+    dest_title: "Explore Morocco's Finest",
+    dest_view_all: "Explore All Destinations",
+
+    // Testimonials
+    test_label: "Testimonials",
+    test_title: "What Travelers Say",
+    test_sub: "Join thousands of happy travelers who discovered Morocco with us.",
+    test_view_all: "Read All Reviews",
+
+    // CTA
+    cta_title: "Ready for Your Moroccan Adventure?",
+    cta_sub: "Contact us today and let us create your perfect personalized Moroccan journey.",
+    cta_book: "Book Your Tour",
+    cta_whatsapp: "WhatsApp Us",
+    cta_free: "Free personalized itinerary consultation",
+
+    // Blog
+    blog_label: "Travel Blog",
+    blog_title: "Morocco Travel Guides & Tips",
+    blog_view_all: "Read All Articles",
+    blog_read_more: "Read More",
+
+    // Footer
+    footer_desc: "Your trusted Moroccan travel partner for authentic, personalized adventures across the Kingdom of Morocco.",
+    footer_quick_links: "Quick Links",
+    footer_tours: "Our Tours",
+    footer_newsletter: "Newsletter",
+    footer_newsletter_sub: "Get exclusive deals and Morocco travel tips.",
+    footer_newsletter_placeholder: "Your email address",
+    footer_newsletter_btn: "Subscribe",
+    footer_rights: "All rights reserved.",
+    footer_privacy: "Privacy Policy",
+    footer_terms: "Terms of Service",
+
+    // Contact
+    contact_label: "Get In Touch",
+    contact_title: "Plan Your Dream Morocco Trip",
+    contact_name: "Full Name",
+    contact_email: "Email Address",
+    contact_phone: "Phone / WhatsApp",
+    contact_tour: "Tour of Interest",
+    contact_date: "Preferred Travel Date",
+    contact_travelers: "Number of Travelers",
+    contact_message: "Your Message",
+    contact_send: "Send Message",
+    contact_sending: "Sending...",
+    contact_success: "Message sent! We'll reply within 24 hours.",
+    contact_error: "Please fill all required fields.",
+
+    // Booking Modal
+    modal_title: "Book Your Tour",
+    modal_tour: "Selected Tour",
+    modal_book_btn: "Confirm Booking Request",
+
+    // General
+    per_person: "per person",
+    read_more: "Read More",
+    view_details: "View Details",
+    loading: "Loading...",
+    error_generic: "Something went wrong. Please try again.",
+  },
+
+  es: {
+    // Navigation
+    nav_home: "Inicio",
+    nav_tours: "Tours",
+    nav_destinations: "Destinos",
+    nav_gallery: "Galería",
+    nav_testimonials: "Testimonios",
+    nav_blog: "Blog",
+    nav_contact: "Contacto",
+    nav_book: "Reservar Ahora",
+
+    // Hero
+    hero_badge: "✨ Experiencias Marroquíes Auténticas",
+    hero_title: "Descubre la Magia de",
+    hero_title_accent: "Marruecos",
+    hero_sub: "Explora antiguas medinas, desiertos dorados y majestuosas montañas con tu guía local de confianza. Tours personalizados para recuerdos inolvidables.",
+    hero_cta_book: "Reserva tu Tour",
+    hero_cta_contact: "Contáctanos",
+
+    // Stats
+    stat_tours: "Tours Realizados",
+    stat_countries: "Países Atendidos",
+    stat_guests: "Viajeros Felices",
+    stat_years: "Años de Experiencia",
+
+    // About
+    about_label: "Sobre Nosotros",
+    about_title: "Tus Expertos de Confianza en Viajes a Marruecos",
+    about_text1: "RodoTours es una agencia de viajes marroquí líder dedicada a ofrecer experiencias de viaje auténticas, memorables y totalmente personalizadas. Somos expertos locales apasionados que conocen cada rincón de este magnífico país.",
+    about_text2: "Desde las doradas dunas del Sahara hasta las calles azules de Chefchaouen, desde la grandeza imperial de Fez hasta los vibrantes zocos de Marrakech — creamos cada viaje con cuidado, experiencia y genuina hospitalidad marroquí.",
+    about_years: "Años de Excelencia",
+    about_v1: "Guías Expertos Locales",
+    about_v2: "Servicio Personalizado",
+    about_v3: "Seguro y Confiable",
+    about_v4: "Precios Transparentes",
+    about_v5: "Soporte 24/7",
+    about_v6: "Equipo Multilingüe",
+    about_read_more: "Más Sobre Nosotros",
+
+    // Featured Tours
+    tours_label: "Nuestros Tours",
+    tours_title: "Las Experiencias Más Populares",
+    tours_sub: "Tours cuidadosamente seleccionados que muestran lo mejor de la cultura, paisajes y tradiciones de Marruecos.",
+    tours_view_all: "Ver Todos los Tours",
+    tour_days: "días",
+    tour_from: "Desde",
+    tour_quote: "Solicitar Precio",
+    tour_book: "Reservar Ahora",
+    tour_duration: "Duración",
+    tour_difficulty: "Dificultad",
+    tour_max_group: "Grupo Máximo",
+
+    // Why Choose Us
+    why_label: "¿Por Qué Elegirnos?",
+    why_title: "La Diferencia de RodoTours",
+    why_sub: "Vamos más allá del turismo ordinario para ofrecer experiencias extraordinarias en Marruecos.",
+    why1_title: "Guías Expertos Locales",
+    why1_text: "Nacidos y criados en Marruecos, nuestros guías comparten historias auténticas y lugares únicos.",
+    why2_title: "Totalmente Personalizado",
+    why2_text: "Cada tour adaptado a tus intereses, ritmo y preferencias.",
+    why3_title: "Viaje Seguro",
+    why3_text: "Con licencia, asegurado y comprometido con tu seguridad en cada trayecto.",
+    why4_title: "Transporte Cómodo",
+    why4_text: "Vehículos con aire acondicionado, conductores experimentados, máximo confort.",
+    why5_title: "Equipo Multilingüe",
+    why5_text: "Fluidos en inglés, español, francés, árabe y bereber.",
+    why6_title: "Precios Transparentes",
+    why6_text: "Sin cargos ocultos, sin sorpresas. Precios claros desde el inicio.",
+    why7_title: "Soporte 24/7",
+    why7_text: "Asistencia continua antes, durante y después de tu viaje.",
+    why8_title: "Hoteles Seleccionados",
+    why8_text: "Riads y hoteles cuidadosamente seleccionados para el máximo confort.",
+
+    // Destinations
+    dest_label: "Destinos",
+    dest_title: "Explora lo Mejor de Marruecos",
+    dest_view_all: "Ver Todos los Destinos",
+
+    // Testimonials
+    test_label: "Testimonios",
+    test_title: "Lo Que Dicen los Viajeros",
+    test_sub: "Únete a miles de viajeros felices que descubrieron Marruecos con nosotros.",
+    test_view_all: "Leer Todas las Reseñas",
+
+    // CTA
+    cta_title: "¿Listo para tu Aventura en Marruecos?",
+    cta_sub: "Contáctanos hoy y te crearemos el itinerario marroquí perfecto y personalizado.",
+    cta_book: "Reserva tu Tour",
+    cta_whatsapp: "WhatsApp",
+    cta_free: "Consulta de itinerario personalizado gratis",
+
+    // Blog
+    blog_label: "Blog de Viajes",
+    blog_title: "Guías y Consejos de Viaje por Marruecos",
+    blog_view_all: "Leer Todos los Artículos",
+    blog_read_more: "Leer Más",
+
+    // Footer
+    footer_desc: "Tu agencia de viajes de confianza para aventuras auténticas y personalizadas por el Reino de Marruecos.",
+    footer_quick_links: "Enlaces Rápidos",
+    footer_tours: "Nuestros Tours",
+    footer_newsletter: "Newsletter",
+    footer_newsletter_sub: "Recibe ofertas exclusivas y consejos de viaje por Marruecos.",
+    footer_newsletter_placeholder: "Tu correo electrónico",
+    footer_newsletter_btn: "Suscribirse",
+    footer_rights: "Todos los derechos reservados.",
+    footer_privacy: "Política de Privacidad",
+    footer_terms: "Términos de Servicio",
+
+    // Contact
+    contact_label: "Ponte en Contacto",
+    contact_title: "Planifica tu Viaje Soñado a Marruecos",
+    contact_name: "Nombre Completo",
+    contact_email: "Correo Electrónico",
+    contact_phone: "Teléfono / WhatsApp",
+    contact_tour: "Tour de Interés",
+    contact_date: "Fecha de Viaje Preferida",
+    contact_travelers: "Número de Viajeros",
+    contact_message: "Tu Mensaje",
+    contact_send: "Enviar Mensaje",
+    contact_sending: "Enviando...",
+    contact_success: "¡Mensaje enviado! Responderemos en 24 horas.",
+    contact_error: "Por favor completa todos los campos requeridos.",
+
+    // Booking Modal
+    modal_title: "Reservar Tour",
+    modal_tour: "Tour Seleccionado",
+    modal_book_btn: "Confirmar Solicitud",
+
+    // General
+    per_person: "por persona",
+    read_more: "Leer Más",
+    view_details: "Ver Detalles",
+    loading: "Cargando...",
+    error_generic: "Algo salió mal. Por favor inténtalo de nuevo.",
+  },
+
+  fr: {
+    // Navigation
+    nav_home: "Accueil",
+    nav_tours: "Circuits",
+    nav_destinations: "Destinations",
+    nav_gallery: "Galerie",
+    nav_testimonials: "Témoignages",
+    nav_blog: "Blog",
+    nav_contact: "Contact",
+    nav_book: "Réserver",
+
+    // Hero
+    hero_badge: "✨ Expériences Marocaines Authentiques",
+    hero_title: "Découvrez la Magie du",
+    hero_title_accent: "Maroc",
+    hero_sub: "Explorez les anciennes médinas, les déserts dorés et les montagnes majestueuses avec votre guide local de confiance. Circuits personnalisés pour des souvenirs inoubliables.",
+    hero_cta_book: "Réserver votre Circuit",
+    hero_cta_contact: "Nous Contacter",
+
+    // Stats
+    stat_tours: "Circuits Réalisés",
+    stat_countries: "Pays Desservis",
+    stat_guests: "Voyageurs Heureux",
+    stat_years: "Ans d'Expérience",
+
+    // About
+    about_label: "À Propos",
+    about_title: "Vos Experts de Confiance pour le Maroc",
+    about_text1: "RodoTours est une agence de voyage marocaine de premier plan, dédiée à offrir des expériences de voyage authentiques, mémorables et entièrement personnalisées. Nous sommes des experts locaux passionnés qui connaissent chaque recoin de ce magnifique pays.",
+    about_text2: "Des dunes dorées du Sahara aux ruelles bleues de Chefchaouen, de la grandeur impériale de Fès aux souks animés de Marrakech — nous créons chaque voyage avec soin, expertise et hospitalité marocaine authentique.",
+    about_years: "Ans d'Excellence",
+    about_v1: "Guides Experts Locaux",
+    about_v2: "Service Personnalisé",
+    about_v3: "Sûr et Fiable",
+    about_v4: "Prix Transparents",
+    about_v5: "Support 24/7",
+    about_v6: "Équipe Multilingue",
+    about_read_more: "En Savoir Plus",
+
+    // Featured Tours
+    tours_label: "Nos Circuits",
+    tours_title: "Les Expériences Les Plus Populaires",
+    tours_sub: "Circuits sélectionnés avec soin qui mettent en valeur le meilleur de la culture, des paysages et des traditions marocaines.",
+    tours_view_all: "Voir Tous les Circuits",
+    tour_days: "jours",
+    tour_from: "À partir de",
+    tour_quote: "Demander un Devis",
+    tour_book: "Réserver",
+    tour_duration: "Durée",
+    tour_difficulty: "Difficulté",
+    tour_max_group: "Groupe Max",
+
+    // Why Choose Us
+    why_label: "Pourquoi Nous Choisir",
+    why_title: "La Différence RodoTours",
+    why_sub: "Nous allons au-delà du tourisme ordinaire pour offrir des expériences marocaines extraordinaires.",
+    why1_title: "Guides Experts Locaux",
+    why1_text: "Nés et élevés au Maroc, nos guides partagent des histoires authentiques et des joyaux cachés.",
+    why2_title: "Entièrement Personnalisé",
+    why2_text: "Chaque circuit adapté à vos centres d'intérêt, votre rythme et vos préférences.",
+    why3_title: "Voyage Sûr",
+    why3_text: "Agréé, assuré et engagé pour votre sécurité tout au long du voyage.",
+    why4_title: "Transport Confortable",
+    why4_text: "Véhicules climatisés, chauffeurs expérimentés, confort premium.",
+    why5_title: "Équipe Multilingue",
+    why5_text: "Courants en anglais, espagnol, français, arabe et berbère.",
+    why6_title: "Prix Transparents",
+    why6_text: "Pas de frais cachés, pas de surprises. Tarifs clairs dès le début.",
+    why7_title: "Support 24/7",
+    why7_text: "Assistance continue avant, pendant et après votre voyage.",
+    why8_title: "Hôtels Sélectionnés",
+    why8_text: "Riads et hôtels soigneusement choisis pour un confort authentique.",
+
+    // Destinations
+    dest_label: "Destinations",
+    dest_title: "Explorez le Meilleur du Maroc",
+    dest_view_all: "Explorer Toutes les Destinations",
+
+    // Testimonials
+    test_label: "Témoignages",
+    test_title: "Ce que Disent les Voyageurs",
+    test_sub: "Rejoignez des milliers de voyageurs heureux qui ont découvert le Maroc avec nous.",
+    test_view_all: "Lire Tous les Avis",
+
+    // CTA
+    cta_title: "Prêt pour votre Aventure Marocaine?",
+    cta_sub: "Contactez-nous aujourd'hui et laissez-nous créer votre parfait voyage personnalisé au Maroc.",
+    cta_book: "Réserver votre Circuit",
+    cta_whatsapp: "WhatsApp",
+    cta_free: "Consultation d'itinéraire personnalisé gratuite",
+
+    // Blog
+    blog_label: "Blog Voyage",
+    blog_title: "Guides et Conseils de Voyage au Maroc",
+    blog_view_all: "Lire Tous les Articles",
+    blog_read_more: "Lire Plus",
+
+    // Footer
+    footer_desc: "Votre partenaire de voyage marocain de confiance pour des aventures authentiques et personnalisées à travers le Royaume du Maroc.",
+    footer_quick_links: "Liens Rapides",
+    footer_tours: "Nos Circuits",
+    footer_newsletter: "Newsletter",
+    footer_newsletter_sub: "Recevez des offres exclusives et des conseils de voyage au Maroc.",
+    footer_newsletter_placeholder: "Votre adresse e-mail",
+    footer_newsletter_btn: "S'abonner",
+    footer_rights: "Tous droits réservés.",
+    footer_privacy: "Politique de Confidentialité",
+    footer_terms: "Conditions d'Utilisation",
+
+    // Contact
+    contact_label: "Prendre Contact",
+    contact_title: "Planifiez votre Voyage de Rêve au Maroc",
+    contact_name: "Nom Complet",
+    contact_email: "Adresse E-mail",
+    contact_phone: "Téléphone / WhatsApp",
+    contact_tour: "Circuit d'Intérêt",
+    contact_date: "Date de Voyage Préférée",
+    contact_travelers: "Nombre de Voyageurs",
+    contact_message: "Votre Message",
+    contact_send: "Envoyer le Message",
+    contact_sending: "Envoi en cours...",
+    contact_success: "Message envoyé ! Nous répondrons dans les 24 heures.",
+    contact_error: "Veuillez remplir tous les champs requis.",
+
+    // Booking Modal
+    modal_title: "Réserver votre Circuit",
+    modal_tour: "Circuit Sélectionné",
+    modal_book_btn: "Confirmer la Demande",
+
+    // General
+    per_person: "par personne",
+    read_more: "Lire Plus",
+    view_details: "Voir les Détails",
+    loading: "Chargement...",
+    error_generic: "Une erreur s'est produite. Veuillez réessayer.",
+  }
+};
+
+// Current language state
+let currentLang = localStorage.getItem('trm_lang') || 'en';
+
+function t(key) {
+  return (translations[currentLang] && translations[currentLang][key]) 
+    || translations['en'][key] 
+    || key;
+}
+
+function setLanguage(lang) {
+  if (!translations[lang]) return;
+  currentLang = lang;
+  localStorage.setItem('trm_lang', lang);
+  applyTranslations();
+  updateLangUI();
+}
+
+function applyTranslations() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    const attr = el.getAttribute('data-i18n-attr');
+    if (attr) {
+      el.setAttribute(attr, t(key));
+    } else {
+      el.innerHTML = t(key);
+    }
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    el.setAttribute('placeholder', t(el.getAttribute('data-i18n-placeholder')));
+  });
+}
+
+function updateLangUI() {
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === currentLang);
+  });
+  document.documentElement.lang = currentLang;
+}
+
+// Initialize on load
+document.addEventListener('DOMContentLoaded', () => {
+  applyTranslations();
+  updateLangUI();
+});

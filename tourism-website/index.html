@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RodoTours – Authentic Morocco Travel Experiences</title>
+  <meta name="description" content="Discover Morocco with RodoTours – personalized desert tours, imperial city tours, Sahara experiences, and more. English, Spanish, French guides."/>
+  <meta name="keywords" content="Morocco tours, Marrakech tours, Sahara desert tour, Morocco travel, Merzouga, Fes, Chefchaouen, Morocco guide"/>
+  <meta property="og:title" content="RodoTours – Authentic Morocco Travel"/>
+  <meta property="og:description" content="Personalized tours across Morocco – deserts, cities, mountains. Local experts, multilingual guides."/>
+  <meta property="og:type" content="website"/>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Lato:wght@300;400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet"/>
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"/>
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- ============================================
+     NAVIGATION
+     ============================================ -->
+<nav id="main-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="RodoTours Home">
+      <img src="img/logo.png" alt="RodoTours Logo" class="logo-img"/>
+      <div class="logo-text">
+        
+        
+      </div>
+    </a>
+
+    <nav class="nav-links">
+      <a href="index.html" data-i18n="nav_home">Home</a>
+      <a href="tours.html" data-i18n="nav_tours">Tours</a>
+      <a href="destinations.html" data-i18n="nav_destinations">Destinations</a>
+      <a href="gallery.html" data-i18n="nav_gallery">Gallery</a>
+      <a href="testimonials.html" data-i18n="nav_testimonials">Testimonials</a>
+      <a href="blog.html" data-i18n="nav_blog">Blog</a>
+      <a href="contact.html" data-i18n="nav_contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <div class="lang-switcher" aria-label="Language selector">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+      <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="nav_book">Book Now</a>
+    </div>
+
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" role="dialog" aria-label="Mobile menu">
+  <a href="index.html" data-i18n="nav_home">Home</a>
+  <a href="tours.html" data-i18n="nav_tours">Tours</a>
+  <a href="destinations.html" data-i18n="nav_destinations">Destinations</a>
+  <a href="gallery.html" data-i18n="nav_gallery">Gallery</a>
+  <a href="testimonials.html" data-i18n="nav_testimonials">Testimonials</a>
+  <a href="blog.html" data-i18n="nav_blog">Blog</a>
+  <a href="contact.html" data-i18n="nav_contact">Contact</a>
+  <a href="contact.html" class="btn btn-primary" data-i18n="nav_book">Book Now</a>
+</div>
+
+<!-- ============================================
+     HERO SECTION
+     ============================================ -->
+<section id="hero" aria-label="Hero section">
+  <div class="hero-slides" aria-hidden="true">
+    <div class="hero-slide active" style="background-image: url('img/sahara-camel-sunset.jpg')"></div>
+    <div class="hero-slide" style="background-image: url('img/marrakech-souks.jpg')"></div>
+    <div class="hero-slide" style="background-image: url('img/ait-benhaddou.jpg')"></div>
+    <div class="hero-slide" style="background-image: url('img/essaouira-port.jpg')"></div>
+  </div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge fade-in-up" data-i18n="hero_badge">✨ Authentic Moroccan Experiences</div>
+    <h1 class="hero-title fade-in-up delay-1">
+      <span data-i18n="hero_title">Discover the Magic of</span><br>
+      <span class="accent" data-i18n="hero_title_accent">Morocco</span>
+    </h1>
+    <p class="hero-sub fade-in-up delay-2" data-i18n="hero_sub">
+      Explore ancient medinas, golden deserts, and majestic mountains with your trusted local guide. Personalized tours crafted for unforgettable memories.
+    </p>
+    <div class="hero-actions fade-in-up delay-3">
+      <a href="contact.html" class="btn btn-primary btn-lg" data-i18n="hero_cta_book">Book Your Tour</a>
+      <a href="contact.html" class="btn btn-outline btn-lg" data-i18n="hero_cta_contact">Contact Us</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <i class="fas fa-chevron-down"></i>
+  </div>
+
+  <div class="hero-dots" role="tablist" aria-label="Hero slide navigation">
+    <button class="hero-dot active" role="tab" aria-selected="true" aria-label="Slide 1"></button>
+    <button class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 2"></button>
+    <button class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 3"></button>
+    <button class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 4"></button>
+  </div>
+</section>
+
+<!-- ============================================
+     STATS BAR
+     ============================================ -->
+<section id="stats-bar" aria-label="Company statistics">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item" data-reveal>
+        <div class="number"><span class="counter-num" data-target="2500" data-suffix="+">0</span></div>
+        <div class="label" data-i18n="stat_tours">Tours Completed</div>
+      </div>
+      <div class="stat-item" data-reveal>
+        <div class="number"><span class="counter-num" data-target="42" data-suffix="">0</span></div>
+        <div class="label" data-i18n="stat_countries">Countries Served</div>
+      </div>
+      <div class="stat-item" data-reveal>
+        <div class="number"><span class="counter-num" data-target="8700" data-suffix="+">0</span></div>
+        <div class="label" data-i18n="stat_guests">Happy Travelers</div>
+      </div>
+      <div class="stat-item" data-reveal>
+        <div class="number"><span class="counter-num" data-target="12" data-suffix="">0</span></div>
+        <div class="label" data-i18n="stat_years">Years Experience</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     ABOUT SECTION
+     ============================================ -->
+<section id="about" class="section-pad" aria-label="About RodoTours">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-images" data-reveal>
+        <div class="about-img-main">
+          <img src="img/sahara-camel-sunset.jpg" alt="Sahara desert at sunrise, Merzouga Morocco" loading="lazy"/>
+        </div>
+        <div class="about-img-accent">
+          <img src="img/marrakech-souks.jpg" alt="Chefchaouen blue city streets Morocco" loading="lazy"/>
+        </div>
+        <div class="about-badge">
+          <span class="years">12+</span>
+          <span class="years-label" data-i18n="about_years">Years of Excellence</span>
+        </div>
+      </div>
+
+      <div class="about-text" data-reveal>
+        <span class="section-label" data-i18n="about_label">About Us</span>
+        <h2 class="section-title" data-i18n="about_title">Your Trusted Moroccan Travel Experts</h2>
+        <div class="divider"></div>
+        <p data-i18n="about_text1">RodoTours is a premier Moroccan travel agency dedicated to providing authentic, memorable, and fully customized travel experiences. We are passionate local experts who know every corner of this magnificent country.</p>
+        <p data-i18n="about_text2">From the golden dunes of the Sahara to the blue streets of Chefchaouen, from the imperial grandeur of Fes to the vibrant souks of Marrakech — we craft every journey with care, expertise, and genuine Moroccan hospitality.</p>
+
+        <div class="about-values">
+          <div class="value-item">
+            <i class="fas fa-user-tie"></i>
+            <p data-i18n="about_v1">Local Expert Guides</p>
+          </div>
+          <div class="value-item">
+            <i class="fas fa-sliders-h"></i>
+            <p data-i18n="about_v2">Personalized Service</p>
+          </div>
+          <div class="value-item">
+            <i class="fas fa-shield-alt"></i>
+            <p data-i18n="about_v3">Safe &amp; Reliable</p>
+          </div>
+          <div class="value-item">
+            <i class="fas fa-tag"></i>
+            <p data-i18n="about_v4">Transparent Pricing</p>
+          </div>
+          <div class="value-item">
+            <i class="fas fa-headset"></i>
+            <p data-i18n="about_v5">24/7 Support</p>
+          </div>
+          <div class="value-item">
+            <i class="fas fa-language"></i>
+            <p data-i18n="about_v6">Multilingual Team</p>
+          </div>
+        </div>
+
+        <a href="contact.html" class="btn btn-primary" style="margin-top:1.5rem" data-i18n="about_read_more">Learn More About Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pattern-divider"></div>
+
+<!-- ============================================
+     FEATURED TOURS
+     ============================================ -->
+<section id="featured-tours" class="section-pad" aria-label="Featured tours">
+  <div class="container">
+    <div class="text-center" data-reveal>
+      <span class="section-label" data-i18n="tours_label">Our Tours</span>
+      <h2 class="section-title" data-i18n="tours_title">Most Popular Experiences</h2>
+      <div class="divider centered"></div>
+      <p class="section-sub" style="margin:0 auto" data-i18n="tours_sub">Hand-picked tours that showcase the very best of Morocco's culture, landscapes, and traditions.</p>
+    </div>
+
+    <div class="tours-grid" style="margin-top:2.5rem">
+
+      <!-- Tour 1 -->
+      <article class="tour-card" data-reveal data-category="desert">
+        <div class="tour-card-img">
+          <img src="img/sahara-camel-sunset.jpg" alt="Marrakech to Merzouga Desert Tour – camel trek at sunset" loading="lazy"/>
+          <div class="tour-badge">🏜️ Best Seller</div>
+          <div class="tour-price">From $299</div>
+        </div>
+        <div class="tour-card-body">
+          <div class="tour-meta">
+            <span><i class="fas fa-clock"></i> 3 days</span>
+            <span><i class="fas fa-users"></i> Max 12</span>
+            <span><i class="fas fa-star"></i> 4.9</span>
+          </div>
+          <h3>Marrakech to Merzouga Desert</h3>
+          <p>Experience the magic of the Sahara — camel treks, stargazing camps, golden dunes at sunrise.</p>
+          <div class="tour-highlights">
+            <span class="tour-tag">🐪 Camel Trek</span>
+            <span class="tour-tag">🌅 Sunrise Dunes</span>
+            <span class="tour-tag">⭐ Desert Camp</span>
+            <span class="tour-tag">🏛️ Kasbah Visit</span>
+          </div>
+        </div>
+        <div class="tour-card-footer">
+          <div class="tour-rating">
+            <span class="stars">★★★★★</span>
+            <span class="count">(148 reviews)</span>
+          </div>
+          <a href="tours.html" class="btn btn-primary btn-sm" data-i18n="view_details">View Details</a>
+        </div>
+      </article>
+
+      <!-- Tour 2 -->
+      <article class="tour-card" data-reveal data-category="cultural">
+        <div class="tour-card-img">
+          <img src="img/jemaa-el-fna.jpg" alt="Imperial Cities Tour – Fes ancient medina" loading="lazy"/>
+          <div class="tour-badge">🏛️ Cultural</div>
+          <div class="tour-price">From $449</div>
+        </div>
+        <div class="tour-card-body">
+          <div class="tour-meta">
+            <span><i class="fas fa-clock"></i> 7 days</span>
+            <span><i class="fas fa-users"></i> Max 10</span>
+            <span><i class="fas fa-star"></i> 4.8</span>
+          </div>
+          <h3>Imperial Cities Grand Tour</h3>
+          <p>Journey through Marrakech, Fes, Meknes, and Rabat — Morocco's greatest imperial cities.</p>
+          <div class="tour-highlights">
+            <span class="tour-tag">🕌 Medinas</span>
+            <span class="tour-tag">🎨 Souks</span>
+            <span class="tour-tag">🏰 Palaces</span>
+            <span class="tour-tag">🍵 Tea Ceremony</span>
+          </div>
+        </div>
+        <div class="tour-card-footer">
+          <div class="tour-rating">
+            <span class="stars">★★★★★</span>
+            <span class="count">(96 reviews)</span>
+          </div>
+          <a href="tours.html" class="btn btn-primary btn-sm" data-i18n="view_details">View Details</a>
+        </div>
+      </article>
+
+      <!-- Tour 3 -->
+      <article class="tour-card" data-reveal data-category="adventure">
+        <div class="tour-card-img">
+          <img src="img/essaouira-port.jpg" alt="Atlas Mountains excursion trekking" loading="lazy"/>
+          <div class="tour-badge">🏔️ Adventure</div>
+          <div class="tour-price">From $189</div>
+        </div>
+        <div class="tour-card-body">
+          <div class="tour-meta">
+            <span><i class="fas fa-clock"></i> 2 days</span>
+            <span><i class="fas fa-users"></i> Max 8</span>
+            <span><i class="fas fa-star"></i> 4.9</span>
+          </div>
+          <h3>Atlas Mountains Excursion</h3>
+          <p>Trek through Berber villages, waterfalls, and breathtaking mountain scenery in the High Atlas.</p>
+          <div class="tour-highlights">
+            <span class="tour-tag">🥾 Trekking</span>
+            <span class="tour-tag">🏘️ Berber Village</span>
+            <span class="tour-tag">💧 Waterfalls</span>
+            <span class="tour-tag">🎒 Hiking</span>
+          </div>
+        </div>
+        <div class="tour-card-footer">
+          <div class="tour-rating">
+            <span class="stars">★★★★★</span>
+            <span class="count">(73 reviews)</span>
+          </div>
+          <a href="tours.html" class="btn btn-primary btn-sm" data-i18n="view_details">View Details</a>
+        </div>
+      </article>
+
+      <!-- Tour 4 -->
+      <article class="tour-card" data-reveal data-category="luxury">
+        <div class="tour-card-img">
+          <img src="img/casablanca-tajine.jpg" alt="Sahara Luxury Experience – private desert camp" loading="lazy"/>
+          <div class="tour-badge">💎 Luxury</div>
+          <div class="tour-price">From $799</div>
+        </div>
+        <div class="tour-card-body">
+          <div class="tour-meta">
+            <span><i class="fas fa-clock"></i> 5 days</span>
+            <span><i class="fas fa-users"></i> Max 6</span>
+            <span><i class="fas fa-star"></i> 5.0</span>
+          </div>
+          <h3>Sahara Luxury Experience</h3>
+          <p>A premium private journey through Morocco's most stunning landscapes with luxury desert camp.</p>
+          <div class="tour-highlights">
+            <span class="tour-tag">🏕️ Luxury Camp</span>
+            <span class="tour-tag">🐪 Private Trek</span>
+            <span class="tour-tag">🌟 5-Star Riads</span>
+            <span class="tour-tag">🍽️ Fine Dining</span>
+          </div>
+        </div>
+        <div class="tour-card-footer">
+          <div class="tour-rating">
+            <span class="stars">★★★★★</span>
+            <span class="count">(52 reviews)</span>
+          </div>
+          <a href="tours.html" class="btn btn-primary btn-sm" data-i18n="view_details">View Details</a>
+        </div>
+      </article>
+
+      <!-- Tour 5 -->
+      <article class="tour-card" data-reveal data-category="cultural">
+        <div class="tour-card-img">
+          <img src="img/hercules-cave-coast.jpg" alt="Chefchaouen blue city Morocco" loading="lazy"/>
+          <div class="tour-badge">🔵 Iconic</div>
+          <div class="tour-price">From $249</div>
+        </div>
+        <div class="tour-card-body">
+          <div class="tour-meta">
+            <span><i class="fas fa-clock"></i> 4 days</span>
+            <span><i class="fas fa-users"></i> Max 10</span>
+            <span><i class="fas fa-star"></i> 4.9</span>
+          </div>
+          <h3>Chefchaouen & Rif Mountains</h3>
+          <p>Discover the enchanting blue city, explore its labyrinthine streets and stunning mountain scenery.</p>
+          <div class="tour-highlights">
+            <span class="tour-tag">🔵 Blue City</span>
+            <span class="tour-tag">📸 Photography</span>
+            <span class="tour-tag">🏔️ Rif Mountains</span>
+            <span class="tour-tag">🧶 Crafts</span>
+          </div>
+        </div>
+        <div class="tour-card-footer">
+          <div class="tour-rating">
+            <span class="stars">★★★★★</span>
+            <span class="count">(87 reviews)</span>
+          </div>
+          <a href="tours.html" class="btn btn-primary btn-sm" data-i18n="view_details">View Details</a>
+        </div>
+      </article>
+
+      <!-- Tour 6 -->
+      <article class="tour-card" data-reveal data-category="cultural">
+        <div class="tour-card-img">
+          <img src="img/ait-benhaddou.jpg" alt="Ait Ben Haddou UNESCO kasbah Morocco" loading="lazy"/>
+          <div class="tour-badge">🎬 UNESCO</div>
+          <div class="tour-price">From $349</div>
+        </div>
+        <div class="tour-card-body">
+          <div class="tour-meta">
+            <span><i class="fas fa-clock"></i> 5 days</span>
+            <span><i class="fas fa-users"></i> Max 12</span>
+            <span><i class="fas fa-star"></i> 4.8</span>
+          </div>
+          <h3>Morocco Grand Tour</h3>
+          <p>The ultimate Morocco experience — Marrakech, Ait Ben Haddou, Merzouga desert, and imperial cities.</p>
+          <div class="tour-highlights">
+            <span class="tour-tag">🏛️ UNESCO Sites</span>
+            <span class="tour-tag">🏜️ Desert</span>
+            <span class="tour-tag">🏙️ 4 Cities</span>
+            <span class="tour-tag">🎭 Culture</span>
+          </div>
+        </div>
+        <div class="tour-card-footer">
+          <div class="tour-rating">
+            <span class="stars">★★★★★</span>
+            <span class="count">(112 reviews)</span>
+          </div>
+          <a href="tours.html" class="btn btn-primary btn-sm" data-i18n="view_details">View Details</a>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="text-center" style="margin-top:2.5rem">
+      <a href="tours.html" class="btn btn-outline-gold btn-lg" data-i18n="tours_view_all">View All Tours</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     WHY CHOOSE US
+     ============================================ -->
+<section id="why-us" class="section-pad" aria-label="Why choose RodoTours">
+  <div class="container">
+    <div class="text-center" data-reveal>
+      <span class="section-label" data-i18n="why_label">Why Choose Us</span>
+      <h2 class="section-title" data-i18n="why_title">The RodoTours Difference</h2>
+      <div class="divider centered"></div>
+      <p class="section-sub" style="margin:0 auto" data-i18n="why_sub">We go beyond ordinary tourism to deliver extraordinary Moroccan experiences.</p>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card" data-reveal>
+        <div class="why-icon"><i class="fas fa-user-tie"></i></div>
+        <h4 data-i18n="why1_title">Local Expert Guides</h4>
+        <p data-i18n="why1_text">Born and raised in Morocco, our guides share authentic stories and hidden gems.</p>
+      </div>
+      <div class="why-card" data-reveal>
+        <div class="why-icon"><i class="fas fa-sliders-h"></i></div>
+        <h4 data-i18n="why2_title">Fully Customized</h4>
+        <p data-i18n="why2_text">Every tour tailored to your interests, pace, and preferences.</p>
+      </div>
+      <div class="why-card" data-reveal>
+        <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+        <h4 data-i18n="why3_title">Safe Travel</h4>
+        <p data-i18n="why3_text">Licensed, insured, and committed to your safety throughout every journey.</p>
+      </div>
+      <div class="why-card" data-reveal>
+        <div class="why-icon"><i class="fas fa-bus"></i></div>
+        <h4 data-i18n="why4_title">Comfortable Transport</h4>
+        <p data-i18n="why4_text">Air-conditioned vehicles, experienced drivers, premium comfort.</p>
+      </div>
+      <div class="why-card" data-reveal>
+        <div class="why-icon"><i class="fas fa-language"></i></div>
+        <h4 data-i18n="why5_title">Multilingual Team</h4>
+        <p data-i18n="why5_text">Fluent in English, Spanish, French, Arabic, and Berber.</p>
+      </div>
+      <div class="why-card" data-reveal>
+        <div class="why-icon"><i class="fas fa-tag"></i></div>
+        <h4 data-i18n="why6_title">Transparent Pricing</h4>
+        <p data-i18n="why6_text">No hidden fees, no surprises. Clear pricing from the start.</p>
+      </div>
+      <div class="why-card" data-reveal>
+        <div class="why-icon"><i class="fas fa-headset"></i></div>
+        <h4 data-i18n="why7_title">24/7 Support</h4>
+        <p data-i18n="why7_text">Round-the-clock assistance before, during, and after your trip.</p>
+      </div>
+      <div class="why-card" data-reveal>
+        <div class="why-icon"><i class="fas fa-hotel"></i></div>
+        <h4 data-i18n="why8_title">Handpicked Hotels</h4>
+        <p data-i18n="why8_text">Carefully selected riads and hotels for authentic comfort.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     DESTINATIONS STRIP
+     ============================================ -->
+<section id="destinations-strip" class="section-pad" aria-label="Popular destinations">
+  <div class="container">
+    <div class="text-center" data-reveal>
+      <span class="section-label" style="color:var(--clr-primary-lt)" data-i18n="dest_label">Destinations</span>
+      <h2 class="section-title text-white" data-i18n="dest_title">Explore Morocco's Finest</h2>
+      <div class="divider centered"></div>
+    </div>
+
+    <div class="dest-strip-grid" style="margin-top:2rem">
+      <a href="destinations.html" class="dest-strip-item" data-reveal>
+        <img src="img/sahara-camel-selfie.jpg" alt="Marrakech medina Morocco" loading="lazy"/>
+        <div class="dest-strip-overlay">
+          <h4>Marrakech</h4>
+          <span>🌹 The Red City</span>
+        </div>
+      </a>
+      <a href="destinations.html" class="dest-strip-item" data-reveal>
+        <img src="img/sahara-camel-sunset.jpg" alt="Merzouga Sahara desert dunes" loading="lazy"/>
+        <div class="dest-strip-overlay">
+          <h4>Merzouga</h4>
+          <span>🏜️ Sahara Desert</span>
+        </div>
+      </a>
+      <a href="destinations.html" class="dest-strip-item" data-reveal>
+        <img src="img/jemaa-el-fna.jpg" alt="Fes medina ancient city" loading="lazy"/>
+        <div class="dest-strip-overlay">
+          <h4>Fes</h4>
+          <span>🏛️ Imperial City</span>
+        </div>
+      </a>
+      <a href="destinations.html" class="dest-strip-item" data-reveal>
+        <img src="img/hercules-cave-coast.jpg" alt="Chefchaouen blue city" loading="lazy"/>
+        <div class="dest-strip-overlay">
+          <h4>Chefchaouen</h4>
+          <span>🔵 Blue City</span>
+        </div>
+      </a>
+      <a href="destinations.html" class="dest-strip-item" data-reveal>
+        <img src="img/ait-benhaddou.jpg" alt="Ait Ben Haddou kasbah" loading="lazy"/>
+        <div class="dest-strip-overlay">
+          <h4>Aït Ben Haddou</h4>
+          <span>🏯 UNESCO Site</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="text-center" style="margin-top:2rem">
+      <a href="destinations.html" class="btn btn-outline btn-lg" data-i18n="dest_view_all">Explore All Destinations</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     TESTIMONIALS
+     ============================================ -->
+<section id="testimonials" class="section-pad" aria-label="Customer testimonials">
+  <div class="container">
+    <div class="text-center" data-reveal>
+      <span class="section-label" data-i18n="test_label">Testimonials</span>
+      <h2 class="section-title" data-i18n="test_title">What Travelers Say</h2>
+      <div class="divider centered"></div>
+      <p class="section-sub" style="margin:0 auto" data-i18n="test_sub">Join thousands of happy travelers who discovered Morocco with us.</p>
+    </div>
+
+    <div class="testimonials-wrapper" style="margin-top:2.5rem">
+      <div class="testimonials-track">
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Absolutely incredible experience! Our guide Mohamed was knowledgeable, funny, and showed us the real Morocco. The Sahara night under the stars was magical. Can't recommend RodoTours enough!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SM</div>
+            <div class="author-info">
+              <strong>Sarah Mitchell</strong>
+              <span>United States 🇺🇸</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"¡Una experiencia de viaje perfecta! El equipo habla español perfectamente y organizó todo de maravilla. El tour al desierto del Sáhara fue espectacular. ¡Volveré!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">CG</div>
+            <div class="author-info">
+              <strong>Carlos García</strong>
+              <span>España 🇪🇸</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Voyage exceptionnel ! L'équipe a été aux petits soins tout au long de notre séjour. Chefchaouen et le désert étaient absolument magnifiques. Je recommande vivement RodoTours!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">ML</div>
+            <div class="author-info">
+              <strong>Marie Laurent</strong>
+              <span>France 🇫🇷</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"RodoTours organized our honeymoon perfectly. Every detail was thoughtfully arranged — from the luxury riad in Marrakech to our private desert camp. A dream come true!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JL</div>
+            <div class="author-info">
+              <strong>James & Lucy</strong>
+              <span>United Kingdom 🇬🇧</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"We traveled as a family with 3 kids and RodoTours made it seamless. The kids loved the camel ride and the Berber village visit. An education AND an adventure!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AK</div>
+            <div class="author-info">
+              <strong>Anna Kowalski</strong>
+              <span>Germany 🇩🇪</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"As a solo traveler, safety was my priority. RodoTours exceeded all expectations. I felt safe, welcome, and genuinely cared for. The Fes medina tour was unforgettable."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">TP</div>
+            <div class="author-info">
+              <strong>Tomoko Patel</strong>
+              <span>Australia 🇦🇺</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="testimonials-nav" aria-label="Testimonials navigation">
+      <button id="testimonials-prev" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+      <button id="testimonials-next" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <div class="text-center" style="margin-top:1.5rem">
+      <a href="testimonials.html" class="btn btn-outline-gold" data-i18n="test_view_all">Read All Reviews</a>
+    </div>
+  </div>
+</section>
+
+<div class="pattern-divider"></div>
+
+<!-- ============================================
+     BLOG PREVIEW
+     ============================================ -->
+<section id="blog-preview" class="section-pad" aria-label="Travel blog">
+  <div class="container">
+    <div class="text-center" data-reveal>
+      <span class="section-label" data-i18n="blog_label">Travel Blog</span>
+      <h2 class="section-title" data-i18n="blog_title">Morocco Travel Guides &amp; Tips</h2>
+      <div class="divider centered"></div>
+    </div>
+
+    <div class="blog-grid">
+      <article class="blog-card" data-reveal>
+        <div class="blog-card-img">
+          <img src="img/sahara-camel-sunset.jpg" alt="Best time to visit Morocco Sahara" loading="lazy"/>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-category">Travel Tips</div>
+          <h3>Best Time to Visit Morocco: A Complete Seasonal Guide</h3>
+          <p>Discover when to visit Morocco for the best weather, fewer crowds, and the most memorable experiences.</p>
+          <div class="blog-meta">
+            <span><i class="fas fa-calendar"></i> March 2025</span>
+            <span><i class="fas fa-clock"></i> 8 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card" data-reveal>
+        <div class="blog-card-img">
+          <img src="img/marrakech-souks.jpg" alt="Chefchaouen blue city travel guide" loading="lazy"/>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-category">Destinations</div>
+          <h3>Chefchaouen: Everything You Need to Know About Morocco's Blue City</h3>
+          <p>A complete guide to exploring the magical blue-painted streets of Chefchaouen in northern Morocco.</p>
+          <div class="blog-meta">
+            <span><i class="fas fa-calendar"></i> February 2025</span>
+            <span><i class="fas fa-clock"></i> 6 min read</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="blog-card" data-reveal>
+        <div class="blog-card-img">
+          <img src="img/essaouira-port.jpg" alt="Atlas Mountains trekking guide Morocco" loading="lazy"/>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-category">Adventure</div>
+          <h3>Atlas Mountains Trekking: Routes, Tips &amp; What to Expect</h3>
+          <p>Everything you need to know before hiking the magnificent Atlas Mountains, from easy walks to summit attempts.</p>
+          <div class="blog-meta">
+            <span><i class="fas fa-calendar"></i> January 2025</span>
+            <span><i class="fas fa-clock"></i> 10 min read</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="text-center" style="margin-top:2rem">
+      <a href="blog.html" class="btn btn-outline-gold btn-lg" data-i18n="blog_view_all">Read All Articles</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     CTA SECTION
+     ============================================ -->
+<section id="cta" class="section-pad" aria-label="Call to action">
+  <div class="container">
+    <div class="cta-inner" data-reveal>
+      <span class="section-label" style="color:var(--clr-primary-lt)">🌟 Start Your Journey</span>
+      <h2 data-i18n="cta_title">Ready for Your Moroccan Adventure?</h2>
+      <p data-i18n="cta_sub">Contact us today and let us create your perfect personalized Moroccan journey.</p>
+      <p style="font-size:.8rem;color:rgba(255,255,255,.5);margin-bottom:1.5rem" data-i18n="cta_free">Free personalized itinerary consultation</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-primary btn-lg" data-i18n="cta_book">Book Your Tour</a>
+        <a href="https://wa.me/212600000000?text=Hello%20Tours%20Roja%20Marruecos!%20I'd%20like%20to%20inquire%20about%20a%20Morocco%20tour." 
+           class="cta-whatsapp" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-whatsapp"></i>
+          <span data-i18n="cta_whatsapp">WhatsApp Us</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer id="footer" aria-label="Site footer">
+  <div class="container">
+    <div class="footer-top">
+      <!-- Brand -->
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <img src="img/logo.png" alt="RodoTours Logo" class="logo-img"/>
+          <div class="logo-text">
+            
+            
+          </div>
+        </a>
+        <p data-i18n="footer_desc">Your trusted Moroccan travel partner for authentic, personalized adventures across the Kingdom of Morocco.</p>
+        <div class="footer-social">
+          <a href="https://facebook.com/rodotours" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com/rodotours" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://tiktok.com/@rodotours" aria-label="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
+          <a href="#" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+          <a href="https://wa.me/212600000000" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4 data-i18n="footer_quick_links">Quick Links</h4>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-chevron-right"></i> <span data-i18n="nav_home">Home</span></a></li>
+          <li><a href="tours.html"><i class="fas fa-chevron-right"></i> <span data-i18n="nav_tours">Tours</span></a></li>
+          <li><a href="destinations.html"><i class="fas fa-chevron-right"></i> <span data-i18n="nav_destinations">Destinations</span></a></li>
+          <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> <span data-i18n="nav_gallery">Gallery</span></a></li>
+          <li><a href="testimonials.html"><i class="fas fa-chevron-right"></i> <span data-i18n="nav_testimonials">Testimonials</span></a></li>
+          <li><a href="blog.html"><i class="fas fa-chevron-right"></i> <span data-i18n="nav_blog">Blog</span></a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span data-i18n="nav_contact">Contact</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Tours -->
+      <div class="footer-col">
+        <h4 data-i18n="footer_tours">Our Tours</h4>
+        <ul>
+          <li><a href="tours.html"><i class="fas fa-chevron-right"></i> Marrakech to Merzouga</a></li>
+          <li><a href="tours.html"><i class="fas fa-chevron-right"></i> Imperial Cities Tour</a></li>
+          <li><a href="tours.html"><i class="fas fa-chevron-right"></i> Sahara Luxury Experience</a></li>
+          <li><a href="tours.html"><i class="fas fa-chevron-right"></i> Atlas Mountains Trek</a></li>
+          <li><a href="tours.html"><i class="fas fa-chevron-right"></i> Chefchaouen Tour</a></li>
+          <li><a href="tours.html"><i class="fas fa-chevron-right"></i> Morocco Grand Tour</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact & Newsletter -->
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone"></i>
+          <p>+212 600 000 000</p>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope"></i>
+          <p>info@rodotours.com</p>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fab fa-whatsapp"></i>
+          <p>+212 600 000 000</p>
+        </div>
+
+        <h4 style="margin-top:1.2rem" data-i18n="footer_newsletter">Newsletter</h4>
+        <p style="font-size:.8rem;margin-bottom:.6rem" data-i18n="footer_newsletter_sub">Get exclusive deals and Morocco travel tips.</p>
+        <form class="newsletter-form" style="display:flex;gap:.4rem">
+          <input type="email" name="newsletter_email" placeholder="Your email" 
+                 data-i18n-placeholder="footer_newsletter_placeholder"
+                 style="flex:1;padding:.5rem .8rem;border-radius:4px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-size:.82rem" required/>
+          <button type="submit" class="btn btn-primary btn-sm" data-i18n="footer_newsletter_btn">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> RodoTours. <span data-i18n="footer_rights">All rights reserved.</span> | 
+        <a href="#" data-i18n="footer_privacy">Privacy Policy</a> | 
+        <a href="#" data-i18n="footer_terms">Terms of Service</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================
+     BOOKING MODAL
+     ============================================ -->
+<div id="modal-overlay" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Booking modal">
+  <div class="modal">
+    <div class="modal-header">
+      <h3 data-i18n="modal_title">Book Your Tour</h3>
+      <button class="modal-close" aria-label="Close modal"><i class="fas fa-times"></i></button>
+    </div>
+    <form id="booking-form" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label data-i18n="contact_name">Full Name *</label>
+          <input type="text" name="bk_name" required placeholder="Your full name"/>
+        </div>
+        <div class="form-group">
+          <label data-i18n="contact_email">Email *</label>
+          <input type="email" name="bk_email" required placeholder="your@email.com"/>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label data-i18n="contact_phone">WhatsApp / Phone *</label>
+          <input type="tel" name="bk_phone" placeholder="+1 234 567 890"/>
+        </div>
+        <div class="form-group">
+          <label data-i18n="modal_tour">Select Tour</label>
+          <select name="bk_tour" id="modal-tour-select">
+            <option value="">Select a tour...</option>
+            <option value="marrakech-merzouga">Marrakech to Merzouga Desert</option>
+            <option value="imperial-cities">Imperial Cities Grand Tour</option>
+            <option value="atlas-mountains">Atlas Mountains Excursion</option>
+            <option value="sahara-luxury">Sahara Luxury Experience</option>
+            <option value="chefchaouen">Chefchaouen &amp; Rif Mountains</option>
+            <option value="grand-tour">Morocco Grand Tour</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label data-i18n="contact_date">Travel Date</label>
+          <input type="date" name="bk_date"/>
+        </div>
+        <div class="form-group">
+          <label data-i18n="contact_travelers">Travelers</label>
+          <select name="bk_travelers">
+            <option value="1">1 person</option>
+            <option value="2" selected>2 people</option>
+            <option value="3-5">3–5 people</option>
+            <option value="6-10">6–10 people</option>
+            <option value="10+">10+ people</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%" data-i18n="modal_book_btn">Confirm Booking Request</button>
+    </form>
+  </div>
+</div>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/212600000000?text=Hello%20Tours%20Roja%20Marruecos!" 
+   class="whatsapp-float" 
+   target="_blank" 
+   rel="noopener noreferrer"
+   aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Back to Top -->
+<button id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<!-- Scripts -->
+<script src="js/translations.js"></script>
+<script src="js/main.js"></script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
