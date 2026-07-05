@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://toursrojamarruecos.netlify.app/sitemap.xml
+Sitemap: https://www.beldiatours.com/sitemap.xml
