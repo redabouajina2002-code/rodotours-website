@@ -1,5 +1,5 @@
 /* ============================================
-   TOURS ROJA MARRUECOS - Main JavaScript
+   BELDIA TOURS - Main JavaScript
    ============================================ */
 
 document.addEventListener('DOMContentLoaded', () => {

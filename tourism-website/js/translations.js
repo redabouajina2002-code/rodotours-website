@@ -1,5 +1,5 @@
 /* ============================================
-   TOURS ROJA MARRUECOS - Translation System
+   BELDIA TOURS - Translation System
    Supports: English (en), Spanish (es), French (fr)
    ============================================ */
 
@@ -32,7 +32,7 @@ const translations = {
     // About
     about_label: "About Us",
     about_title: "Your Trusted Moroccan Travel Experts",
-    about_text1: "RodoTours is a premier Moroccan travel agency dedicated to providing authentic, memorable, and fully customized travel experiences. We are passionate local experts who know every corner of this magnificent country.",
+    about_text1: "BeldiaTours is a premier Moroccan travel agency dedicated to providing authentic, memorable, and fully customized travel experiences. We are passionate local experts who know every corner of this magnificent country.",
     about_text2: "From the golden dunes of the Sahara to the blue streets of Chefchaouen, from the imperial grandeur of Fes to the vibrant souks of Marrakech — we craft every journey with care, expertise, and genuine Moroccan hospitality.",
     about_years: "Years of Excellence",
     about_v1: "Local Expert Guides",
@@ -58,7 +58,7 @@ const translations = {
 
     // Why Choose Us
     why_label: "Why Choose Us",
-    why_title: "The RodoTours Difference",
+    why_title: "The BeldiaTours Difference",
     why_sub: "We go beyond ordinary tourism to deliver extraordinary Moroccan experiences.",
     why1_title: "Local Expert Guides",
     why1_text: "Born and raised in Morocco, our guides share authentic stories and hidden gems.",
@@ -169,7 +169,7 @@ const translations = {
     // About
     about_label: "Sobre Nosotros",
     about_title: "Tus Expertos de Confianza en Viajes a Marruecos",
-    about_text1: "RodoTours es una agencia de viajes marroquí líder dedicada a ofrecer experiencias de viaje auténticas, memorables y totalmente personalizadas. Somos expertos locales apasionados que conocen cada rincón de este magnífico país.",
+    about_text1: "BeldiaTours es una agencia de viajes marroquí líder dedicada a ofrecer experiencias de viaje auténticas, memorables y totalmente personalizadas. Somos expertos locales apasionados que conocen cada rincón de este magnífico país.",
     about_text2: "Desde las doradas dunas del Sahara hasta las calles azules de Chefchaouen, desde la grandeza imperial de Fez hasta los vibrantes zocos de Marrakech — creamos cada viaje con cuidado, experiencia y genuina hospitalidad marroquí.",
     about_years: "Años de Excelencia",
     about_v1: "Guías Expertos Locales",
@@ -195,7 +195,7 @@ const translations = {
 
     // Why Choose Us
     why_label: "¿Por Qué Elegirnos?",
-    why_title: "La Diferencia de RodoTours",
+    why_title: "La Diferencia de BeldiaTours",
     why_sub: "Vamos más allá del turismo ordinario para ofrecer experiencias extraordinarias en Marruecos.",
     why1_title: "Guías Expertos Locales",
     why1_text: "Nacidos y criados en Marruecos, nuestros guías comparten historias auténticas y lugares únicos.",
@@ -306,7 +306,7 @@ const translations = {
     // About
     about_label: "À Propos",
     about_title: "Vos Experts de Confiance pour le Maroc",
-    about_text1: "RodoTours est une agence de voyage marocaine de premier plan, dédiée à offrir des expériences de voyage authentiques, mémorables et entièrement personnalisées. Nous sommes des experts locaux passionnés qui connaissent chaque recoin de ce magnifique pays.",
+    about_text1: "BeldiaTours est une agence de voyage marocaine de premier plan, dédiée à offrir des expériences de voyage authentiques, mémorables et entièrement personnalisées. Nous sommes des experts locaux passionnés qui connaissent chaque recoin de ce magnifique pays.",
     about_text2: "Des dunes dorées du Sahara aux ruelles bleues de Chefchaouen, de la grandeur impériale de Fès aux souks animés de Marrakech — nous créons chaque voyage avec soin, expertise et hospitalité marocaine authentique.",
     about_years: "Ans d'Excellence",
     about_v1: "Guides Experts Locaux",
@@ -332,7 +332,7 @@ const translations = {
 
     // Why Choose Us
     why_label: "Pourquoi Nous Choisir",
-    why_title: "La Différence RodoTours",
+    why_title: "La Différence BeldiaTours",
     why_sub: "Nous allons au-delà du tourisme ordinaire pour offrir des expériences marocaines extraordinaires.",
     why1_title: "Guides Experts Locaux",
     why1_text: "Nés et élevés au Maroc, nos guides partagent des histoires authentiques et des joyaux cachés.",
