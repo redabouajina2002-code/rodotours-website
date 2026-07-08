@@ -1,462 +1,255 @@
-/* ============================================
-   TOURS ROJA MARRUECOS - Translation System
-   Supports: English (en), Spanish (es), French (fr)
-   ============================================ */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Morocco Travel Blog – BeldiaTours</title>
+  <meta name="description" content="Morocco travel tips, guides, culture, food and itineraries from the experts at BeldiaTours."/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900\&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400\&family=Montserrat:wght@300;400;500;600;700\&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
 
-const translations = {
-  en: {
-    // Navigation
-    nav_home: "Home",
-    nav_tours: "Tours",
-    nav_destinations: "Destinations",
-    nav_gallery: "Gallery",
-    nav_testimonials: "Testimonials",
-    nav_blog: "Blog",
-    nav_contact: "Contact",
-    nav_book: "Book Now",
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="img/beldia-logo.png" alt="BeldiaTours Logo" class="logo-img"/>
+      <div class="logo-text"></div>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" data-i18n="nav_home">Home</a>
+      <a href="tours.html" data-i18n="nav_tours">Tours</a>
+      <a href="destinations.html" data-i18n="nav_destinations">Destinations</a>
+      <a href="gallery.html" data-i18n="nav_gallery">Gallery</a>
+      <a href="testimonials.html" data-i18n="nav_testimonials">Testimonials</a>
+      <a href="blog.html" data-i18n="nav_blog">Blog</a>
+      <a href="contact.html" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+      <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="nav_book">Book Now</a>
+    </div>
+    <button class="nav-toggle"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-nav">
+  <a href="index.html" data-i18n="nav_home">Home</a>
+  <a href="tours.html" data-i18n="nav_tours">Tours</a>
+  <a href="destinations.html" data-i18n="nav_destinations">Destinations</a>
+  <a href="gallery.html" data-i18n="nav_gallery">Gallery</a>
+  <a href="testimonials.html" data-i18n="nav_testimonials">Testimonials</a>
+  <a href="blog.html" data-i18n="nav_blog">Blog</a>
+  <a href="contact.html" data-i18n="nav_contact">Contact</a>
+  <a href="contact.html" class="btn btn-primary" data-i18n="nav_book">Book Now</a>
+</div>
 
-    // Hero
-    hero_badge: "✨ Authentic Moroccan Experiences",
-    hero_title: "Discover the Magic of",
-    hero_title_accent: "Morocco",
-    hero_sub: "Explore ancient medinas, golden deserts, and majestic mountains with your trusted local guide. Personalized tours crafted for unforgettable memories.",
-    hero_cta_book: "Book Your Tour",
-    hero_cta_contact: "Contact Us",
+<!-- Page Header -->
+<header class="page-header" style="background-image: url('img/sahara-camel-sunset.jpg')">
+  <div class="container">
+    <div class="page-header-content">
+      <nav class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span data-i18n="nav_blog">Blog</span></nav>
+      <h1 data-i18n="blog_title">Morocco Travel Guides &amp; Tips</h1>
+      <p style="color:rgba(255,255,255,.75);margin:0">Expert insights from local Moroccan guides</p>
+    </div>
+  </div>
+</header>
 
-    // Stats
-    stat_tours: "Tours Completed",
-    stat_countries: "Countries Served",
-    stat_guests: "Happy Travelers",
-    stat_years: "Years Experience",
+<main>
+  <div class="section-pad">
+    <div class="container">
 
-    // About
-    about_label: "About Us",
-    about_title: "Your Trusted Moroccan Travel Experts",
-    about_text1: "BeldiaTours is a premier Moroccan travel agency dedicated to providing authentic, memorable, and fully customized travel experiences. We are passionate local experts who know every corner of this magnificent country.",
-    about_text2: "From the golden dunes of the Sahara to the blue streets of Chefchaouen, from the imperial grandeur of Fes to the vibrant souks of Marrakech — we craft every journey with care, expertise, and genuine Moroccan hospitality.",
-    about_years: "Years of Excellence",
-    about_v1: "Local Expert Guides",
-    about_v2: "Personalized Service",
-    about_v3: "Safe & Reliable",
-    about_v4: "Transparent Pricing",
-    about_v5: "24/7 Support",
-    about_v6: "Multilingual Team",
-    about_read_more: "Learn More About Us",
+      <!-- Featured Post -->
+      <article class="blog-card blog-hero-card" style="margin-bottom:2.5rem;display:grid;grid-template-columns:1fr 1fr;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md)" data-reveal>
+        <div style="height:400px;overflow:hidden">
+          <img src="img/marrakech-souks.jpg" alt="Best time to visit Morocco Sahara" style="width:100%;height:100%;object-fit:cover" loading="lazy"/>
+        </div>
+        <div style="padding:40px;background:white;display:flex;flex-direction:column;justify-content:center">
+          <div class="blog-category">⭐ Featured · Travel Tips</div>
+          <h2 style="font-size:1.6rem;margin:.5rem 0 1rem;line-height:1.3">The Ultimate Guide to Morocco: When to Go, What to See &amp; How to Get Around</h2>
+          <p style="font-size:.9rem;margin-bottom:1.5rem">Everything a first-time visitor needs to know about planning the perfect Morocco trip – from visas and currency to the best cities and how to navigate the medinas.</p>
+          <div class="blog-meta" style="margin-bottom:1.5rem">
+            <span><i class="fas fa-calendar"></i> April 2025</span>
+            <span><i class="fas fa-clock"></i> 12 min read</span>
+            <span><i class="fas fa-eye"></i> 4,200 views</span>
+          </div>
+          <a href="#" class="btn btn-primary" data-i18n="blog_read_more">Read Full Article</a>
+        </div>
+      </article>
 
-    // Featured Tours
-    tours_label: "Our Tours",
-    tours_title: "Most Popular Experiences",
-    tours_sub: "Hand-picked tours that showcase the very best of Morocco's culture, landscapes, and traditions.",
-    tours_view_all: "View All Tours",
-    tour_days: "days",
-    tour_from: "From",
-    tour_quote: "Request Quote",
-    tour_book: "Book Now",
-    tour_duration: "Duration",
-    tour_difficulty: "Difficulty",
-    tour_max_group: "Max Group",
+      <!-- Blog Grid -->
+      <div class="text-center" style="margin-bottom:2rem" data-reveal>
+        <span class="section-label" data-i18n="blog_label">Travel Blog</span>
+        <h2 class="section-title">Latest Articles</h2>
+        <div class="divider centered"></div>
+      </div>
 
-    // Why Choose Us
-    why_label: "Why Choose Us",
-    why_title: "The BeldiaTours Difference",
-    why_sub: "We go beyond ordinary tourism to deliver extraordinary Moroccan experiences.",
-    why1_title: "Local Expert Guides",
-    why1_text: "Born and raised in Morocco, our guides share authentic stories and hidden gems.",
-    why2_title: "Fully Customized",
-    why2_text: "Every tour tailored to your interests, pace, and preferences.",
-    why3_title: "Safe Travel",
-    why3_text: "Licensed, insured, and committed to your safety throughout every journey.",
-    why4_title: "Comfortable Transport",
-    why4_text: "Air-conditioned vehicles, experienced drivers, premium comfort.",
-    why5_title: "Multilingual Team",
-    why5_text: "Fluent in English, Spanish, French, Arabic, and Berber.",
-    why6_title: "Transparent Pricing",
-    why6_text: "No hidden fees, no surprises. Clear pricing from the start.",
-    why7_title: "24/7 Support",
-    why7_text: "Round-the-clock assistance before, during, and after your trip.",
-    why8_title: "Handpicked Hotels",
-    why8_text: "Carefully selected riads and hotels for authentic comfort.",
+      <div class="blog-page-grid">
 
-    // Destinations
-    dest_label: "Destinations",
-    dest_title: "Explore Morocco's Finest",
-    dest_view_all: "Explore All Destinations",
+        <article class="blog-card" data-reveal>
+          <div class="blog-card-img">
+            <img src="img/ait-benhaddou.jpg" alt="Chefchaouen Blue City Guide" loading="lazy"/>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-category">🔵 Destinations</div>
+            <h3>Chefchaouen: Everything You Need to Know About Morocco's Blue City</h3>
+            <p>A complete guide to exploring the magical blue-painted streets, the best photo spots, where to stay, eat, and what to do in Chefchaouen.</p>
+            <div class="blog-meta">
+              <span><i class="fas fa-calendar"></i> March 2025</span>
+              <span><i class="fas fa-clock"></i> 8 min read</span>
+            </div>
+          </div>
+        </article>
 
-    // Testimonials
-    test_label: "Testimonials",
-    test_title: "What Travelers Say",
-    test_sub: "Join thousands of happy travelers who discovered Morocco with us.",
-    test_view_all: "Read All Reviews",
+        <article class="blog-card" data-reveal>
+          <div class="blog-card-img">
+            <img src="img/sahara-camel-sunset.jpg" alt="Atlas Mountains Trekking Guide" loading="lazy"/>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-category">🏔️ Adventure</div>
+            <h3>Atlas Mountains Trekking: Routes, Tips &amp; What to Expect</h3>
+            <p>Everything you need before hiking the magnificent Atlas Mountains – from beginner-friendly day hikes to the epic 3-day Toubkal summit trek.</p>
+            <div class="blog-meta">
+              <span><i class="fas fa-calendar"></i> February 2025</span>
+              <span><i class="fas fa-clock"></i> 10 min read</span>
+            </div>
+          </div>
+        </article>
 
-    // CTA
-    cta_title: "Ready for Your Moroccan Adventure?",
-    cta_sub: "Contact us today and let us create your perfect personalized Moroccan journey.",
-    cta_book: "Book Your Tour",
-    cta_whatsapp: "WhatsApp Us",
-    cta_free: "Free personalized itinerary consultation",
+        <article class="blog-card" data-reveal>
+          <div class="blog-card-img">
+            <img src="img/essaouira-port.jpg" alt="Fes Medina Travel Guide" loading="lazy"/>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-category">🏛️ Culture</div>
+            <h3>Navigating Fes: A Guide to the World's Most Ancient Living City</h3>
+            <p>How to explore Fes el-Bali's 9,000 alleyways without getting lost – the best sights, local foods, and hidden gems of Morocco's spiritual capital.</p>
+            <div class="blog-meta">
+              <span><i class="fas fa-calendar"></i> January 2025</span>
+              <span><i class="fas fa-clock"></i> 9 min read</span>
+            </div>
+          </div>
+        </article>
 
-    // Blog
-    blog_label: "Travel Blog",
-    blog_title: "Morocco Travel Guides & Tips",
-    blog_view_all: "Read All Articles",
-    blog_read_more: "Read More",
+        <article class="blog-card" data-reveal>
+          <div class="blog-card-img">
+            <img src="img/jemaa-el-fna.jpg" alt="Sahara Desert Night Stars Morocco" loading="lazy"/>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-category">🌟 Experiences</div>
+            <h3>A Night in the Sahara: What It's Really Like to Sleep Under the Stars</h3>
+            <p>Our firsthand account of a magical night in a traditional Berber desert camp – the sounds, smells, stars, and the indescribable sunrise over the golden dunes.</p>
+            <div class="blog-meta">
+              <span><i class="fas fa-calendar"></i> December 2024</span>
+              <span><i class="fas fa-clock"></i> 7 min read</span>
+            </div>
+          </div>
+        </article>
 
-    // Footer
-    footer_desc: "Your trusted Moroccan travel partner for authentic, personalized adventures across the Kingdom of Morocco.",
-    footer_quick_links: "Quick Links",
-    footer_tours: "Our Tours",
-    footer_newsletter: "Newsletter",
-    footer_newsletter_sub: "Get exclusive deals and Morocco travel tips.",
-    footer_newsletter_placeholder: "Your email address",
-    footer_newsletter_btn: "Subscribe",
-    footer_rights: "All rights reserved.",
-    footer_privacy: "Privacy Policy",
-    footer_terms: "Terms of Service",
+        <article class="blog-card" data-reveal>
+          <div class="blog-card-img">
+            <img src="img/casablanca-tajine.jpg" alt="Morocco Food Guide Traditional Tagine Couscous" loading="lazy"/>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-category">🍽️ Food & Culture</div>
+            <h3>The Essential Moroccan Food Guide: 20 Dishes You Must Try</h3>
+            <p>From fragrant tagines and fluffy couscous to sweet pastilla and mint tea ceremonies – your complete guide to Morocco's incredible culinary traditions.</p>
+            <div class="blog-meta">
+              <span><i class="fas fa-calendar"></i> November 2024</span>
+              <span><i class="fas fa-clock"></i> 11 min read</span>
+            </div>
+          </div>
+        </article>
 
-    // Contact
-    contact_label: "Get In Touch",
-    contact_title: "Plan Your Dream Morocco Trip",
-    contact_name: "Full Name",
-    contact_email: "Email Address",
-    contact_phone: "Phone / WhatsApp",
-    contact_tour: "Tour of Interest",
-    contact_date: "Preferred Travel Date",
-    contact_travelers: "Number of Travelers",
-    contact_message: "Your Message",
-    contact_send: "Send Message",
-    contact_sending: "Sending...",
-    contact_success: "Message sent! We'll reply within 24 hours.",
-    contact_error: "Please fill all required fields.",
+        <article class="blog-card" data-reveal>
+          <div class="blog-card-img">
+            <img src="img/hercules-cave-coast.jpg" alt="Ait Ben Haddou Film Location Morocco" loading="lazy"/>
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-category">🎬 Film &amp; History</div>
+            <h3>Ait Ben Haddou: Hollywood's Favorite Moroccan Location</h3>
+            <p>Game of Thrones, Gladiator, Lawrence of Arabia – discover the incredible UNESCO kasbah that has captivated the world's greatest filmmakers for decades.</p>
+            <div class="blog-meta">
+              <span><i class="fas fa-calendar"></i> October 2024</span>
+              <span><i class="fas fa-clock"></i> 6 min read</span>
+            </div>
+          </div>
+        </article>
 
-    // Booking Modal
-    modal_title: "Book Your Tour",
-    modal_tour: "Selected Tour",
-    modal_book_btn: "Confirm Booking Request",
+      </div>
 
-    // General
-    per_person: "per person",
-    read_more: "Read More",
-    view_details: "View Details",
-    loading: "Loading...",
-    error_generic: "Something went wrong. Please try again.",
-  },
+      <!-- Newsletter CTA -->
+      <div style="background:var(--clr-primary);border-radius:var(--radius-lg);padding:40px;text-align:center;margin-top:3rem;color:white" data-reveal>
+        <h3 style="color:white;margin-bottom:.5rem">Get Morocco Travel Tips Straight to Your Inbox</h3>
+        <p style="color:rgba(255,255,255,.85);max-width:500px;margin:0 auto 1.5rem">Subscribe to our newsletter for exclusive travel tips, destination guides, and special tour offers.</p>
+        <form class="newsletter-form" style="display:flex;gap:.5rem;max-width:400px;margin:0 auto" novalidate>
+          <input type="email" name="newsletter_email" placeholder="Your email address" required
+                 style="flex:1;padding:.75rem 1rem;border-radius:50px;border:none;font-size:.9rem;color:var(--clr-text)"/>
+          <button type="submit" class="btn" style="background:var(--clr-dark);color:white;border-radius:50px;padding:.75rem 1.4rem;font-weight:600">Subscribe</button>
+        </form>
+      </div>
 
-  es: {
-    // Navigation
-    nav_home: "Inicio",
-    nav_tours: "Tours",
-    nav_destinations: "Destinos",
-    nav_gallery: "Galería",
-    nav_testimonials: "Testimonios",
-    nav_blog: "Blog",
-    nav_contact: "Contacto",
-    nav_book: "Reservar Ahora",
+    </div>
+  </div>
+</main>
 
-    // Hero
-    hero_badge: "✨ Experiencias Marroquíes Auténticas",
-    hero_title: "Descubre la Magia de",
-    hero_title_accent: "Marruecos",
-    hero_sub: "Explora antiguas medinas, desiertos dorados y majestuosas montañas con tu guía local de confianza. Tours personalizados para recuerdos inolvidables.",
-    hero_cta_book: "Reserva tu Tour",
-    hero_cta_contact: "Contáctanos",
+<!-- Footer -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <img src="img/beldia-logo.png" alt="BeldiaTours Logo" class="logo-img"/>
+          <div class="logo-text"></div>
+        </a>
+        <p>Your trusted Moroccan travel partner for authentic, personalized adventures.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-tripadvisor"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+          <li><a href="tours.html"><i class="fas fa-chevron-right"></i> Tours</a></li>
+          <li><a href="destinations.html"><i class="fas fa-chevron-right"></i> Destinations</a></li>
+          <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><p>+212 600 000 000</p></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><p>info@beldiatours.com</p></div>
+      </div>
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <form class="newsletter-form" style="display:flex;flex-direction:column;gap:.4rem">
+          <input type="email" name="newsletter_email" placeholder="Your email" style="padding:.5rem .8rem;border-radius:4px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-size:.82rem" required/>
+          <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> BeldiaTours. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
 
-    // Stats
-    stat_tours: "Tours Realizados",
-    stat_countries: "Países Atendidos",
-    stat_guests: "Viajeros Felices",
-    stat_years: "Años de Experiencia",
+<a href="https://wa.me/212600000000" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+<button id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
 
-    // About
-    about_label: "Sobre Nosotros",
-    about_title: "Tus Expertos de Confianza en Viajes a Marruecos",
-    about_text1: "BeldiaTours es una agencia de viajes marroquí líder dedicada a ofrecer experiencias de viaje auténticas, memorables y totalmente personalizadas. Somos expertos locales apasionados que conocen cada rincón de este magnífico país.",
-    about_text2: "Desde las doradas dunas del Sahara hasta las calles azules de Chefchaouen, desde la grandeza imperial de Fez hasta los vibrantes zocos de Marrakech — creamos cada viaje con cuidado, experiencia y genuina hospitalidad marroquí.",
-    about_years: "Años de Excelencia",
-    about_v1: "Guías Expertos Locales",
-    about_v2: "Servicio Personalizado",
-    about_v3: "Seguro y Confiable",
-    about_v4: "Precios Transparentes",
-    about_v5: "Soporte 24/7",
-    about_v6: "Equipo Multilingüe",
-    about_read_more: "Más Sobre Nosotros",
-
-    // Featured Tours
-    tours_label: "Nuestros Tours",
-    tours_title: "Las Experiencias Más Populares",
-    tours_sub: "Tours cuidadosamente seleccionados que muestran lo mejor de la cultura, paisajes y tradiciones de Marruecos.",
-    tours_view_all: "Ver Todos los Tours",
-    tour_days: "días",
-    tour_from: "Desde",
-    tour_quote: "Solicitar Precio",
-    tour_book: "Reservar Ahora",
-    tour_duration: "Duración",
-    tour_difficulty: "Dificultad",
-    tour_max_group: "Grupo Máximo",
-
-    // Why Choose Us
-    why_label: "¿Por Qué Elegirnos?",
-    why_title: "La Diferencia de BeldiaTours",
-    why_sub: "Vamos más allá del turismo ordinario para ofrecer experiencias extraordinarias en Marruecos.",
-    why1_title: "Guías Expertos Locales",
-    why1_text: "Nacidos y criados en Marruecos, nuestros guías comparten historias auténticas y lugares únicos.",
-    why2_title: "Totalmente Personalizado",
-    why2_text: "Cada tour adaptado a tus intereses, ritmo y preferencias.",
-    why3_title: "Viaje Seguro",
-    why3_text: "Con licencia, asegurado y comprometido con tu seguridad en cada trayecto.",
-    why4_title: "Transporte Cómodo",
-    why4_text: "Vehículos con aire acondicionado, conductores experimentados, máximo confort.",
-    why5_title: "Equipo Multilingüe",
-    why5_text: "Fluidos en inglés, español, francés, árabe y bereber.",
-    why6_title: "Precios Transparentes",
-    why6_text: "Sin cargos ocultos, sin sorpresas. Precios claros desde el inicio.",
-    why7_title: "Soporte 24/7",
-    why7_text: "Asistencia continua antes, durante y después de tu viaje.",
-    why8_title: "Hoteles Seleccionados",
-    why8_text: "Riads y hoteles cuidadosamente seleccionados para el máximo confort.",
-
-    // Destinations
-    dest_label: "Destinos",
-    dest_title: "Explora lo Mejor de Marruecos",
-    dest_view_all: "Ver Todos los Destinos",
-
-    // Testimonials
-    test_label: "Testimonios",
-    test_title: "Lo Que Dicen los Viajeros",
-    test_sub: "Únete a miles de viajeros felices que descubrieron Marruecos con nosotros.",
-    test_view_all: "Leer Todas las Reseñas",
-
-    // CTA
-    cta_title: "¿Listo para tu Aventura en Marruecos?",
-    cta_sub: "Contáctanos hoy y te crearemos el itinerario marroquí perfecto y personalizado.",
-    cta_book: "Reserva tu Tour",
-    cta_whatsapp: "WhatsApp",
-    cta_free: "Consulta de itinerario personalizado gratis",
-
-    // Blog
-    blog_label: "Blog de Viajes",
-    blog_title: "Guías y Consejos de Viaje por Marruecos",
-    blog_view_all: "Leer Todos los Artículos",
-    blog_read_more: "Leer Más",
-
-    // Footer
-    footer_desc: "Tu agencia de viajes de confianza para aventuras auténticas y personalizadas por el Reino de Marruecos.",
-    footer_quick_links: "Enlaces Rápidos",
-    footer_tours: "Nuestros Tours",
-    footer_newsletter: "Newsletter",
-    footer_newsletter_sub: "Recibe ofertas exclusivas y consejos de viaje por Marruecos.",
-    footer_newsletter_placeholder: "Tu correo electrónico",
-    footer_newsletter_btn: "Suscribirse",
-    footer_rights: "Todos los derechos reservados.",
-    footer_privacy: "Política de Privacidad",
-    footer_terms: "Términos de Servicio",
-
-    // Contact
-    contact_label: "Ponte en Contacto",
-    contact_title: "Planifica tu Viaje Soñado a Marruecos",
-    contact_name: "Nombre Completo",
-    contact_email: "Correo Electrónico",
-    contact_phone: "Teléfono / WhatsApp",
-    contact_tour: "Tour de Interés",
-    contact_date: "Fecha de Viaje Preferida",
-    contact_travelers: "Número de Viajeros",
-    contact_message: "Tu Mensaje",
-    contact_send: "Enviar Mensaje",
-    contact_sending: "Enviando...",
-    contact_success: "¡Mensaje enviado! Responderemos en 24 horas.",
-    contact_error: "Por favor completa todos los campos requeridos.",
-
-    // Booking Modal
-    modal_title: "Reservar Tour",
-    modal_tour: "Tour Seleccionado",
-    modal_book_btn: "Confirmar Solicitud",
-
-    // General
-    per_person: "por persona",
-    read_more: "Leer Más",
-    view_details: "Ver Detalles",
-    loading: "Cargando...",
-    error_generic: "Algo salió mal. Por favor inténtalo de nuevo.",
-  },
-
-  fr: {
-    // Navigation
-    nav_home: "Accueil",
-    nav_tours: "Circuits",
-    nav_destinations: "Destinations",
-    nav_gallery: "Galerie",
-    nav_testimonials: "Témoignages",
-    nav_blog: "Blog",
-    nav_contact: "Contact",
-    nav_book: "Réserver",
-
-    // Hero
-    hero_badge: "✨ Expériences Marocaines Authentiques",
-    hero_title: "Découvrez la Magie du",
-    hero_title_accent: "Maroc",
-    hero_sub: "Explorez les anciennes médinas, les déserts dorés et les montagnes majestueuses avec votre guide local de confiance. Circuits personnalisés pour des souvenirs inoubliables.",
-    hero_cta_book: "Réserver votre Circuit",
-    hero_cta_contact: "Nous Contacter",
-
-    // Stats
-    stat_tours: "Circuits Réalisés",
-    stat_countries: "Pays Desservis",
-    stat_guests: "Voyageurs Heureux",
-    stat_years: "Ans d'Expérience",
-
-    // About
-    about_label: "À Propos",
-    about_title: "Vos Experts de Confiance pour le Maroc",
-    about_text1: "BeldiaTours est une agence de voyage marocaine de premier plan, dédiée à offrir des expériences de voyage authentiques, mémorables et entièrement personnalisées. Nous sommes des experts locaux passionnés qui connaissent chaque recoin de ce magnifique pays.",
-    about_text2: "Des dunes dorées du Sahara aux ruelles bleues de Chefchaouen, de la grandeur impériale de Fès aux souks animés de Marrakech — nous créons chaque voyage avec soin, expertise et hospitalité marocaine authentique.",
-    about_years: "Ans d'Excellence",
-    about_v1: "Guides Experts Locaux",
-    about_v2: "Service Personnalisé",
-    about_v3: "Sûr et Fiable",
-    about_v4: "Prix Transparents",
-    about_v5: "Support 24/7",
-    about_v6: "Équipe Multilingue",
-    about_read_more: "En Savoir Plus",
-
-    // Featured Tours
-    tours_label: "Nos Circuits",
-    tours_title: "Les Expériences Les Plus Populaires",
-    tours_sub: "Circuits sélectionnés avec soin qui mettent en valeur le meilleur de la culture, des paysages et des traditions marocaines.",
-    tours_view_all: "Voir Tous les Circuits",
-    tour_days: "jours",
-    tour_from: "À partir de",
-    tour_quote: "Demander un Devis",
-    tour_book: "Réserver",
-    tour_duration: "Durée",
-    tour_difficulty: "Difficulté",
-    tour_max_group: "Groupe Max",
-
-    // Why Choose Us
-    why_label: "Pourquoi Nous Choisir",
-    why_title: "La Différence BeldiaTours",
-    why_sub: "Nous allons au-delà du tourisme ordinaire pour offrir des expériences marocaines extraordinaires.",
-    why1_title: "Guides Experts Locaux",
-    why1_text: "Nés et élevés au Maroc, nos guides partagent des histoires authentiques et des joyaux cachés.",
-    why2_title: "Entièrement Personnalisé",
-    why2_text: "Chaque circuit adapté à vos centres d'intérêt, votre rythme et vos préférences.",
-    why3_title: "Voyage Sûr",
-    why3_text: "Agréé, assuré et engagé pour votre sécurité tout au long du voyage.",
-    why4_title: "Transport Confortable",
-    why4_text: "Véhicules climatisés, chauffeurs expérimentés, confort premium.",
-    why5_title: "Équipe Multilingue",
-    why5_text: "Courants en anglais, espagnol, français, arabe et berbère.",
-    why6_title: "Prix Transparents",
-    why6_text: "Pas de frais cachés, pas de surprises. Tarifs clairs dès le début.",
-    why7_title: "Support 24/7",
-    why7_text: "Assistance continue avant, pendant et après votre voyage.",
-    why8_title: "Hôtels Sélectionnés",
-    why8_text: "Riads et hôtels soigneusement choisis pour un confort authentique.",
-
-    // Destinations
-    dest_label: "Destinations",
-    dest_title: "Explorez le Meilleur du Maroc",
-    dest_view_all: "Explorer Toutes les Destinations",
-
-    // Testimonials
-    test_label: "Témoignages",
-    test_title: "Ce que Disent les Voyageurs",
-    test_sub: "Rejoignez des milliers de voyageurs heureux qui ont découvert le Maroc avec nous.",
-    test_view_all: "Lire Tous les Avis",
-
-    // CTA
-    cta_title: "Prêt pour votre Aventure Marocaine?",
-    cta_sub: "Contactez-nous aujourd'hui et laissez-nous créer votre parfait voyage personnalisé au Maroc.",
-    cta_book: "Réserver votre Circuit",
-    cta_whatsapp: "WhatsApp",
-    cta_free: "Consultation d'itinéraire personnalisé gratuite",
-
-    // Blog
-    blog_label: "Blog Voyage",
-    blog_title: "Guides et Conseils de Voyage au Maroc",
-    blog_view_all: "Lire Tous les Articles",
-    blog_read_more: "Lire Plus",
-
-    // Footer
-    footer_desc: "Votre partenaire de voyage marocain de confiance pour des aventures authentiques et personnalisées à travers le Royaume du Maroc.",
-    footer_quick_links: "Liens Rapides",
-    footer_tours: "Nos Circuits",
-    footer_newsletter: "Newsletter",
-    footer_newsletter_sub: "Recevez des offres exclusives et des conseils de voyage au Maroc.",
-    footer_newsletter_placeholder: "Votre adresse e-mail",
-    footer_newsletter_btn: "S'abonner",
-    footer_rights: "Tous droits réservés.",
-    footer_privacy: "Politique de Confidentialité",
-    footer_terms: "Conditions d'Utilisation",
-
-    // Contact
-    contact_label: "Prendre Contact",
-    contact_title: "Planifiez votre Voyage de Rêve au Maroc",
-    contact_name: "Nom Complet",
-    contact_email: "Adresse E-mail",
-    contact_phone: "Téléphone / WhatsApp",
-    contact_tour: "Circuit d'Intérêt",
-    contact_date: "Date de Voyage Préférée",
-    contact_travelers: "Nombre de Voyageurs",
-    contact_message: "Votre Message",
-    contact_send: "Envoyer le Message",
-    contact_sending: "Envoi en cours...",
-    contact_success: "Message envoyé ! Nous répondrons dans les 24 heures.",
-    contact_error: "Veuillez remplir tous les champs requis.",
-
-    // Booking Modal
-    modal_title: "Réserver votre Circuit",
-    modal_tour: "Circuit Sélectionné",
-    modal_book_btn: "Confirmer la Demande",
-
-    // General
-    per_person: "par personne",
-    read_more: "Lire Plus",
-    view_details: "Voir les Détails",
-    loading: "Chargement...",
-    error_generic: "Une erreur s'est produite. Veuillez réessayer.",
-  }
-};
-
-// Current language state
-let currentLang = localStorage.getItem('trm_lang') || 'en';
-
-function t(key) {
-  return (translations[currentLang] && translations[currentLang][key]) 
-    || translations['en'][key] 
-    || key;
-}
-
-function setLanguage(lang) {
-  if (!translations[lang]) return;
-  currentLang = lang;
-  localStorage.setItem('trm_lang', lang);
-  applyTranslations();
-  updateLangUI();
-}
-
-function applyTranslations() {
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    const attr = el.getAttribute('data-i18n-attr');
-    if (attr) {
-      el.setAttribute(attr, t(key));
-    } else {
-      el.innerHTML = t(key);
-    }
-  });
-  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-    el.setAttribute('placeholder', t(el.getAttribute('data-i18n-placeholder')));
-  });
-}
-
-function updateLangUI() {
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.lang === currentLang);
-  });
-  document.documentElement.lang = currentLang;
-}
-
-// Initialize on load
-document.addEventListener('DOMContentLoaded', () => {
-  applyTranslations();
-  updateLangUI();
-});
+<script src="js/translations.js"></script>
+<script src="js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
