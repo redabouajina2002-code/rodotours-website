@@ -44,9 +44,10 @@ function initNav() {
 
   // Hamburger toggle
   toggle?.addEventListener('click', () => {
-    mobileNav?.classList.toggle('open');
+    const isOpen = mobileNav?.classList.toggle('open');
+    if (mobileNav) mobileNav.style.display = isOpen ? 'flex' : 'none';
     const spans = toggle.querySelectorAll('span');
-    if (mobileNav?.classList.contains('open')) {
+    if (isOpen) {
       spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
       spans[1].style.opacity = '0';
       spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
@@ -57,7 +58,10 @@ function initNav() {
 
   // Close mobile nav on link click
   mobileNav?.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => mobileNav.classList.remove('open'));
+    a.addEventListener('click', () => {
+      mobileNav.classList.remove('open');
+      mobileNav.style.display = 'none';
+    });
   });
 
   // Language buttons
@@ -462,3 +466,27 @@ if ('IntersectionObserver' in window) {
   }, { rootMargin: '200px' });
   lazyImgs.forEach(img => imgObserver.observe(img));
 }
+
+/* ============================================
+   ITINERARY ACCORDIONS
+   ============================================ */
+function initItinerary() {
+  document.querySelectorAll('.itinerary-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const body = header.nextElementSibling;
+      const isOpen = body.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.itinerary-body').forEach(b => b.classList.remove('open'));
+      document.querySelectorAll('.itinerary-header').forEach(h => h.classList.remove('open'));
+      // Open clicked if it was closed
+      if (!isOpen) {
+        body.classList.add('open');
+        header.classList.add('open');
+      }
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (document.querySelector('.itinerary-header')) initItinerary();
+});
