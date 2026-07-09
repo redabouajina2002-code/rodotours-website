@@ -8,6 +8,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900\&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400\&family=Montserrat:wght@300;400;500;600;700\&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="css/style.css"/>
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init({ publicKey: "o1zypBZCC6ohDqn3J" });
+    })();
+  </script>
 </head>
 <body>
 
@@ -386,6 +393,83 @@
 
 <script src="js/translations.js"></script>
 <script src="js/main.js"></script>
+<script>
+// ============================================
+// EMAILJS CONTACT FORM
+// ============================================
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const btn = this.querySelector('button[type="submit"]');
+  const originalText = btn.innerHTML;
+
+  // Validate consent
+  if (!document.getElementById('cf-consent').checked) {
+    showFormMessage('Please agree to our privacy policy to continue.', 'error');
+    return;
+  }
+
+  // Show loading state
+  btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+  btn.disabled = true;
+
+  // Collect form data
+  const templateParams = {
+    from_name:    document.getElementById('cf-name').value,
+    from_email:   document.getElementById('cf-email').value,
+    phone:        document.getElementById('cf-phone').value || 'Not provided',
+    country:      document.getElementById('cf-country').value || 'Not provided',
+    tour:         document.getElementById('cf-tour').value || 'Not specified',
+    travel_date:  document.getElementById('cf-date').value || 'Not specified',
+    travelers:    document.getElementById('cf-travelers').value,
+    budget:       document.getElementById('cf-budget').value || 'Not specified',
+    message:      document.getElementById('cf-message').value,
+    to_email:     'info@beldiatours.com',
+    reply_to:     document.getElementById('cf-email').value,
+  };
+
+  // Send via EmailJS
+  emailjs.send('service_z25cafa', 'template_j28g8sg', templateParams)
+    .then(function() {
+      btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+      btn.style.background = '#25a244';
+      showFormMessage('✅ Thank you! We will contact you within 24 hours at ' + templateParams.from_email, 'success');
+      document.getElementById('contact-form').reset();
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 4000);
+    }, function(error) {
+      btn.innerHTML = originalText;
+      btn.disabled = false;
+      showFormMessage('❌ Something went wrong. Please contact us directly on WhatsApp: +212 6 89 38 60 63', 'error');
+      console.error('EmailJS error:', error);
+    });
+});
+
+function showFormMessage(msg, type) {
+  let el = document.getElementById('form-message');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'form-message';
+    document.getElementById('contact-form').appendChild(el);
+  }
+  el.innerHTML = msg;
+  el.style.cssText = `
+    padding: 1rem 1.2rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+    font-size: .88rem;
+    font-weight: 500;
+    text-align: center;
+    background: ${type === 'success' ? '#f0faf5' : '#fff5f5'};
+    color: ${type === 'success' ? '#1a7a4a' : '#c0392b'};
+    border: 1px solid ${type === 'success' ? '#c3e6d4' : '#fad7d7'};
+  `;
+  el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+</script>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
