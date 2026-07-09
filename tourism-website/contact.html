@@ -10,7 +10,13 @@
   <link rel="stylesheet" href="css/style.css"/>
   <!-- EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script>emailjs.init({ publicKey: "o1zypBZCC6ohDqn3J" });</script>
+  <script>
+    emailjs.init({
+      publicKey: "o1zypBZCC6ohDqn3J",
+      blockHeadless: false,
+      limitRate: { id: 'app', throttle: 10000 }
+    });
+  </script>
 </head>
 <body>
 
@@ -428,6 +434,8 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
       msg.style.border = '1px solid #fad7d7';
       msg.innerHTML = '❌ Something went wrong. Please WhatsApp us directly: <strong>+212 6 89 38 60 63</strong>';
       console.error('EmailJS error:', JSON.stringify(error));
+      // Show exact error for debugging
+      msg.innerHTML += '<br><small style="opacity:.6">Error: ' + JSON.stringify(error) + '</small>';
     });
 });
 document.getElementById('year').textContent = new Date().getFullYear();
