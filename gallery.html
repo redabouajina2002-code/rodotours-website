@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photo Gallery – BeldiaTours</title>
+  <meta name="description" content="Browse stunning photos of Morocco tours – deserts, imperial cities, mountains, food, and cultural experiences."/>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png"/>
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png"/>
+  <meta name="theme-color" content="#0F2747"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900\&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400\&family=Montserrat:wght@300;400;500;600;700\&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="img/beldia-logo.png" alt="BeldiaTours Logo" class="logo-img"/>
+      <div class="logo-text"></div>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" data-i18n="nav_home">Home</a>
+      <a href="tours.html" data-i18n="nav_tours">Tours</a>
+      <a href="destinations.html" data-i18n="nav_destinations">Destinations</a>
+      <a href="gallery.html" data-i18n="nav_gallery">Gallery</a>
+      <a href="testimonials.html" data-i18n="nav_testimonials">Testimonials</a>
+      <a href="blog.html" data-i18n="nav_blog">Blog</a>
+      <a href="contact.html" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-switcher">
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+      <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="nav_book">Book Now</a>
+    </div>
+    <button class="nav-toggle"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-nav" style="display:none">
+  <a href="index.html" data-i18n="nav_home">Home</a>
+  <a href="tours.html" data-i18n="nav_tours">Tours</a>
+  <a href="destinations.html" data-i18n="nav_destinations">Destinations</a>
+  <a href="gallery.html" data-i18n="nav_gallery">Gallery</a>
+  <a href="testimonials.html" data-i18n="nav_testimonials">Testimonials</a>
+  <a href="blog.html" data-i18n="nav_blog">Blog</a>
+  <a href="contact.html" data-i18n="nav_contact">Contact</a>
+  <a href="contact.html" class="btn btn-primary" data-i18n="nav_book">Book Now</a>
+</div>
+
+<!-- Page Header -->
+<header class="page-header" style="background-image: url('img/sahara-camel-sunset.jpg')">
+  <div class="container">
+    <div class="page-header-content">
+      <nav class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span data-i18n="nav_gallery">Gallery</span></nav>
+      <h1 data-i18n="nav_gallery">Morocco Gallery</h1>
+      <p style="color:rgba(255,255,255,.75);margin:0">Journey through Morocco in stunning images</p>
+    </div>
+  </div>
+</header>
+
+<main class="section-pad">
+  <div class="container">
+
+    <div class="text-center" style="margin-bottom:2rem" data-reveal>
+      <span class="section-label">📷 Photo Gallery</span>
+      <h2 class="section-title">Morocco Through Our Lens</h2>
+      <div class="divider centered"></div>
+      <p class="section-sub" style="margin:0 auto">Authentic photos from our tours across Morocco's most beautiful landscapes and cities.</p>
+    </div>
+
+    <!-- Filter -->
+    <div class="gallery-filter" role="group" aria-label="Filter gallery by category">
+      <button class="filter-btn active" data-filter="all">🌍 All</button>
+      <button class="filter-btn" data-filter="desert">🏜️ Desert</button>
+      <button class="filter-btn" data-filter="cities">🏙️ Cities</button>
+      <button class="filter-btn" data-filter="mountains">🏔️ Mountains</button>
+      <button class="filter-btn" data-filter="culture">🎭 Culture</button>
+    </div>
+
+    <!-- Gallery Grid (Masonry-style using CSS columns) -->
+    <div class="gallery-grid">
+
+      <div class="gallery-item" data-category="desert">
+        <img src="img/marrakech-souks.jpg" alt="Merzouga Sahara desert dunes at sunrise" loading="lazy"/>
+        <div class="gallery-item-overlay"><i class="fas fa-expand-alt"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="cities">
+        <img src="img/ait-benhaddou.jpg" alt="Chefchaouen blue medina streets Morocco" loading="lazy"/>
+        <div class="gallery-item-overlay"><i class="fas fa-expand-alt"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="culture">
+        <img src="img/essaouira-port.jpg" alt="Ait Ben Haddou UNESCO kasbah Morocco" loading="lazy"/>
+        <div class="gallery-item-overlay"><i class="fas fa-expand-alt"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="mountains">
+        <img src="img/jemaa-el-fna.jpg" alt="Atlas Mountains trekking Morocco" loading="lazy"/>
+        <div class="gallery-item-overlay"><i class="fas fa-expand-alt"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="cities">
+        <img src="img/casablanca-tajine.jpg" alt="Fes ancient medina narrow streets" loading="lazy"/>
+        <div class="gallery-item-overlay"><i class="fas fa-expand-alt"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="desert">
+        <img src="img/sahara-camel-sunset.jpg" alt="Camel trek Sahara desert Morocco" loading="lazy"/>
+        <div class="gallery-item-overlay"><i class="fas fa-expand-alt"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="cities">
+        <img src="img/hercules-cave-coast.jpg" alt="Chefchaouen blue city steps Morocco" loading="lazy"/>
+        <div class="gallery-item-overlay"><i class="fas fa-expand-alt"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="culture">
+        <img src="img/sahara-camel-selfie.jpg" alt="Marrakech medina souks market" loading="lazy"/>
+        <div class="gallery-item-overlay"><i class="fas fa-expand-alt"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="mountains">
+        <img src="img/sahara-camel-sunset.jpg" alt="Atlas Mountains Morocco scenic landscape" loading="lazy"/>
+        <div class="gallery-item-overlay"><i class="fas fa-expand-alt"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="desert">
+        <img src="img/marrakech-souks.jpg" alt="Sahara desert sand dunes Morocco" loading="lazy"/>
+        <div class="gallery-item-overlay"><i class="fas fa-expand-alt"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="cities">
+        <img src="img/ait-benhaddou.jpg" alt="Chefchaouen Morocco blue alleys photography" loading="lazy"/>
+        <div class="gallery-item-overlay"><i class="fas fa-expand-alt"></i></div>
+      </div>
+
+      <div class="gallery-item" data-category="culture">
+        <img src="img/essaouira-port.jpg" alt="Ait Ben Haddou kasbah architecture detail" loading="lazy"/>
+        <div class="gallery-item-overlay"><i class="fas fa-expand-alt"></i></div>
+      </div>
+
+    </div>
+
+    <!-- Video Section -->
+    <section style="margin-top:4rem;text-align:center" data-reveal>
+      <span class="section-label">🎬 Video</span>
+      <h2 class="section-title">Experience Morocco in Motion</h2>
+      <div class="divider centered"></div>
+      <p style="max-width:600px;margin:0 auto 2rem;color:var(--clr-text-lt)">Watch highlights from our tours across Morocco's most iconic destinations.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+        <div style="border-radius:var(--radius-md);overflow:hidden;position:relative;aspect-ratio:16/9;background:var(--clr-dark);display:flex;align-items:center;justify-content:center;cursor:pointer" class="video-thumb">
+          <img src="img/marrakech-souks.jpg" alt="Desert Tour Video Thumbnail" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" loading="lazy"/>
+          <div style="position:absolute;inset:0;background:rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center">
+            <div style="width:56px;height:56px;background:var(--clr-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:white">▶</div>
+          </div>
+          <div style="position:absolute;bottom:12px;left:12px;color:white;font-size:.82rem;font-weight:600">🏜️ Sahara Desert Tour</div>
+        </div>
+        <div style="border-radius:var(--radius-md);overflow:hidden;position:relative;aspect-ratio:16/9;background:var(--clr-dark);display:flex;align-items:center;justify-content:center;cursor:pointer">
+          <img src="img/ait-benhaddou.jpg" alt="Chefchaouen Tour Video" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" loading="lazy"/>
+          <div style="position:absolute;inset:0;background:rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center">
+            <div style="width:56px;height:56px;background:var(--clr-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:white">▶</div>
+          </div>
+          <div style="position:absolute;bottom:12px;left:12px;color:white;font-size:.82rem;font-weight:600">🔵 Chefchaouen Walk</div>
+        </div>
+        <div style="border-radius:var(--radius-md);overflow:hidden;position:relative;aspect-ratio:16/9;background:var(--clr-dark);display:flex;align-items:center;justify-content:center;cursor:pointer">
+          <img src="img/jemaa-el-fna.jpg" alt="Atlas Mountains Video Thumbnail" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" loading="lazy"/>
+          <div style="position:absolute;inset:0;background:rgba(0,0,0,.4);display:flex;align-items:center;justify-content:center">
+            <div style="width:56px;height:56px;background:var(--clr-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;color:white">▶</div>
+          </div>
+          <div style="position:absolute;bottom:12px;left:12px;color:white;font-size:.82rem;font-weight:600">🏔️ Atlas Trek</div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" role="dialog" aria-label="Image lightbox">
+  <button class="lightbox-close" aria-label="Close lightbox"><i class="fas fa-times"></i></button>
+  <img id="lightbox-img" src="" alt="Gallery image enlarged"/>
+</div>
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo">
+          <img src="img/beldia-logo.png" alt="BeldiaTours Logo" class="logo-img"/>
+          <div class="logo-text"></div>
+        </a>
+        <p>Your trusted Moroccan travel partner for authentic, personalized adventures.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tripadvisor.fr/AttractionProductReview-g293734-d34114602-4_Day_Sahara_Desert_Tour_from_Marrakech-Marrakech_Marrakech_Safi.html" target="_blank" rel="noopener"><i class="fab fa-tripadvisor"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+          <li><a href="tours.html"><i class="fas fa-chevron-right"></i> Tours</a></li>
+          <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><p>+212 6 89 38 60 63</p></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><p>info@beldiatours.com</p></div>
+      </div>
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <p style="font-size:.82rem;color:rgba(255,255,255,.6)">Share your Morocco moments with <strong style="color:var(--clr-primary-lt)">#ToursRojaMarruecos</strong></p>
+        <div class="footer-social" style="margin-top:.75rem">
+          <a href="https://www.instagram.com/beldiatours" aria-label="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://tiktok.com/@beldiatours" aria-label="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.facebook.com/share/14iQym7R4vB/?mibextid=wwXIfr" aria-label="Facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> BeldiaTours. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/212689386063" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+<button id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<script src="js/translations.js"></script>
+<script src="js/main.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
