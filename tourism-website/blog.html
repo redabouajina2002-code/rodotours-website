@@ -3,33 +3,58 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Morocco Travel Blog – BeldiaTours</title>
-  <meta name="description" content="Morocco travel tips, guides, culture, food and itineraries from the experts at BeldiaTours."/>
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico"/>
+  <title>Morocco Travel Blog – Beldia Tours</title>
+  <meta name="description" content="Expert Morocco travel guides and tips from Beldia Tours — best time to visit, Sahara desert guide, what to pack, and more."/>
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico"/>
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png"/>
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png"/>
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png"/>
   <meta name="theme-color" content="#0F2747"/>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900\&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400\&family=Montserrat:wght@300;400;500;600;700\&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    .article-body { max-width: 800px; margin: 0 auto; }
+    .article-body h2 { font-size: 1.4rem; color: var(--navy); margin: 2rem 0 .8rem; padding-top: 1rem; border-top: 1px solid var(--clr-grey); }
+    .article-body h3 { font-size: 1.1rem; color: var(--navy); margin: 1.5rem 0 .6rem; }
+    .article-body p { font-size: .95rem; line-height: 1.9; color: var(--text-mid); margin-bottom: 1rem; }
+    .article-body ul { margin: .8rem 0 1.2rem 1.5rem; }
+    .article-body ul li { font-size: .92rem; color: var(--text-mid); margin-bottom: .5rem; line-height: 1.7; }
+    .article-body ul li::marker { color: var(--gold); }
+    .article-tip { background: var(--cream-lt); border-left: 4px solid var(--gold); padding: 1.2rem 1.5rem; border-radius: 0 4px 4px 0; margin: 1.5rem 0; }
+    .article-tip strong { color: var(--navy); display: block; margin-bottom: .3rem; font-size: .85rem; letter-spacing: .05em; text-transform: uppercase; }
+    .article-tip p { margin: 0; font-size: .88rem; }
+    .blog-nav { display: flex; gap: .5rem; flex-wrap: wrap; margin-bottom: 2.5rem; justify-content: center; }
+    .blog-nav-btn { padding: .45rem 1.2rem; border-radius: 2px; border: 1px solid var(--border); background: var(--white); font-size: .78rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--text-mid); cursor: pointer; transition: var(--transition); }
+    .blog-nav-btn:hover, .blog-nav-btn.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
+    .article-card { background: var(--white); border-radius: 4px; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid rgba(15,39,71,.07); margin-bottom: 3rem; }
+    .article-card-header { display: grid; grid-template-columns: 1fr 1fr; min-height: 360px; }
+    .article-card-img { overflow: hidden; }
+    .article-card-img img { width: 100%; height: 100%; object-fit: cover; }
+    .article-card-intro { padding: 3rem; display: flex; flex-direction: column; justify-content: center; background: var(--white); }
+    .article-card-body { padding: 3rem; border-top: 1px solid var(--clr-grey); }
+    @media(max-width:768px) {
+      .article-card-header { grid-template-columns: 1fr; }
+      .article-card-img { height: 240px; }
+      .article-card-intro, .article-card-body { padding: 1.5rem; }
+      .article-body h2 { font-size: 1.2rem; }
+    }
+  </style>
 </head>
 <body>
 
 <nav id="main-nav">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <img src="img/beldia-logo.png" alt="BeldiaTours Logo" class="logo-img"/>
-      <div class="logo-text"></div>
+      <img src="img/beldia-logo.png" alt="Beldia Tours" class="logo-img"/>
     </a>
     <nav class="nav-links">
-      <a href="index.html" data-i18n="nav_home">Home</a>
-      <a href="tours.html" data-i18n="nav_tours">Tours</a>
-      <a href="destinations.html" data-i18n="nav_destinations">Destinations</a>
-      <a href="gallery.html" data-i18n="nav_gallery">Gallery</a>
-      <a href="testimonials.html" data-i18n="nav_testimonials">Testimonials</a>
-      <a href="blog.html" data-i18n="nav_blog">Blog</a>
-      <a href="contact.html" data-i18n="nav_contact">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="tours.html">Tours</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <div class="nav-actions">
       <div class="lang-switcher">
@@ -37,186 +62,363 @@
         <button class="lang-btn" data-lang="es">ES</button>
         <button class="lang-btn" data-lang="fr">FR</button>
       </div>
-      <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="nav_book">Book Now</a>
+      <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
     </div>
     <button class="nav-toggle"><span></span><span></span><span></span></button>
   </div>
 </nav>
 <div class="mobile-nav" style="display:none">
-  <a href="index.html" data-i18n="nav_home">Home</a>
-  <a href="tours.html" data-i18n="nav_tours">Tours</a>
-  <a href="destinations.html" data-i18n="nav_destinations">Destinations</a>
-  <a href="gallery.html" data-i18n="nav_gallery">Gallery</a>
-  <a href="testimonials.html" data-i18n="nav_testimonials">Testimonials</a>
-  <a href="blog.html" data-i18n="nav_blog">Blog</a>
-  <a href="contact.html" data-i18n="nav_contact">Contact</a>
-  <a href="contact.html" class="btn btn-primary" data-i18n="nav_book">Book Now</a>
+  <a href="index.html">Home</a><a href="tours.html">Tours</a>
+  <a href="destinations.html">Destinations</a><a href="gallery.html">Gallery</a>
+  <a href="testimonials.html">Testimonials</a><a href="blog.html">Blog</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn-primary">Book Now</a>
 </div>
 
 <!-- Page Header -->
-<header class="page-header" style="background-image: url('img/sahara-camel-sunset.jpg')">
+<header class="page-header" style="background-image:url('img/sahara-camel-sunset.jpg')">
   <div class="container">
     <div class="page-header-content">
-      <nav class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right"></i><span data-i18n="nav_blog">Blog</span></nav>
-      <h1 data-i18n="blog_title">Morocco Travel Guides &amp; Tips</h1>
-      <p style="color:rgba(255,255,255,.75);margin:0">Expert insights from local Moroccan guides</p>
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a>
+        <i class="fas fa-chevron-right"></i>
+        <span>Blog</span>
+      </nav>
+      <h1>Morocco Travel Guides & Tips</h1>
+      <p style="color:rgba(255,255,255,.78);margin:.5rem 0 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem">Expert insights from your local Moroccan guides</p>
     </div>
   </div>
 </header>
 
-<main>
-  <div class="section-pad">
-    <div class="container">
+<main class="section-pad" style="background:var(--off-white)">
+  <div class="container">
 
-      <!-- Featured Post -->
-      <article class="blog-card blog-hero-card" style="margin-bottom:2.5rem;display:grid;grid-template-columns:1fr 1fr;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-md)" data-reveal>
-        <div style="height:400px;overflow:hidden">
-          <img src="img/marrakech-souks.jpg" alt="Best time to visit Morocco Sahara" style="width:100%;height:100%;object-fit:cover" loading="lazy"/>
-        </div>
-        <div style="padding:40px;background:white;display:flex;flex-direction:column;justify-content:center">
-          <div class="blog-category">⭐ Featured · Travel Tips</div>
-          <h2 style="font-size:1.6rem;margin:.5rem 0 1rem;line-height:1.3">The Ultimate Guide to Morocco: When to Go, What to See &amp; How to Get Around</h2>
-          <p style="font-size:.9rem;margin-bottom:1.5rem">Everything a first-time visitor needs to know about planning the perfect Morocco trip – from visas and currency to the best cities and how to navigate the medinas.</p>
-          <div class="blog-meta" style="margin-bottom:1.5rem">
-            <span><i class="fas fa-calendar"></i> April 2025</span>
-            <span><i class="fas fa-clock"></i> 12 min read</span>
-            <span><i class="fas fa-eye"></i> 4,200 views</span>
-          </div>
-          <a href="#" class="btn btn-primary" data-i18n="blog_read_more">Read Full Article</a>
-        </div>
-      </article>
-
-      <!-- Blog Grid -->
-      <div class="text-center" style="margin-bottom:2rem" data-reveal>
-        <span class="section-label" data-i18n="blog_label">Travel Blog</span>
-        <h2 class="section-title">Latest Articles</h2>
-        <div class="divider centered"></div>
-      </div>
-
-      <div class="blog-page-grid">
-
-        <article class="blog-card" data-reveal>
-          <div class="blog-card-img">
-            <img src="img/ait-benhaddou.jpg" alt="Chefchaouen Blue City Guide" loading="lazy"/>
-          </div>
-          <div class="blog-card-body">
-            <div class="blog-category">🔵 Destinations</div>
-            <h3>Chefchaouen: Everything You Need to Know About Morocco's Blue City</h3>
-            <p>A complete guide to exploring the magical blue-painted streets, the best photo spots, where to stay, eat, and what to do in Chefchaouen.</p>
-            <div class="blog-meta">
-              <span><i class="fas fa-calendar"></i> March 2025</span>
-              <span><i class="fas fa-clock"></i> 8 min read</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="blog-card" data-reveal>
-          <div class="blog-card-img">
-            <img src="img/sahara-camel-sunset.jpg" alt="Atlas Mountains Trekking Guide" loading="lazy"/>
-          </div>
-          <div class="blog-card-body">
-            <div class="blog-category">🏔️ Adventure</div>
-            <h3>Atlas Mountains Trekking: Routes, Tips &amp; What to Expect</h3>
-            <p>Everything you need before hiking the magnificent Atlas Mountains – from beginner-friendly day hikes to the epic 3-day Toubkal summit trek.</p>
-            <div class="blog-meta">
-              <span><i class="fas fa-calendar"></i> February 2025</span>
-              <span><i class="fas fa-clock"></i> 10 min read</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="blog-card" data-reveal>
-          <div class="blog-card-img">
-            <img src="img/essaouira-port.jpg" alt="Fes Medina Travel Guide" loading="lazy"/>
-          </div>
-          <div class="blog-card-body">
-            <div class="blog-category">🏛️ Culture</div>
-            <h3>Navigating Fes: A Guide to the World's Most Ancient Living City</h3>
-            <p>How to explore Fes el-Bali's 9,000 alleyways without getting lost – the best sights, local foods, and hidden gems of Morocco's spiritual capital.</p>
-            <div class="blog-meta">
-              <span><i class="fas fa-calendar"></i> January 2025</span>
-              <span><i class="fas fa-clock"></i> 9 min read</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="blog-card" data-reveal>
-          <div class="blog-card-img">
-            <img src="img/jemaa-el-fna.jpg" alt="Sahara Desert Night Stars Morocco" loading="lazy"/>
-          </div>
-          <div class="blog-card-body">
-            <div class="blog-category">🌟 Experiences</div>
-            <h3>A Night in the Sahara: What It's Really Like to Sleep Under the Stars</h3>
-            <p>Our firsthand account of a magical night in a traditional Berber desert camp – the sounds, smells, stars, and the indescribable sunrise over the golden dunes.</p>
-            <div class="blog-meta">
-              <span><i class="fas fa-calendar"></i> December 2024</span>
-              <span><i class="fas fa-clock"></i> 7 min read</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="blog-card" data-reveal>
-          <div class="blog-card-img">
-            <img src="img/casablanca-tajine.jpg" alt="Morocco Food Guide Traditional Tagine Couscous" loading="lazy"/>
-          </div>
-          <div class="blog-card-body">
-            <div class="blog-category">🍽️ Food & Culture</div>
-            <h3>The Essential Moroccan Food Guide: 20 Dishes You Must Try</h3>
-            <p>From fragrant tagines and fluffy couscous to sweet pastilla and mint tea ceremonies – your complete guide to Morocco's incredible culinary traditions.</p>
-            <div class="blog-meta">
-              <span><i class="fas fa-calendar"></i> November 2024</span>
-              <span><i class="fas fa-clock"></i> 11 min read</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="blog-card" data-reveal>
-          <div class="blog-card-img">
-            <img src="img/hercules-cave-coast.jpg" alt="Ait Ben Haddou Film Location Morocco" loading="lazy"/>
-          </div>
-          <div class="blog-card-body">
-            <div class="blog-category">🎬 Film &amp; History</div>
-            <h3>Ait Ben Haddou: Hollywood's Favorite Moroccan Location</h3>
-            <p>Game of Thrones, Gladiator, Lawrence of Arabia – discover the incredible UNESCO kasbah that has captivated the world's greatest filmmakers for decades.</p>
-            <div class="blog-meta">
-              <span><i class="fas fa-calendar"></i> October 2024</span>
-              <span><i class="fas fa-clock"></i> 6 min read</span>
-            </div>
-          </div>
-        </article>
-
-      </div>
-
-      <!-- Newsletter CTA -->
-      <div style="background:var(--clr-primary);border-radius:var(--radius-lg);padding:40px;text-align:center;margin-top:3rem;color:white" data-reveal>
-        <h3 style="color:white;margin-bottom:.5rem">Get Morocco Travel Tips Straight to Your Inbox</h3>
-        <p style="color:rgba(255,255,255,.85);max-width:500px;margin:0 auto 1.5rem">Subscribe to our newsletter for exclusive travel tips, destination guides, and special tour offers.</p>
-        <form class="newsletter-form" style="display:flex;gap:.5rem;max-width:400px;margin:0 auto" novalidate>
-          <input type="email" name="newsletter_email" placeholder="Your email address" required
-                 style="flex:1;padding:.75rem 1rem;border-radius:50px;border:none;font-size:.9rem;color:var(--clr-text)"/>
-          <button type="submit" class="btn" style="background:var(--clr-dark);color:white;border-radius:50px;padding:.75rem 1.4rem;font-weight:600">Subscribe</button>
-        </form>
-      </div>
-
+    <!-- Category Filter -->
+    <div class="blog-nav" data-reveal>
+      <button class="blog-nav-btn active">All Articles</button>
+      <button class="blog-nav-btn">Travel Tips</button>
+      <button class="blog-nav-btn">Destinations</button>
+      <button class="blog-nav-btn">Desert & Sahara</button>
+      <button class="blog-nav-btn">Culture & Food</button>
     </div>
+
+    <!-- ===================== ARTICLE 1 ===================== -->
+    <article class="article-card" data-reveal>
+      <div class="article-card-header">
+        <div class="article-card-img">
+          <img src="img/sahara-camel-sunset.jpg" alt="Best time to visit Morocco Sahara desert" loading="lazy"/>
+        </div>
+        <div class="article-card-intro">
+          <div class="blog-category">🗓️ Travel Tips</div>
+          <h2 style="font-size:1.7rem;margin:.6rem 0 1rem;line-height:1.3;border:none;padding:0">Best Time to Visit Morocco: A Complete Month-by-Month Guide</h2>
+          <p style="font-size:.9rem;color:var(--text-mid);margin-bottom:1.2rem">Morocco is a year-round destination — but the timing of your visit makes a huge difference. Here's our local expert guide to every month of the year.</p>
+          <div class="blog-meta" style="margin-bottom:1.5rem">
+            <span><i class="fas fa-calendar"></i> July 2025</span>
+            <span><i class="fas fa-clock"></i> 8 min read</span>
+            <span><i class="fas fa-user"></i> Beldia Tours Team</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-card-body">
+        <div class="article-body">
+
+          <p>One of the most common questions we get from travelers planning their Morocco trip is: <strong>"When is the best time to visit?"</strong> The honest answer is that it depends on what you want to experience — the Sahara desert, the imperial cities, or the Atlantic coast all have their ideal seasons.</p>
+
+          <p>As local experts based in Marrakech, we've guided thousands of travelers across all seasons. Here's our definitive, honest guide.</p>
+
+          <h2>🌸 Spring (March – May) — The Best Overall Season</h2>
+          <p>Spring is widely considered the best time to visit Morocco. The weather is warm but not hot — typically 20-25°C in Marrakech and 15-20°C in the mountains. The landscapes are green, wildflowers bloom in the valleys, and the famous rose harvest in the Dadès Valley happens in May.</p>
+          <ul>
+            <li>Perfect temperatures for sightseeing in cities and medinas</li>
+            <li>Ideal for Atlas Mountains trekking</li>
+            <li>Rose Festival in Kelaat M'Gouna (May)</li>
+            <li>Comfortable for Sahara desert trips</li>
+            <li>Moderate tourist crowds</li>
+          </ul>
+
+          <div class="article-tip">
+            <strong>💡 Beldia Tours Tip</strong>
+            <p>Book your spring tour at least 6-8 weeks in advance — it's our busiest season and the best riads fill up fast!</p>
+          </div>
+
+          <h2>☀️ Summer (June – August) — Hot But Possible</h2>
+          <p>Summer in Morocco means intense heat, especially in the south. Marrakech regularly reaches 38-42°C in July and August. The Sahara desert can exceed 45°C during the day. However, coastal cities like Essaouira and Agadir are cooled by Atlantic breezes and are very pleasant.</p>
+          <ul>
+            <li>Very hot inland — not recommended for Sahara tours</li>
+            <li>Perfect for Atlantic coast (Essaouira, Agadir, Tangier)</li>
+            <li>Fewer tourists in desert areas</li>
+            <li>Chefchaouen is cool and beautiful</li>
+            <li>Lower prices at some hotels</li>
+          </ul>
+
+          <h2>🍂 Autumn (September – November) — Our Second Favourite</h2>
+          <p>Autumn rivals spring as the best time to visit. September and October see temperatures dropping to a comfortable 25-30°C. The summer crowds have gone, prices drop, and the light for photography is spectacular. The Sahara is warm but manageable.</p>
+          <ul>
+            <li>Excellent temperatures for all activities</li>
+            <li>Perfect Sahara desert conditions</li>
+            <li>Beautiful light for photography</li>
+            <li>Fewer tourists than spring</li>
+            <li>Date harvest season in the south (October)</li>
+          </ul>
+
+          <h2>❄️ Winter (December – February) — Hidden Gem Season</h2>
+          <p>Winter is Morocco's best-kept secret. While it can be cold in the mountains and at night, daytime temperatures in Marrakech are a lovely 18-22°C — perfect for sightseeing. The Sahara desert at night in winter is magical — cold and clear with incredible stargazing. Snow on the Atlas Mountains creates stunning landscapes.</p>
+          <ul>
+            <li>Lowest prices of the year</li>
+            <li>Almost no tourist crowds</li>
+            <li>Magical stargazing in the Sahara</li>
+            <li>Snow on Atlas Mountains (great for photography)</li>
+            <li>Perfect for city tours and medina exploration</li>
+          </ul>
+
+          <div class="article-tip">
+            <strong>💡 Beldia Tours Tip</strong>
+            <p>December and January are our favourite months for Sahara tours. Cold nights mean incredible stars and you have the dunes almost to yourself at sunrise. Bring a warm jacket!</p>
+          </div>
+
+          <h2>Quick Summary Table</h2>
+          <div style="overflow-x:auto;margin:1rem 0">
+            <table style="width:100%;border-collapse:collapse;font-size:.85rem">
+              <tr style="background:var(--navy);color:white">
+                <th style="padding:.7rem;text-align:left">Season</th>
+                <th style="padding:.7rem">Temp</th>
+                <th style="padding:.7rem">Crowds</th>
+                <th style="padding:.7rem">Sahara</th>
+                <th style="padding:.7rem">Rating</th>
+              </tr>
+              <tr style="background:var(--cream-lt)">
+                <td style="padding:.7rem;font-weight:600">Spring (Mar-May)</td>
+                <td style="padding:.7rem;text-align:center">20-28°C</td>
+                <td style="padding:.7rem;text-align:center">Medium</td>
+                <td style="padding:.7rem;text-align:center">✅ Perfect</td>
+                <td style="padding:.7rem;text-align:center">⭐⭐⭐⭐⭐</td>
+              </tr>
+              <tr>
+                <td style="padding:.7rem;font-weight:600">Summer (Jun-Aug)</td>
+                <td style="padding:.7rem;text-align:center">35-42°C</td>
+                <td style="padding:.7rem;text-align:center">Low</td>
+                <td style="padding:.7rem;text-align:center">⚠️ Very hot</td>
+                <td style="padding:.7rem;text-align:center">⭐⭐⭐</td>
+              </tr>
+              <tr style="background:var(--cream-lt)">
+                <td style="padding:.7rem;font-weight:600">Autumn (Sep-Nov)</td>
+                <td style="padding:.7rem;text-align:center">22-32°C</td>
+                <td style="padding:.7rem;text-align:center">Low</td>
+                <td style="padding:.7rem;text-align:center">✅ Great</td>
+                <td style="padding:.7rem;text-align:center">⭐⭐⭐⭐⭐</td>
+              </tr>
+              <tr>
+                <td style="padding:.7rem;font-weight:600">Winter (Dec-Feb)</td>
+                <td style="padding:.7rem;text-align:center">14-22°C</td>
+                <td style="padding:.7rem;text-align:center">Very low</td>
+                <td style="padding:.7rem;text-align:center">✅ Magical</td>
+                <td style="padding:.7rem;text-align:center">⭐⭐⭐⭐</td>
+              </tr>
+            </table>
+          </div>
+
+          <div style="background:var(--navy);color:white;padding:2rem;border-radius:4px;text-align:center;margin-top:2rem">
+            <h3 style="color:var(--gold-lt);margin-bottom:.5rem">Ready to Plan Your Morocco Trip?</h3>
+            <p style="color:rgba(255,255,255,.8);margin-bottom:1.2rem">Contact us and we'll recommend the perfect tour based on your travel dates.</p>
+            <a href="contact.html" class="btn btn-primary">Get a Free Quote</a>
+          </div>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- ===================== ARTICLE 2 ===================== -->
+    <article class="article-card" data-reveal>
+      <div class="article-card-header">
+        <div class="article-card-img">
+          <img src="img/ait-benhaddou.jpg" alt="Sahara desert Morocco Merzouga guide" loading="lazy"/>
+        </div>
+        <div class="article-card-intro">
+          <div class="blog-category">🏜️ Desert & Sahara</div>
+          <h2 style="font-size:1.7rem;margin:.6rem 0 1rem;line-height:1.3;border:none;padding:0">The Complete Sahara Desert Guide: Everything You Need to Know Before You Go</h2>
+          <p style="font-size:.9rem;color:var(--text-mid);margin-bottom:1.2rem">The Sahara is the highlight of almost every Morocco trip. Here's our insider guide to make sure your desert experience is perfect.</p>
+          <div class="blog-meta" style="margin-bottom:1.5rem">
+            <span><i class="fas fa-calendar"></i> June 2025</span>
+            <span><i class="fas fa-clock"></i> 10 min read</span>
+            <span><i class="fas fa-user"></i> Aziz, Senior Guide</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-card-body">
+        <div class="article-body">
+
+          <p>The Sahara desert is one of the world's most extraordinary places — and Merzouga's Erg Chebbi dunes are Morocco's most spectacular stretch of golden sand. After guiding hundreds of travelers through the desert, our senior guide Aziz shares everything you need to know.</p>
+
+          <h2>🗺️ How to Get to the Sahara from Marrakech</h2>
+          <p>Merzouga, the gateway to Erg Chebbi, is approximately 560km from Marrakech — about 9-10 hours by road. The journey itself is spectacular, passing through the High Atlas Mountains, the UNESCO-listed Aït Ben Haddou kasbah, the Draa Valley, and Todra Gorge.</p>
+          <p>We recommend a <strong>minimum 3-day tour</strong> from Marrakech — this gives you one night in the desert and enough time to experience the journey properly. A 4-day tour allows for more stops and a second night in the desert.</p>
+
+          <div class="article-tip">
+            <strong>💡 Beldia Tours Tip</strong>
+            <p>Never rush the Marrakech to Merzouga journey. The stops along the way — Aït Ben Haddou, Todra Gorge, the Valley of Roses — are as memorable as the desert itself.</p>
+          </div>
+
+          <h2>🐪 The Camel Trek Experience</h2>
+          <p>The traditional way to reach your desert camp is by camel — a 45-60 minute ride through the golden dunes as the sun sets. It's one of the most magical experiences Morocco offers. Here's what to expect:</p>
+          <ul>
+            <li>Camels are well-trained and gentle — no experience needed</li>
+            <li>Your guide leads the camel — you just enjoy the view</li>
+            <li>It can be bumpy — hold on and go with the movement</li>
+            <li>Bring a headscarf or turban to protect from sand and sun</li>
+            <li>The return ride at sunrise is equally magical</li>
+          </ul>
+
+          <h2>⭐ Desert Camp — What to Expect</h2>
+          <p>Desert camps range from basic (shared tents, simple meals) to luxury glamping (private ensuite tents, gourmet food, hot showers). We work with carefully selected camps that offer the best experience.</p>
+          <ul>
+            <li>Traditional Berber dinner under the stars</li>
+            <li>Live music around the campfire</li>
+            <li>Incredible stargazing — the Sahara has zero light pollution</li>
+            <li>Wake up call before sunrise for the most beautiful light</li>
+            <li>Hot mint tea served at the top of the dunes</li>
+          </ul>
+
+          <h2>🎒 What to Pack for the Sahara</h2>
+          <ul>
+            <li><strong>Headscarf or turban</strong> — essential protection from sun and sand</li>
+            <li><strong>Sunscreen SPF 50+</strong> — the desert sun is intense</li>
+            <li><strong>Sunglasses</strong> — protecting your eyes from sand</li>
+            <li><strong>Closed shoes</strong> — sandals let sand in; trainers are better</li>
+            <li><strong>Warm layers</strong> — desert nights are cold even in summer</li>
+            <li><strong>Camera/phone charger</strong> — sunrises here are unforgettable</li>
+            <li><strong>Cash</strong> — for tips and small purchases in villages</li>
+          </ul>
+
+          <div class="article-tip">
+            <strong>💡 Beldia Tours Tip</strong>
+            <p>The best photos happen at golden hour — 30 minutes before sunset and 30 minutes after sunrise. Position yourself at the top of a dune facing away from the sun for the most dramatic shots.</p>
+          </div>
+
+          <h2>🌡️ Desert Temperatures by Season</h2>
+          <ul>
+            <li><strong>Summer (Jun-Aug):</strong> 40-48°C daytime, 25°C night — very hot, not recommended</li>
+            <li><strong>Spring/Autumn:</strong> 25-35°C daytime, 15°C night — perfect</li>
+            <li><strong>Winter (Dec-Feb):</strong> 18-25°C daytime, 5°C night — magical stargazing, bring warm clothes</li>
+          </ul>
+
+          <div style="background:var(--navy);color:white;padding:2rem;border-radius:4px;text-align:center;margin-top:2rem">
+            <h3 style="color:var(--gold-lt);margin-bottom:.5rem">Book Your Sahara Experience</h3>
+            <p style="color:rgba(255,255,255,.8);margin-bottom:1.2rem">Our 3-day and 4-day Sahara tours depart daily from Marrakech. Private and group options available.</p>
+            <a href="tours.html" class="btn btn-primary">See Sahara Tours</a>
+          </div>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- ===================== ARTICLE 3 ===================== -->
+    <article class="article-card" data-reveal>
+      <div class="article-card-header">
+        <div class="article-card-img">
+          <img src="img/marrakech-souks.jpg" alt="Marrakech travel guide medina souks" loading="lazy"/>
+        </div>
+        <div class="article-card-intro">
+          <div class="blog-category">🕌 Destinations</div>
+          <h2 style="font-size:1.7rem;margin:.6rem 0 1rem;line-height:1.3;border:none;padding:0">Marrakech Travel Guide: The 15 Best Things to Do in the Red City</h2>
+          <p style="font-size:.9rem;color:var(--text-mid);margin-bottom:1.2rem">Marrakech is one of the world's most vibrant cities. Here are the 15 experiences you absolutely cannot miss — from local experts who live here.</p>
+          <div class="blog-meta" style="margin-bottom:1.5rem">
+            <span><i class="fas fa-calendar"></i> May 2025</span>
+            <span><i class="fas fa-clock"></i> 9 min read</span>
+            <span><i class="fas fa-user"></i> Beldia Tours Team</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-card-body">
+        <div class="article-body">
+
+          <p>Marrakech — the Red City — is Morocco's most visited destination and for good reason. It's a city that assaults your senses in the most wonderful way: the smell of spices, the sound of musicians in Jemaa el-Fna, the maze of the ancient medina. Here are the 15 things you must do.</p>
+
+          <h2>1. 🌟 Jemaa el-Fna Square — The Heart of Marrakech</h2>
+          <p>UNESCO-listed as a Masterpiece of Oral and Intangible Heritage, Jemaa el-Fna is unlike any other square on earth. By day it hosts snake charmers, henna artists, and orange juice sellers. By night it transforms into a massive outdoor food festival with dozens of food stalls, musicians, storytellers, and acrobats.</p>
+          <div class="article-tip">
+            <strong>💡 Local Tip</strong>
+            <p>Arrive at the square just before sunset and find a rooftop cafe. Watch the square transform as night falls — it's one of the most spectacular sights in Africa.</p>
+          </div>
+
+          <h2>2. 🛍️ The Souks — Get Lost on Purpose</h2>
+          <p>The medina's souks are organized by trade — spice souks, leather souks, textile souks, metalwork souks. Getting lost is part of the experience. Don't be afraid to wander — you'll always find your way back to Jemaa el-Fna eventually.</p>
+
+          <h2>3. 🏰 Bahia Palace</h2>
+          <p>Built in the late 19th century, Bahia Palace is a masterpiece of Moroccan architecture — intricate tilework, carved cedar ceilings, and peaceful orange-tree gardens. Allow 45-60 minutes to explore.</p>
+
+          <h2>4. 🌿 Majorelle Garden & Yves Saint Laurent Museum</h2>
+          <p>Created by French painter Jacques Majorelle and later restored by Yves Saint Laurent, this stunning garden features cobalt blue buildings, exotic plants, and the excellent Berber Museum. Book tickets in advance — it sells out daily.</p>
+
+          <h2>5. 🕌 Koutoubia Mosque</h2>
+          <p>The 12th-century Koutoubia Mosque is Marrakech's most iconic landmark — its 70-metre minaret visible from almost everywhere in the city. Non-Muslims cannot enter but the gardens and exterior are beautiful, especially at sunset.</p>
+
+          <h2>6. 🏺 Saadian Tombs</h2>
+          <p>Discovered only in 1917 after being sealed for two centuries, the Saadian Tombs contain the remains of members of the Saadian dynasty. The intricate tilework and carved plaster are extraordinary.</p>
+
+          <h2>7. 🍽️ Eat at a Medina Restaurant</h2>
+          <p>Marrakech's food scene is incredible. Don't miss: tagine with preserved lemon and olives, bastilla (pigeon or chicken pastry), harira soup, fresh-squeezed orange juice from the square, and Moroccan mint tea.</p>
+          <div class="article-tip">
+            <strong>💡 Local Tip</strong>
+            <p>Avoid restaurants directly on Jemaa el-Fna — they're overpriced and average quality. Walk 2-3 streets into the medina for much better food at half the price.</p>
+          </div>
+
+          <h2>8. 🛁 Visit a Traditional Hammam</h2>
+          <p>A Moroccan hammam (steam bath) is a cultural experience not to be missed. The traditional black soap scrub leaves your skin incredibly smooth. Ask your riad or guide to recommend a good local hammam — not the tourist ones.</p>
+
+          <h2>9. 🌅 Day Trip to Atlas Mountains</h2>
+          <p>Just 1 hour from Marrakech, the High Atlas Mountains offer a completely different Morocco — Berber villages, walnut groves, and snow-capped peaks. A day trip or overnight stay is highly recommended.</p>
+
+          <h2>10. 🏰 Day Trip to Aït Ben Haddou</h2>
+          <p>Morocco's most famous kasbah — a UNESCO World Heritage Site and filming location for Gladiator, Game of Thrones, and dozens of other productions. 3.5 hours from Marrakech but absolutely worth it.</p>
+
+          <h2>11-15. More Hidden Gems</h2>
+          <ul>
+            <li><strong>El Badi Palace ruins</strong> — hauntingly beautiful 16th-century palace</li>
+            <li><strong>Ben Youssef Madrasa</strong> — stunning Islamic school with intricate architecture</li>
+            <li><strong>Mellah (Jewish Quarter)</strong> — fascinating history and beautiful synagogue</li>
+            <li><strong>Tanneries of the Medina</strong> — watch traditional leather dyeing from rooftop terraces</li>
+            <li><strong>Agafay Desert Day Trip</strong> — rocky desert just 40 minutes from Marrakech, perfect for sunset dinners</li>
+          </ul>
+
+          <div style="background:var(--navy);color:white;padding:2rem;border-radius:4px;text-align:center;margin-top:2rem">
+            <h3 style="color:var(--gold-lt);margin-bottom:.5rem">Explore Marrakech With a Local Guide</h3>
+            <p style="color:rgba(255,255,255,.8);margin-bottom:1.2rem">Our expert guides know every corner of the medina. Let us show you the real Marrakech.</p>
+            <a href="contact.html" class="btn btn-primary">Book a Marrakech Tour</a>
+          </div>
+
+        </div>
+      </div>
+    </article>
+
+    <!-- CTA -->
+    <div style="background:linear-gradient(135deg,var(--navy-dk),var(--navy));border-radius:4px;padding:50px 40px;text-align:center;border:1px solid rgba(200,155,60,.2)" data-reveal>
+      <span class="section-label" style="color:var(--gold-lt)">Your Journey Starts Here</span>
+      <h2 style="color:var(--white);margin:.5rem 0 1rem">Ready to Experience Morocco?</h2>
+      <p style="color:rgba(255,255,255,.7);max-width:500px;margin:0 auto 2rem">Let our local experts plan your perfect Morocco adventure — personalized, authentic, unforgettable.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <a href="tours.html" class="btn btn-primary btn-lg">View Our Tours</a>
+        <a href="https://wa.me/212689386063" class="btn btn-outline btn-lg" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+      </div>
+    </div>
+
   </div>
 </main>
 
-<!-- Footer -->
 <footer id="footer">
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="index.html" class="nav-logo">
-          <img src="img/beldia-logo.png" alt="BeldiaTours Logo" class="logo-img"/>
-          <div class="logo-text"></div>
-        </a>
-        <p>Your trusted Moroccan travel partner for authentic, personalized adventures.</p>
+        <a href="index.html"><img src="img/beldia-logo.png" alt="Beldia Tours" class="logo-img"/></a>
+        <p>Your trusted Moroccan travel partner for authentic, personalized adventures across the Kingdom of Morocco.</p>
         <div class="footer-social">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.tripadvisor.fr/AttractionProductReview-g293734-d34114602-4_Day_Sahara_Desert_Tour_from_Marrakech-Marrakech_Marrakech_Safi.html" target="_blank" rel="noopener"><i class="fab fa-tripadvisor"></i></a>
-          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.facebook.com/share/14iQym7R4vB/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/beldiatours" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://tiktok.com/@beldiatours" target="_blank"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.tripadvisor.fr/AttractionProductReview-g293734-d34114602-4_Day_Sahara_Desert_Tour_from_Marrakech-Marrakech_Marrakech_Safi.html" target="_blank"><i class="fab fa-tripadvisor"></i></a>
+          <a href="https://wa.me/212689386063" target="_blank"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
       <div class="footer-col">
@@ -225,33 +427,36 @@
           <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
           <li><a href="tours.html"><i class="fas fa-chevron-right"></i> Tours</a></li>
           <li><a href="destinations.html"><i class="fas fa-chevron-right"></i> Destinations</a></li>
-          <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+          <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
           <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Recent Articles</h4>
+        <ul>
+          <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Best Time to Visit Morocco</a></li>
+          <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Complete Sahara Desert Guide</a></li>
+          <li><a href="blog.html"><i class="fas fa-chevron-right"></i> 15 Things to Do in Marrakech</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
         <div class="footer-contact-item"><i class="fas fa-phone"></i><p>+212 6 89 38 60 63</p></div>
         <div class="footer-contact-item"><i class="fas fa-envelope"></i><p>info@beldiatours.com</p></div>
-      </div>
-      <div class="footer-col">
-        <h4>Newsletter</h4>
-        <form class="newsletter-form" style="display:flex;flex-direction:column;gap:.4rem">
-          <input type="email" name="newsletter_email" placeholder="Your email" style="padding:.5rem .8rem;border-radius:4px;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);color:#fff;font-size:.82rem" required/>
-          <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
-        </form>
+        <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><p>+212 6 89 38 60 63</p></div>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><p>Marrakech, Morocco</p></div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© <span id="year"></span> BeldiaTours. All rights reserved.</p>
+      <p>© <span id="year"></span> Beldia Tours. All rights reserved. | Your Journey, Our Passion</p>
     </div>
   </div>
 </footer>
 
-<a href="https://wa.me/212689386063" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+<a href="https://wa.me/212689386063?text=Hello%20Beldia%20Tours!" class="whatsapp-float" target="_blank">
   <i class="fab fa-whatsapp"></i>
 </a>
-<button id="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+<button id="back-to-top"><i class="fas fa-chevron-up"></i></button>
 
 <script src="js/translations.js"></script>
 <script src="js/main.js"></script>
