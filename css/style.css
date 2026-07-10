@@ -293,3 +293,14 @@ footer{background:#070F1A;padding:70px 0 0;border-top:1px solid rgba(200,155,60,
   .dest-strip-grid{grid-template-columns:1fr}
   .about-values{grid-template-columns:1fr}
 }
+
+/* Contact & Blog mobile fixes */
+@media(max-width:768px){
+  .contact-quick-cards{grid-template-columns:1fr!important}
+  .contact-main-grid{grid-template-columns:1fr!important}
+  article [style*="grid-template-columns:1fr 1fr"]{display:block!important}
+  article [style*="grid-template-columns:1fr 1fr"] > div:first-child{height:220px}
+  [style*="grid-template-columns:repeat(3,1fr)"]{grid-template-columns:1fr!important}
+  [style*="grid-template-columns:1fr 380px"]{display:block!important}
+  [style*="grid-template-columns:1fr 2fr"]{display:block!important}
+}
