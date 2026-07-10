@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Beldia Tours – Authentic Morocco Travel Experiences</title>
+  <meta name="description" content="Discover Morocco with Beldia Tours – personalized desert tours, imperial city tours, Sahara experiences. Your Journey, Our Passion."/>
+  <link rel="icon" type="image/ico" href="img/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png"/>
+  <meta name="theme-color" content="#0F2747"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="img/beldia-logo.png" alt="Beldia Tours" class="logo-img"/>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="tours.html">Tours</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="testimonials.html">Testimonials</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+      <a href="https://wa.me/212689386063?text=Hello%20Beldia%20Tours!" class="btn btn-primary btn-sm" target="_blank">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+    </div>
+    <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-nav" style="display:none">
+  <a href="index.html">Home</a>
+  <a href="tours.html">Tours</a>
+  <a href="destinations.html">Destinations</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="testimonials.html">Testimonials</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn-primary">Book Now</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-slides">
+    <div class="hero-slide active" style="background-image:url('img/sahara-camel-sunset.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('img/marrakech-souks.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('img/ait-benhaddou.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('img/essaouira-port.jpg')"></div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge fade-in-up">✨ Authentic Moroccan Experiences</div>
+    <p class="hero-tagline fade-in-up delay-1">Your Journey, Our Passion</p>
+    <h1 class="hero-title fade-in-up delay-1">
+      Discover the Magic of<br><span class="accent">Morocco</span>
+    </h1>
+    <p class="hero-sub fade-in-up delay-2">Explore ancient medinas, golden deserts, and majestic mountains with your trusted local guide. Personalized tours crafted for unforgettable memories.</p>
+    <div class="hero-actions fade-in-up delay-3">
+      <a href="tours.html" class="btn btn-primary btn-lg">Book Your Tour</a>
+      <a href="contact.html" class="btn btn-outline btn-lg">Contact Us</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><span>Scroll</span><i class="fas fa-chevron-down"></i></div>
+  <div class="hero-dots">
+    <button class="hero-dot active"></button>
+    <button class="hero-dot"></button>
+    <button class="hero-dot"></button>
+    <button class="hero-dot"></button>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item" data-reveal>
+        <div class="number"><span class="counter-num" data-target="500" data-suffix="+">0</span></div>
+        <div class="label">Tours Completed</div>
+      </div>
+      <div class="stat-item" data-reveal>
+        <div class="number"><span class="counter-num" data-target="20" data-suffix="+">0</span></div>
+        <div class="label">Countries Served</div>
+      </div>
+      <div class="stat-item" data-reveal>
+        <div class="number"><span class="counter-num" data-target="1000" data-suffix="+">0</span></div>
+        <div class="label">Happy Travelers</div>
+      </div>
+      <div class="stat-item" data-reveal>
+        <div class="number"><span class="counter-num" data-target="5" data-suffix="">0</span></div>
+        <div class="label">Years Experience</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRIPADVISOR STRIP -->
+<div style="background:var(--navy);padding:1.2rem 0;border-top:1px solid rgba(200,155,60,.2);border-bottom:1px solid rgba(200,155,60,.2)">
+  <div class="container">
+    <div style="display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:.8rem">
+        <i class="fab fa-tripadvisor" style="font-size:1.8rem;color:#00AF87"></i>
+        <div>
+          <div style="color:var(--gold-lt);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;font-family:'Cinzel',serif">Rated Excellent</div>
+          <div style="color:#00AF87;font-size:1rem">★★★★★</div>
+        </div>
+      </div>
+      <div style="color:rgba(255,255,255,.7);font-size:.9rem;font-family:'Cormorant Garamond',serif;font-style:italic">"Verified reviews from travelers around the world"</div>
+      <a href="https://www.tripadvisor.fr/AttractionProductReview-g293734-d34114602-4_Day_Sahara_Desert_Tour_from_Marrakech-Marrakech_Marrakech_Safi.html" target="_blank"
+         style="color:var(--gold-lt);font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(200,155,60,.4);padding:.4rem 1rem;border-radius:2px;text-decoration:none">
+        Read Reviews <i class="fas fa-arrow-right" style="font-size:.65rem"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="section-pad">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-images" data-reveal>
+        <div class="about-img-main">
+          <img src="img/sahara-camel-sunset.jpg" alt="Sahara desert Morocco" loading="lazy"/>
+        </div>
+        <div class="about-img-accent">
+          <img src="img/marrakech-souks.jpg" alt="Marrakech" loading="lazy"/>
+        </div>
+        <div class="about-badge">
+          <span class="years">5+</span>
+          <span class="years-label">Years of Excellence</span>
+        </div>
+      </div>
+      <div class="about-text" data-reveal>
+        <span class="section-label">About Us</span>
+        <h2 class="section-title">Your Trusted Moroccan Travel Experts</h2>
+        <div class="divider"></div>
+        <p>Beldia Tours is a premier Moroccan travel agency dedicated to providing authentic, memorable, and fully customized travel experiences. We are passionate local experts who know every corner of this magnificent country.</p>
+        <p>From the golden dunes of the Sahara to the blue streets of Chefchaouen — we craft every journey with care, expertise, and genuine Moroccan hospitality.</p>
+        <div class="about-values">
+          <div class="value-item"><i class="fas fa-user-tie"></i><p>Local Expert Guides</p></div>
+          <div class="value-item"><i class="fas fa-sliders-h"></i><p>Personalized Service</p></div>
+          <div class="value-item"><i class="fas fa-shield-alt"></i><p>Safe & Reliable</p></div>
+          <div class="value-item"><i class="fas fa-tag"></i><p>Transparent Pricing</p></div>
+          <div class="value-item"><i class="fas fa-headset"></i><p>24/7 Support</p></div>
+          <div class="value-item"><i class="fas fa-language"></i><p>Multilingual Team</p></div>
+        </div>
+        <a href="contact.html" class="btn btn-primary" style="margin-top:1.5rem">Plan Your Trip</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="pattern-divider"></div>
+
+<!-- TOURS -->
+<section id="featured-tours" class="section-pad" style="background:var(--off-white)">
+  <div class="container">
+    <div class="text-center" data-reveal>
+      <span class="section-label">Our Tours</span>
+      <h2 class="section-title">Most Popular Experiences</h2>
+      <div class="divider centered"></div>
+    </div>
+    <div class="tours-grid" style="margin-top:2.5rem">
+      <article class="tour-card" data-reveal>
+        <div class="tour-card-img">
+          <img src="img/sahara-camel-sunset.jpg" alt="Sahara Desert Tour" loading="lazy"/>
+          <div class="tour-badge">🏜️ Best Seller</div>
+          <div class="tour-price">Contact Us</div>
+        </div>
+        <div class="tour-card-body">
+          <div class="tour-meta"><span><i class="fas fa-clock"></i> 3-4 days</span><span><i class="fas fa-users"></i> Private</span><span><i class="fas fa-star"></i> 5.0</span></div>
+          <h3>Marrakech to Merzouga Desert</h3>
+          <p>Experience the magic of the Sahara — camel treks, stargazing camps, golden dunes at sunrise.</p>
+          <div class="tour-highlights"><span class="tour-tag">🐪 Camel Trek</span><span class="tour-tag">🌅 Sunrise</span><span class="tour-tag">⭐ Desert Camp</span></div>
+        </div>
+        <div class="tour-card-footer">
+          <div class="tour-rating"><span class="stars">★★★★★</span><span class="count">(14 reviews)</span></div>
+          <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+      </article>
+      <article class="tour-card" data-reveal>
+        <div class="tour-card-img">
+          <img src="img/jemaa-el-fna.jpg" alt="Imperial Cities Tour" loading="lazy"/>
+          <div class="tour-badge">🏛️ Cultural</div>
+          <div class="tour-price">Contact Us</div>
+        </div>
+        <div class="tour-card-body">
+          <div class="tour-meta"><span><i class="fas fa-clock"></i> 7 days</span><span><i class="fas fa-users"></i> Private</span><span><i class="fas fa-star"></i> 5.0</span></div>
+          <h3>Imperial Cities Grand Tour</h3>
+          <p>Journey through Marrakech, Fes, Meknes, and Rabat — Morocco's greatest imperial cities.</p>
+          <div class="tour-highlights"><span class="tour-tag">🕌 Medinas</span><span class="tour-tag">🎨 Souks</span><span class="tour-tag">🏰 Palaces</span></div>
+        </div>
+        <div class="tour-card-footer">
+          <div class="tour-rating"><span class="stars">★★★★★</span><span class="count">(8 reviews)</span></div>
+          <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+      </article>
+      <article class="tour-card" data-reveal>
+        <div class="tour-card-img">
+          <img src="img/ait-benhaddou.jpg" alt="Atlas Mountains" loading="lazy"/>
+          <div class="tour-badge">🏔️ Adventure</div>
+          <div class="tour-price">Contact Us</div>
+        </div>
+        <div class="tour-card-body">
+          <div class="tour-meta"><span><i class="fas fa-clock"></i> 2 days</span><span><i class="fas fa-users"></i> Private</span><span><i class="fas fa-star"></i> 5.0</span></div>
+          <h3>Atlas Mountains Excursion</h3>
+          <p>Trek through Berber villages, waterfalls, and breathtaking mountain scenery.</p>
+          <div class="tour-highlights"><span class="tour-tag">🥾 Trekking</span><span class="tour-tag">🏘️ Berber Village</span><span class="tour-tag">💧 Waterfalls</span></div>
+        </div>
+        <div class="tour-card-footer">
+          <div class="tour-rating"><span class="stars">★★★★★</span><span class="count">(6 reviews)</span></div>
+          <a href="contact.html" class="btn btn-primary btn-sm">Book Now</a>
+        </div>
+      </article>
+    </div>
+    <div class="text-center" style="margin-top:2.5rem">
+      <a href="tours.html" class="btn btn-outline-gold btn-lg">View All Tours</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why-us" class="section-pad">
+  <div class="container">
+    <div class="text-center" data-reveal>
+      <span class="section-label" style="color:var(--gold-lt)">Why Choose Us</span>
+      <h2 class="section-title text-white">The Beldia Tours Difference</h2>
+      <div class="divider centered"></div>
+    </div>
+    <div class="why-grid">
+      <div class="why-card" data-reveal><div class="why-icon"><i class="fas fa-user-tie"></i></div><h4>Local Expert Guides</h4><p>Born and raised in Morocco, our guides share authentic stories and hidden gems.</p></div>
+      <div class="why-card" data-reveal><div class="why-icon"><i class="fas fa-sliders-h"></i></div><h4>Fully Customized</h4><p>Every tour tailored to your interests, pace, and preferences.</p></div>
+      <div class="why-card" data-reveal><div class="why-icon"><i class="fas fa-shield-alt"></i></div><h4>Safe Travel</h4><p>Licensed and committed to your safety throughout every journey.</p></div>
+      <div class="why-card" data-reveal><div class="why-icon"><i class="fas fa-bus"></i></div><h4>Comfortable Transport</h4><p>Air-conditioned vehicles, experienced drivers, premium comfort.</p></div>
+      <div class="why-card" data-reveal><div class="why-icon"><i class="fas fa-language"></i></div><h4>Multilingual Team</h4><p>Fluent in English, Spanish, French, Arabic, and Berber.</p></div>
+      <div class="why-card" data-reveal><div class="why-icon"><i class="fas fa-tag"></i></div><h4>Transparent Pricing</h4><p>No hidden fees. Clear pricing from the start.</p></div>
+      <div class="why-card" data-reveal><div class="why-icon"><i class="fas fa-headset"></i></div><h4>24/7 Support</h4><p>Round-the-clock assistance before, during, and after your trip.</p></div>
+      <div class="why-card" data-reveal><div class="why-icon"><i class="fas fa-hotel"></i></div><h4>Handpicked Hotels</h4><p>Carefully selected riads and hotels for authentic comfort.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DESTINATIONS -->
+<section id="destinations-strip" class="section-pad">
+  <div class="container">
+    <div class="text-center" data-reveal>
+      <span class="section-label" style="color:var(--gold-lt)">Destinations</span>
+      <h2 class="section-title text-white">Explore Morocco's Finest</h2>
+      <div class="divider centered"></div>
+    </div>
+    <div class="dest-strip-grid" style="margin-top:2rem">
+      <a href="destinations.html" class="dest-strip-item" data-reveal>
+        <img src="img/marrakech-souks.jpg" alt="Marrakech" loading="lazy"/>
+        <div class="dest-strip-overlay"><h4>Marrakech</h4><span>🌹 The Red City</span></div>
+      </a>
+      <a href="destinations.html" class="dest-strip-item" data-reveal>
+        <img src="img/sahara-camel-sunset.jpg" alt="Merzouga Sahara" loading="lazy"/>
+        <div class="dest-strip-overlay"><h4>Merzouga</h4><span>🏜️ Sahara Desert</span></div>
+      </a>
+      <a href="destinations.html" class="dest-strip-item" data-reveal>
+        <img src="img/jemaa-el-fna.jpg" alt="Fes" loading="lazy"/>
+        <div class="dest-strip-overlay"><h4>Fes</h4><span>🏛️ Imperial City</span></div>
+      </a>
+      <a href="destinations.html" class="dest-strip-item" data-reveal>
+        <img src="img/hercules-cave-coast.jpg" alt="Chefchaouen" loading="lazy"/>
+        <div class="dest-strip-overlay"><h4>Chefchaouen</h4><span>🔵 Blue City</span></div>
+      </a>
+      <a href="destinations.html" class="dest-strip-item" data-reveal>
+        <img src="img/ait-benhaddou.jpg" alt="Ait Benhaddou" loading="lazy"/>
+        <div class="dest-strip-overlay"><h4>Aït Ben Haddou</h4><span>🏯 UNESCO Site</span></div>
+      </a>
+    </div>
+    <div class="text-center" style="margin-top:2rem">
+      <a href="destinations.html" class="btn btn-outline btn-lg">Explore All Destinations</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section-pad">
+  <div class="container">
+    <div class="text-center" data-reveal>
+      <span class="section-label">Testimonials</span>
+      <h2 class="section-title">What Travelers Say</h2>
+      <div class="divider centered"></div>
+    </div>
+    <div class="testimonials-wrapper" style="margin-top:2.5rem">
+      <div class="testimonials-track">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Abdel was patient and amazing. Our family had the best time traveling the south of Morocco. Would absolutely recommend!"</p>
+          <div class="testimonial-author"><div class="author-avatar">MC</div><div class="author-info"><strong>Mithil C.</strong><span>India 🇮🇳 · May 2026</span></div></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Splendido tour! Aziz is a truly reliable guide — always punctual and precise. Morocco surprised us with its beauty. Highly recommend!"</p>
+          <div class="testimonial-author"><div class="author-avatar">MG</div><div class="author-info"><strong>MaxInGiro</strong><span>Italy 🇮🇹 · January 2026</span></div></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Hemos tenido una experiencia increíble. La profesionalidad y dedicación han sido excepcionales. Guía de 10 ⭐ — ¡100% recomendable!"</p>
+          <div class="testimonial-author"><div class="author-avatar">EM</div><div class="author-info"><strong>Encarna M.</strong><span>Spain 🇪🇸 · April 2026</span></div></div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Aziz is very kind and reliable — made our trip excellent. Very patient with kids. We recommend 100%!"</p>
+          <div class="testimonial-author"><div class="author-avatar">IP</div><div class="author-info"><strong>Idriss P.</strong><span>France 🇫🇷 · April 2026</span></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonials-nav">
+      <button id="testimonials-prev"><i class="fas fa-chevron-left"></i></button>
+      <button id="testimonials-next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    <div class="text-center" style="margin-top:1.5rem">
+      <a href="testimonials.html" class="btn btn-outline-gold">Read All Reviews</a>
+    </div>
+  </div>
+</section>
+
+<div class="pattern-divider"></div>
+
+<!-- BLOG -->
+<section id="blog-preview" class="section-pad">
+  <div class="container">
+    <div class="text-center" data-reveal>
+      <span class="section-label">Travel Blog</span>
+      <h2 class="section-title">Morocco Travel Guides & Tips</h2>
+      <div class="divider centered"></div>
+    </div>
+    <div class="blog-grid">
+      <article class="blog-card" data-reveal>
+        <div class="blog-card-img"><img src="img/sahara-camel-sunset.jpg" alt="Best time Morocco" loading="lazy"/></div>
+        <div class="blog-card-body">
+          <div class="blog-category">Travel Tips</div>
+          <h3>Best Time to Visit Morocco: A Complete Seasonal Guide</h3>
+          <p>Discover when to visit Morocco for the best weather and most memorable experiences.</p>
+          <div class="blog-meta"><span><i class="fas fa-calendar"></i> July 2025</span><span><i class="fas fa-clock"></i> 8 min read</span></div>
+        </div>
+      </article>
+      <article class="blog-card" data-reveal>
+        <div class="blog-card-img"><img src="img/ait-benhaddou.jpg" alt="Sahara guide" loading="lazy"/></div>
+        <div class="blog-card-body">
+          <div class="blog-category">Desert & Sahara</div>
+          <h3>The Complete Sahara Desert Guide: Everything You Need to Know</h3>
+          <p>Our insider guide to make your desert experience absolutely perfect.</p>
+          <div class="blog-meta"><span><i class="fas fa-calendar"></i> June 2025</span><span><i class="fas fa-clock"></i> 10 min read</span></div>
+        </div>
+      </article>
+      <article class="blog-card" data-reveal>
+        <div class="blog-card-img"><img src="img/marrakech-souks.jpg" alt="Marrakech guide" loading="lazy"/></div>
+        <div class="blog-card-body">
+          <div class="blog-category">Destinations</div>
+          <h3>Marrakech Travel Guide: The 15 Best Things to Do</h3>
+          <p>The 15 experiences you cannot miss in the Red City — from local experts.</p>
+          <div class="blog-meta"><span><i class="fas fa-calendar"></i> May 2025</span><span><i class="fas fa-clock"></i> 9 min read</span></div>
+        </div>
+      </article>
+    </div>
+    <div class="text-center" style="margin-top:2rem">
+      <a href="blog.html" class="btn btn-outline-gold btn-lg">Read All Articles</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta" class="section-pad">
+  <div class="container">
+    <div class="cta-inner" data-reveal>
+      <span class="section-label" style="color:var(--gold-lt)">🌟 Start Your Journey</span>
+      <h2>Ready for Your Moroccan Adventure?</h2>
+      <p>Contact us today and let us create your perfect personalized Moroccan journey.</p>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn btn-primary btn-lg">Book Your Tour</a>
+        <a href="https://wa.me/212689386063?text=Hello%20Beldia%20Tours!" class="cta-whatsapp" target="_blank">
+          <i class="fab fa-whatsapp"></i> WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html"><img src="img/beldia-logo.png" alt="Beldia Tours" class="logo-img"/></a>
+        <p>Your trusted Moroccan travel partner for authentic, personalized adventures across the Kingdom of Morocco.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/share/14iQym7R4vB/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/beldiatours" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://tiktok.com/@beldiatours" target="_blank"><i class="fab fa-tiktok"></i></a>
+          <a href="https://www.tripadvisor.fr/AttractionProductReview-g293734-d34114602-4_Day_Sahara_Desert_Tour_from_Marrakech-Marrakech_Marrakech_Safi.html" target="_blank"><i class="fab fa-tripadvisor"></i></a>
+          <a href="https://wa.me/212689386063" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+          <li><a href="tours.html"><i class="fas fa-chevron-right"></i> Tours</a></li>
+          <li><a href="destinations.html"><i class="fas fa-chevron-right"></i> Destinations</a></li>
+          <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+          <li><a href="testimonials.html"><i class="fas fa-chevron-right"></i> Testimonials</a></li>
+          <li><a href="blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+          <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Tours</h4>
+        <ul>
+          <li><a href="tours.html"><i class="fas fa-chevron-right"></i> Marrakech to Merzouga</a></li>
+          <li><a href="tours.html"><i class="fas fa-chevron-right"></i> Imperial Cities Tour</a></li>
+          <li><a href="tours.html"><i class="fas fa-chevron-right"></i> Sahara Luxury Experience</a></li>
+          <li><a href="tours.html"><i class="fas fa-chevron-right"></i> Atlas Mountains Trek</a></li>
+          <li><a href="tours.html"><i class="fas fa-chevron-right"></i> Chefchaouen Tour</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i><p>+212 6 89 38 60 63</p></div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><p>info@beldiatours.com</p></div>
+        <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><p>+212 6 89 38 60 63</p></div>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><p>Marrakech, Morocco 🇲🇦</p></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Beldia Tours. All rights reserved. | Your Journey, Our Passion</p>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/212689386063?text=Hello%20Beldia%20Tours!" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+<button id="back-to-top"><i class="fas fa-chevron-up"></i></button>
+
+<script src="js/translations.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
