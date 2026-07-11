@@ -304,3 +304,18 @@ footer{background:#070F1A;padding:70px 0 0;border-top:1px solid rgba(200,155,60,
   [style*="grid-template-columns:1fr 380px"]{display:block!important}
   [style*="grid-template-columns:1fr 2fr"]{display:block!important}
 }
+
+/* Newsletter in footer */
+.footer-top {
+  grid-template-columns: 1.8fr 1fr 1fr 1fr 1.4fr !important;
+}
+@media(max-width:1100px) {
+  .footer-top { grid-template-columns: 1fr 1fr !important; }
+}
+@media(max-width:768px) {
+  .footer-top { grid-template-columns: 1fr !important; }
+}
+#newsletter-form input:focus {
+  outline: none;
+  border-color: var(--gold) !important;
+}
