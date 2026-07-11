@@ -11,6 +11,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="css/style.css"/>
+  <!-- Google Analytics G-GPKRBTHXY6 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPKRBTHXY6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GPKRBTHXY6');
+  </script>
 </head>
 <body>
 <nav id="main-nav">
@@ -109,6 +117,21 @@
         <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><p>+212 6 89 38 60 63</p></div>
         <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><p>Marrakech, Morocco 🇲🇦</p></div>
       </div>
+    
+        <!-- Newsletter Signup -->
+        <div class="footer-col" style="grid-column: span 1">
+          <h4>Newsletter</h4>
+          <p style="font-size:.82rem;color:rgba(255,255,255,.5);margin-bottom:.8rem">Get Morocco travel tips and exclusive offers.</p>
+          <form id="newsletter-form" style="display:flex;gap:.4rem;flex-wrap:wrap">
+            <input type="email" id="newsletter-email" placeholder="your@email.com"
+              style="flex:1;min-width:0;padding:.55rem .8rem;border-radius:2px;border:1px solid rgba(200,155,60,.3);background:rgba(255,255,255,.06);color:var(--white);font-size:.8rem;font-family:'Montserrat',sans-serif"/>
+            <button type="submit"
+              style="padding:.55rem 1rem;background:linear-gradient(135deg,var(--gold),var(--gold-dk));color:white;border:none;border-radius:2px;font-size:.78rem;font-weight:600;cursor:pointer;white-space:nowrap;font-family:'Montserrat',sans-serif">
+              Subscribe
+            </button>
+          </form>
+          <div id="newsletter-msg" style="display:none;margin-top:.5rem;font-size:.75rem;color:var(--gold-lt)"></div>
+        </div>
     </div>
     <div class="footer-bottom"><p>© <span id="year"></span> Beldia Tours. All rights reserved. | Your Journey, Our Passion</p></div>
   </div>
@@ -117,4 +140,22 @@
 <button id="back-to-top"><i class="fas fa-chevron-up"></i></button>
 <script src="js/translations.js"></script>
 <script src="js/main.js"></script>
+
+<script>
+// Newsletter signup
+document.getElementById('newsletter-form')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const email = document.getElementById('newsletter-email').value;
+  const msg = document.getElementById('newsletter-msg');
+  if (!email) return;
+  // Save to localStorage as simple solution
+  const subs = JSON.parse(localStorage.getItem('beldia_subscribers') || '[]');
+  if (!subs.includes(email)) subs.push(email);
+  localStorage.setItem('beldia_subscribers', JSON.stringify(subs));
+  msg.style.display = 'block';
+  msg.textContent = '✅ Thank you! You will receive our Morocco travel tips.';
+  document.getElementById('newsletter-email').value = '';
+  setTimeout(() => { msg.style.display = 'none'; }, 4000);
+});
+</script>
 </body></html>
