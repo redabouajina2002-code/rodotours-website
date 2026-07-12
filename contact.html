@@ -215,7 +215,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     .then(function(){
       btn.innerHTML='<i class="fas fa-check"></i> Message Sent!';btn.style.background='#25a244';
       msg.style.display='block';msg.style.background='#f0faf5';msg.style.color='#1a7a4a';msg.style.border='1px solid #c3e6d4';
-      msg.innerHTML='✅ Thank you! We will reply within 24 hours to <strong>'+params.from_email+'</strong>';
+      msg.innerHTML='✅ Thank you! We received your message and will reply within 24 hours. Please check your email for confirmation!';
       document.getElementById('contact-form').reset();
       setTimeout(()=>{btn.innerHTML='<i class="fas fa-paper-plane"></i> Send Message';btn.style.background='';btn.disabled=false;},5000);
     },function(){
