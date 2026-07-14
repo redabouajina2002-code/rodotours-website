@@ -38,7 +38,7 @@
         <button class="lang-btn" data-lang="es">ES</button>
         <button class="lang-btn" data-lang="fr">FR</button>
       </div>
-      <a href="https://wa.me/212689386063" class="btn btn-primary btn-sm" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="https://wa.me/212689386063?text=Hello%20Beldia%20Tours!%20I%20would%20like%20to%20inquire%20about%20a%20Morocco%20tour." class="btn btn-primary btn-sm" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
     </div>
     <button class="nav-toggle"><span></span><span></span><span></span></button>
   </div>
@@ -94,7 +94,7 @@
           <a href="https://www.instagram.com/beldiatours" target="_blank"><i class="fab fa-instagram"></i></a>
           <a href="https://tiktok.com/@beldiatours" target="_blank"><i class="fab fa-tiktok"></i></a>
           <a href="https://www.tripadvisor.fr/AttractionProductReview-g293734-d34114602-4_Day_Sahara_Desert_Tour_from_Marrakech-Marrakech_Marrakech_Safi.html" target="_blank"><i class="fab fa-tripadvisor"></i></a>
-          <a href="https://wa.me/212689386063" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://wa.me/212689386063?text=Hello%20Beldia%20Tours!%20I%20would%20like%20to%20inquire%20about%20a%20Morocco%20tour." target="_blank"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
       <div class="footer-col"><h4>Quick Links</h4><ul>
@@ -138,7 +138,6 @@
     <div class="footer-bottom"><p>© <span id="year"></span> Beldia Tours. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | Your Journey, Our Passion</p></div>
   </div>
 </footer>
-<a href="https://wa.me/212689386063" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 <button id="back-to-top"><i class="fas fa-chevron-up"></i></button>
 <script src="js/translations.js"></script>
 <script src="js/main.js"></script>
@@ -160,4 +159,60 @@ document.getElementById('newsletter-form')?.addEventListener('submit', function(
   setTimeout(() => { msg.style.display = 'none'; }, 4000);
 });
 </script>
+
+<!-- WhatsApp Chat Widget -->
+<div id="wa-widget" style="position:fixed;bottom:2rem;right:2rem;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:.8rem">
+  
+  <!-- Chat popup -->
+  <div id="wa-popup" style="display:none;background:white;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,.15);width:300px;overflow:hidden;animation:fadeInUp .3s ease">
+    <!-- Header -->
+    <div style="background:#25D366;padding:1.2rem;display:flex;align-items:center;gap:.8rem">
+      <img src="img/beldia-logo.png" alt="Beldia Tours" style="width:44px;height:44px;border-radius:50%;object-fit:cover;background:white;padding:2px"/>
+      <div>
+        <div style="color:white;font-weight:700;font-size:.92rem;font-family:'Cinzel',serif">Beldia Tours</div>
+        <div style="color:rgba(255,255,255,.85);font-size:.75rem;display:flex;align-items:center;gap:.3rem">
+          <span style="width:8px;height:8px;background:#fff;border-radius:50%;display:inline-block"></span>
+          Typically replies within 1 hour
+        </div>
+      </div>
+      <button onclick="document.getElementById('wa-popup').style.display='none'" 
+        style="margin-left:auto;background:none;border:none;color:white;font-size:1.2rem;cursor:pointer;padding:.2rem">✕</button>
+    </div>
+    <!-- Chat bubble -->
+    <div style="padding:1.2rem;background:#ECE5DD">
+      <div style="background:white;border-radius:0 12px 12px 12px;padding:1rem;box-shadow:0 1px 4px rgba(0,0,0,.1);max-width:85%;font-size:.88rem;color:#333;line-height:1.5">
+        Hello! 👋 Welcome to <strong>Beldia Tours</strong>.<br><br>
+        How can we help you plan your perfect Morocco adventure? 🇲🇦
+      </div>
+      <div style="font-size:.7rem;color:#999;margin-top:.4rem;margin-left:.5rem">Beldia Tours · just now</div>
+    </div>
+    <!-- Input area -->
+    <div style="padding:1rem;background:white;border-top:1px solid #f0f0f0">
+      <a href="https://wa.me/212689386063?text=Hello%20Beldia%20Tours!%20I%20would%20like%20to%20inquire%20about%20a%20Morocco%20tour." 
+         target="_blank"
+         style="display:flex;align-items:center;justify-content:center;gap:.6rem;background:#25D366;color:white;padding:.85rem;border-radius:50px;font-size:.85rem;font-weight:600;text-decoration:none;transition:all .3s"
+         onmouseover="this.style.background='#1DA851'" onmouseout="this.style.background='#25D366'">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Start Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <!-- WhatsApp button -->
+  <button onclick="var p=document.getElementById('wa-popup');p.style.display=p.style.display==='none'?'block':'none'"
+    style="width:60px;height:60px;border-radius:50%;background:#25D366;color:white;border:none;cursor:pointer;font-size:1.8rem;box-shadow:0 4px 20px rgba(37,211,102,.5);display:flex;align-items:center;justify-content:center;transition:all .3s;position:relative"
+    onmouseover="this.style.transform='scale(1.1)';this.style.boxShadow='0 6px 28px rgba(37,211,102,.6)'"
+    onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 20px rgba(37,211,102,.5)'">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <!-- Notification dot -->
+    <span style="position:absolute;top:0;right:0;width:16px;height:16px;background:#FF3B30;border-radius:50%;border:2px solid white;font-size:.65rem;display:flex;align-items:center;justify-content:center;color:white;font-weight:700">1</span>
+  </button>
+</div>
+
+<style>
+@keyframes fadeInUp {
+  from { opacity:0; transform:translateY(10px); }
+  to { opacity:1; transform:translateY(0); }
+}
+</style>
 </body></html>
