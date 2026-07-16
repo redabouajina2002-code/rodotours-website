@@ -319,3 +319,8 @@ footer{background:#070F1A;padding:70px 0 0;border-top:1px solid rgba(200,155,60,
   outline: none;
   border-color: var(--gold) !important;
 }
+
+/* TripAdvisor icon fallback */
+.fa-tripadvisor::before {
+  content: "\f262";
+}
