@@ -10,9 +10,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Morocco Travel Blog – Beldia Tours</title>
   <meta name="theme-color" content="#0F2747"/>
+  <!-- Social sharing preview -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Beldia Tours"/>
+  <meta property="og:title" content="Morocco Travel Blog – Beldia Tours"/>
+  <meta property="og:description" content="Expert Morocco travel guides from local guides: best time to visit, Sahara desert tips, Marrakech highlights and more."/>
+  <meta property="og:image" content="https://beldiatours.com/img/dest-marrakech.jpg"/>
+  <meta property="og:url" content="https://beldiatours.com/blog.html"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Morocco Travel Blog – Beldia Tours"/>
+  <meta name="twitter:description" content="Expert Morocco travel guides from local guides: best time to visit, Sahara desert tips, Marrakech highlights and more."/>
+  <meta name="twitter:image" content="https://beldiatours.com/img/dest-marrakech.jpg"/>
+
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="stylesheet" href="css/style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>emailjs.init({ publicKey: "o1zypBZCC6ohDqn3J" });</script>
+
   <!-- Google Analytics G-GPKRBTHXY6 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPKRBTHXY6"></script>
   <script>
@@ -207,7 +222,7 @@
           <div id="newsletter-msg" style="display:none;margin-top:.5rem;font-size:.75rem;color:var(--gold-lt)"></div>
         </div>
     </div>
-    <div class="footer-bottom"><p>© <span id="year"></span> Beldia Tours. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | Your Journey, Our Passion</p></div>
+    <div class="footer-bottom"><p>© <span id="year">2026</span> Beldia Tours. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | Your Journey, Our Passion</p></div>
   </div>
 </footer>
 <button id="back-to-top"><i class="fas fa-chevron-up"></i></button>
@@ -221,14 +236,24 @@ document.getElementById('newsletter-form')?.addEventListener('submit', function(
   const email = document.getElementById('newsletter-email').value;
   const msg = document.getElementById('newsletter-msg');
   if (!email) return;
-  // Save to localStorage as simple solution
-  const subs = JSON.parse(localStorage.getItem('beldia_subscribers') || '[]');
-  if (!subs.includes(email)) subs.push(email);
-  localStorage.setItem('beldia_subscribers', JSON.stringify(subs));
-  msg.style.display = 'block';
-  msg.textContent = '✅ Thank you! You will receive our Morocco travel tips.';
-  document.getElementById('newsletter-email').value = '';
-  setTimeout(() => { msg.style.display = 'none'; }, 4000);
+  if (typeof emailjs !== 'undefined') {
+    emailjs.send('service_u5dz0qm','template_newsletter',{subscriber_email: email, page: window.location.pathname})
+      .then(function(){
+        msg.style.display = 'block';
+        msg.textContent = '✅ Thank you! You will receive our Morocco travel tips.';
+        document.getElementById('newsletter-email').value = '';
+        setTimeout(() => { msg.style.display = 'none'; }, 4000);
+      }, function(){
+        msg.style.display = 'block';
+        msg.textContent = '⚠️ Could not subscribe right now — please try again later.';
+        setTimeout(() => { msg.style.display = 'none'; }, 4000);
+      });
+  } else {
+    msg.style.display = 'block';
+    msg.textContent = '✅ Thank you! You will receive our Morocco travel tips.';
+    document.getElementById('newsletter-email').value = '';
+    setTimeout(() => { msg.style.display = 'none'; }, 4000);
+  }
 });
 </script>
 
