@@ -36,6 +36,30 @@
     gtag('js', new Date());
     gtag('config', 'G-GPKRBTHXY6');
   </script>
+  <style>
+    /* ===== Mobile responsive fixes for inline grid layouts ===== */
+    @media (max-width: 900px) {
+      [style*="grid-template-columns:1fr 380px"] { grid-template-columns: 1fr !important; }
+    }
+    @media (max-width: 768px) {
+      [style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; gap: 2rem !important; }
+      [style*="grid-template-columns:repeat(3,1fr)"] { grid-template-columns: repeat(2,1fr) !important; }
+      [style*="height:500px"] { height: 380px !important; }
+      /* floating badges: keep inside the screen */
+      [style*="bottom:-20px;right:-20px"] { right: 10px !important; bottom: 10px !important; padding: 1rem !important; }
+      [style*="top:20px;left:-20px"] { left: 10px !important; }
+    }
+    @media (max-width: 560px) {
+      [style*="grid-template-columns:repeat(3,1fr)"] { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <style>
+    /* Gallery keeps 2 photo columns on phones */
+    @media (max-width: 560px) {
+      [style*="grid-template-columns:repeat(3,1fr)"] { grid-template-columns: 1fr 1fr !important; }
+      [style*="height:280px"] { height: 170px !important; }
+    }
+  </style>
 </head>
 <body>
 <nav id="main-nav">
