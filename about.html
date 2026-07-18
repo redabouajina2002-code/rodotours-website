@@ -347,5 +347,13 @@
 <button id="back-to-top"><i class="fas fa-chevron-up"></i></button>
 <script src="js/translations.js"></script>
 <script src="js/main.js"></script>
+<script>
+document.addEventListener('click', function(e){
+  var a = e.target.closest ? e.target.closest('a[href*="wa.me"]') : null;
+  if (a && typeof gtag === 'function') {
+    gtag('event', 'whatsapp_click', { link_url: a.href, page_path: location.pathname });
+  }
+});
+</script>
 </body>
 </html>
