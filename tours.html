@@ -3,29 +3,217 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Morocco Tours & Excursions – Beldia Tours</title>
-  <meta name="description" content="Private Morocco tours from Marrakech: Sahara desert tours to Merzouga, Imperial Cities, Atlas Mountains, Chefchaouen & Essaouira. Fully customized — Book with Beldia Tours."/>
+  <title>Our Morocco Tours – Beldia Tours</title>
+  <meta name="description" content="Book private Morocco tours with Beldia Tours. Sahara Desert 3-4 days, Ourika Valley day trip, Agafay Desert with camel and quad. Real prices, private tours."/>
   <link rel="icon" type="image/x-icon" href="img/favicon.ico"/>
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png"/>
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon-180.png"/>
   <meta name="theme-color" content="#0F2747"/>
-  <!-- Social sharing preview -->
-  <meta property="og:type" content="website"/>
-  <meta property="og:site_name" content="Beldia Tours"/>
-  <meta property="og:title" content="Morocco Tours & Excursions – Beldia Tours"/>
-  <meta property="og:description" content="Private Sahara desert tours, Imperial Cities, Atlas Mountains, Chefchaouen & more. Fully customizable journeys from Marrakech."/>
-  <meta property="og:image" content="https://beldiatours.com/img/sahara-camel-sunset.jpg"/>
-  <meta property="og:url" content="https://beldiatours.com/tours.html"/>
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="Morocco Tours & Excursions – Beldia Tours"/>
-  <meta name="twitter:description" content="Private Sahara desert tours, Imperial Cities, Atlas Mountains, Chefchaouen & more. Fully customizable journeys from Marrakech."/>
-  <meta name="twitter:image" content="https://beldiatours.com/img/sahara-camel-sunset.jpg"/>
-
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="stylesheet" href="css/style.css"/>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPKRBTHXY6"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-GPKRBTHXY6');</script>
+  <style>
+    .tour-card-full {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(15,39,71,.12);
+      border: 1px solid rgba(15,39,71,.07);
+      margin-bottom: 2.5rem;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .tour-card-full:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 60px rgba(15,39,71,.18);
+    }
+    .tour-card-inner {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+    }
+    .tour-img-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+    .tour-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      min-height: 380px;
+      transition: transform .6s ease;
+    }
+    .tour-card-full:hover .tour-img-wrap img {
+      transform: scale(1.05);
+    }
+    .tour-badge-wrap {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: .4rem;
+    }
+    .tour-badge {
+      background: rgba(10,25,41,.88);
+      color: var(--gold-lt);
+      padding: .35rem .9rem;
+      border-radius: 99px;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      backdrop-filter: blur(4px);
+      display: inline-block;
+    }
+    .tour-badge.bestseller {
+      background: linear-gradient(135deg, var(--gold), var(--gold-dk));
+      color: white;
+    }
+    .tour-price-tag {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      background: white;
+      border-radius: 12px;
+      padding: .8rem 1.2rem;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,.2);
+    }
+    .tour-price-tag .from {
+      font-size: .65rem;
+      color: var(--text-lt);
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      display: block;
+    }
+    .tour-price-tag .price {
+      font-family: 'Cinzel', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1;
+    }
+    .tour-price-tag .per {
+      font-size: .7rem;
+      color: var(--text-mid);
+    }
+    .tour-body {
+      padding: 2.2rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .tour-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      margin-bottom: 1rem;
+    }
+    .tour-meta-pill {
+      display: flex;
+      align-items: center;
+      gap: .35rem;
+      background: var(--off-white);
+      border: 1px solid rgba(15,39,71,.08);
+      padding: .3rem .8rem;
+      border-radius: 99px;
+      font-size: .75rem;
+      color: var(--text-mid);
+      font-weight: 500;
+    }
+    .tour-meta-pill i { color: var(--gold); font-size: .7rem; }
+    .tour-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.5rem;
+      color: var(--navy);
+      margin-bottom: .6rem;
+      line-height: 1.3;
+    }
+    .tour-desc {
+      font-size: .9rem;
+      color: var(--text-mid);
+      line-height: 1.75;
+      margin-bottom: 1.2rem;
+    }
+    .tour-includes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .4rem;
+      margin-bottom: 1.5rem;
+    }
+    .tour-include-item {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .8rem;
+      color: var(--text-mid);
+    }
+    .tour-include-item i { color: #25a244; font-size: .75rem; flex-shrink: 0; }
+    .tour-price-box {
+      background: var(--off-white);
+      border-radius: 12px;
+      padding: 1.2rem 1.5rem;
+      border: 1px solid var(--border);
+      margin-bottom: 1.2rem;
+    }
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: .4rem 0;
+      border-bottom: 1px solid rgba(15,39,71,.06);
+      font-size: .84rem;
+    }
+    .price-row:last-child { border-bottom: none; }
+    .price-row .label { color: var(--text-mid); }
+    .price-row .amount {
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      color: var(--navy);
+      font-size: .92rem;
+    }
+    .price-row .amount.highlight { color: var(--gold-dk); }
+    .tour-actions {
+      display: flex;
+      gap: .8rem;
+      flex-wrap: wrap;
+    }
+    .rating-row {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      margin-bottom: 1rem;
+    }
+    .rating-stars { color: var(--gold); font-size: .9rem; }
+    .rating-count { font-size: .78rem; color: var(--text-lt); }
+    .tour-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .4rem;
+      margin-bottom: 1.2rem;
+    }
+    .highlight-tag {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      color: var(--navy);
+      padding: .25rem .75rem;
+      border-radius: 99px;
+      font-size: .72rem;
+      font-weight: 600;
+    }
+    .dh-note {
+      font-size: .72rem;
+      color: var(--text-lt);
+      margin-top: .3rem;
+    }
+    @media(max-width:900px) {
+      .tour-card-inner { grid-template-columns: 1fr; }
+      .tour-img-wrap img { min-height: 260px; max-height: 280px; }
+      .tour-body { padding: 1.5rem; }
+      .tour-includes { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
@@ -33,10 +221,14 @@
   <div class="nav-inner">
     <a href="index.html" class="nav-logo"><img src="img/beldia-logo.png" alt="Beldia Tours" class="logo-img"/></a>
     <nav class="nav-links">
-      <a href="index.html">Home</a><a href="tours.html">Tours</a>
-      <a href="destinations.html">Destinations</a><a href="gallery.html">Gallery</a>
+      <a href="index.html">Home</a>
+      <a href="tours.html">Tours</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="about.html">About</a>
       <a href="testimonials.html">Testimonials</a>
-      <a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <div class="nav-actions">
       <div class="lang-switcher">
@@ -44,7 +236,7 @@
         <button class="lang-btn" data-lang="es">ES</button>
         <button class="lang-btn" data-lang="fr">FR</button>
       </div>
-      <a href="https://wa.me/212689386063?text=Hello%20Beldia%20Tours!" class="btn btn-primary btn-sm" target="_blank">
+      <a href="https://wa.me/212689386063?text=Hello%20Beldia%20Tours!%20I%20would%20like%20to%20book%20a%20tour." class="btn btn-primary btn-sm" target="_blank">
         <i class="fab fa-whatsapp"></i> WhatsApp
       </a>
     </div>
@@ -54,7 +246,7 @@
 <div class="mobile-nav" style="display:none">
   <a href="index.html">Home</a><a href="tours.html">Tours</a>
   <a href="destinations.html">Destinations</a><a href="gallery.html">Gallery</a>
-  <a href="testimonials.html">Testimonials</a>
+  <a href="about.html">About</a><a href="testimonials.html">Testimonials</a>
   <a href="blog.html">Blog</a><a href="contact.html">Contact</a>
 </div>
 
@@ -65,210 +257,326 @@
       <nav class="breadcrumb">
         <a href="index.html">Home</a>
         <i class="fas fa-chevron-right"></i>
-        <span>Tours</span>
+        <span>Our Tours</span>
       </nav>
-      <h1>Our Tours</h1>
-      <p style="color:rgba(255,255,255,.78);margin:.5rem 0 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem">Private, fully customizable journeys across Morocco — Your Journey, Our Passion</p>
+      <h1>Our Morocco Tours</h1>
+      <p style="color:rgba(255,255,255,.78);margin:.5rem 0 0;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem">Private & personalized experiences — real prices, no hidden fees</p>
     </div>
   </div>
 </header>
 
-<main>
+<main class="section-pad" style="background:var(--off-white)">
+  <div class="container">
 
-  <!-- All Tours -->
-  <section class="section-pad" style="background:var(--off-white)">
-    <div class="container">
-      <div class="text-center" data-reveal>
-        <span class="section-label">Explore Morocco</span>
-        <h2 class="section-title">Choose Your Adventure</h2>
-        <div class="divider centered"></div>
-        <p style="max-width:640px;margin:1rem auto 0;color:var(--text-mid)">Every tour below is private and fully customizable — dates, pace, hotels, and stops are all adapted to you. Don't see exactly what you're looking for? Message us on WhatsApp and we'll design it together.</p>
-      </div>
-
-      <div class="tours-grid" style="margin-top:2.5rem">
-
-        <article class="tour-card" data-reveal>
-          <div class="tour-card-img">
-            <img src="img/sahara-camel-sunset.jpg" alt="Camel caravan at sunset on the Sahara dunes near Merzouga" loading="lazy"/>
-            <div class="tour-badge">🏜️ Best Seller</div>
-            <div class="tour-price">Contact Us</div>
-          </div>
-          <div class="tour-card-body">
-            <div class="tour-meta"><span><i class="fas fa-clock"></i> 3-4 days</span><span><i class="fas fa-users"></i> Private</span><span><i class="fas fa-star"></i> 5.0</span></div>
-            <h3>Marrakech to Merzouga Desert</h3>
-            <p>Cross the High Atlas via Aït Ben Haddou and the Draa Valley to the great dunes of Erg Chebbi — camel trek at sunset, a night under the stars in a desert camp, and sunrise over the Sahara.</p>
-            <div class="tour-highlights"><span class="tour-tag">🐪 Camel Trek</span><span class="tour-tag">🌅 Sunrise</span><span class="tour-tag">⭐ Desert Camp</span></div>
-          </div>
-          <div class="tour-card-footer">
-            <div class="tour-rating"><span class="stars">★★★★★</span><span class="count">(14 reviews)</span></div>
-            <a href="https://wa.me/212689386063?text=Hello%20Beldia%20Tours!%20I%27m%20interested%20in%20the%20Marrakech%20to%20Merzouga%20Desert%20tour." target="_blank" class="btn btn-primary btn-sm">Book Now</a>
-          </div>
-        </article>
-
-        <article class="tour-card" data-reveal>
-          <div class="tour-card-img">
-            <img src="img/tour-sahara-luxury.jpg" alt="Dinner inside a Sahara desert camp tent — Beldia Tours luxury experience" loading="lazy"/>
-            <div class="tour-badge">✨ Luxury</div>
-            <div class="tour-price">Contact Us</div>
-          </div>
-          <div class="tour-card-body">
-            <div class="tour-meta"><span><i class="fas fa-clock"></i> 5 days</span><span><i class="fas fa-users"></i> Private</span><span><i class="fas fa-star"></i> 5.0</span></div>
-            <h3>Sahara Luxury Experience</h3>
-            <p>The desert in full comfort — a premium luxury camp with private bathroom, gourmet dinner under the stars, sunset camel ride or 4x4 dune drive, and handpicked riads along the way.</p>
-            <div class="tour-highlights"><span class="tour-tag">🏕️ Luxury Camp</span><span class="tour-tag">🍽️ Gourmet Dinner</span><span class="tour-tag">🚙 4x4 Dunes</span></div>
-          </div>
-          <div class="tour-card-footer">
-            <div class="tour-rating"><span class="stars">★★★★★</span><span class="count">TripAdvisor rated</span></div>
-            <a href="https://wa.me/212689386063?text=Hello%20Beldia%20Tours!%20I%27m%20interested%20in%20the%20Sahara%20Luxury%20Experience." target="_blank" class="btn btn-primary btn-sm">Book Now</a>
-          </div>
-        </article>
-
-        <article class="tour-card" data-reveal>
-          <div class="tour-card-img">
-            <img src="img/dest-fes.jpg" alt="The Chouara tanneries in the ancient medina of Fes" loading="lazy"/>
-            <div class="tour-badge">🏛️ Cultural</div>
-            <div class="tour-price">Contact Us</div>
-          </div>
-          <div class="tour-card-body">
-            <div class="tour-meta"><span><i class="fas fa-clock"></i> 7 days</span><span><i class="fas fa-users"></i> Private</span><span><i class="fas fa-star"></i> 5.0</span></div>
-            <h3>Imperial Cities Grand Tour</h3>
-            <p>Journey through Marrakech, Fes, Meknes, and Rabat — royal palaces, ancient medinas, legendary souks, and a thousand years of Moroccan history with a local expert by your side.</p>
-            <div class="tour-highlights"><span class="tour-tag">🕌 Medinas</span><span class="tour-tag">🎨 Souks</span><span class="tour-tag">🏰 Palaces</span></div>
-          </div>
-          <div class="tour-card-footer">
-            <div class="tour-rating"><span class="stars">★★★★★</span><span class="count">(8 reviews)</span></div>
-            <a href="https://wa.me/212689386063?text=Hello%20Beldia%20Tours!%20I%27m%20interested%20in%20the%20Imperial%20Cities%20Grand%20Tour." target="_blank" class="btn btn-primary btn-sm">Book Now</a>
-          </div>
-        </article>
-
-        <article class="tour-card" data-reveal>
-          <div class="tour-card-img">
-            <img src="img/ait-benhaddou.jpg" alt="The kasbah of Ait Benhaddou at the foot of the Atlas mountains" loading="lazy"/>
-            <div class="tour-badge">🏔️ Adventure</div>
-            <div class="tour-price">Contact Us</div>
-          </div>
-          <div class="tour-card-body">
-            <div class="tour-meta"><span><i class="fas fa-clock"></i> 1-2 days</span><span><i class="fas fa-users"></i> Private</span><span><i class="fas fa-star"></i> 5.0</span></div>
-            <h3>Atlas Mountains Excursion</h3>
-            <p>Trek through Berber villages, visit a traditional family home for mint tea, and discover waterfalls and breathtaking mountain scenery — just a short drive from Marrakech.</p>
-            <div class="tour-highlights"><span class="tour-tag">🥾 Trekking</span><span class="tour-tag">🏘️ Berber Village</span><span class="tour-tag">💧 Waterfalls</span></div>
-          </div>
-          <div class="tour-card-footer">
-            <div class="tour-rating"><span class="stars">★★★★★</span><span class="count">(6 reviews)</span></div>
-            <a href="https://wa.me/212689386063?text=Hello%20Beldia%20Tours!%20I%27m%20interested%20in%20the%20Atlas%20Mountains%20Excursion." target="_blank" class="btn btn-primary btn-sm">Book Now</a>
-          </div>
-        </article>
-
-        <article class="tour-card" data-reveal>
-          <div class="tour-card-img">
-            <img src="img/tour-chefchaouen-blue.jpg" alt="Blue streets of Chefchaouen with flower pots, the blue city of Morocco" loading="lazy"/>
-            <div class="tour-badge">🔵 Scenic</div>
-            <div class="tour-price">Contact Us</div>
-          </div>
-          <div class="tour-card-body">
-            <div class="tour-meta"><span><i class="fas fa-clock"></i> 4 days</span><span><i class="fas fa-users"></i> Private</span><span><i class="fas fa-star"></i> 5.0</span></div>
-            <h3>Chefchaouen & the North</h3>
-            <p>Wander the famous blue streets of Chefchaouen, then explore Morocco's dramatic northern coast — Tangier, the Caves of Hercules, and where the Atlantic meets the Mediterranean.</p>
-            <div class="tour-highlights"><span class="tour-tag">🔵 Blue City</span><span class="tour-tag">🌊 Coast</span><span class="tour-tag">📸 Photo Spots</span></div>
-          </div>
-          <div class="tour-card-footer">
-            <div class="tour-rating"><span class="stars">★★★★★</span><span class="count">TripAdvisor rated</span></div>
-            <a href="https://wa.me/212689386063?text=Hello%20Beldia%20Tours!%20I%27m%20interested%20in%20the%20Chefchaouen%20%26%20the%20North%20tour." target="_blank" class="btn btn-primary btn-sm">Book Now</a>
-          </div>
-        </article>
-
-        <article class="tour-card" data-reveal>
-          <div class="tour-card-img">
-            <img src="img/essaouira-port.jpg" alt="Essaouira Day Trip from Marrakech" loading="lazy"/>
-            <div class="tour-badge">🌊 Day Trip</div>
-            <div class="tour-price">Contact Us</div>
-          </div>
-          <div class="tour-card-body">
-            <div class="tour-meta"><span><i class="fas fa-clock"></i> 1 day</span><span><i class="fas fa-users"></i> Private</span><span><i class="fas fa-star"></i> 5.0</span></div>
-            <h3>Essaouira Coast Day Trip</h3>
-            <p>Escape to the windy city by the Atlantic — the historic port and blue fishing boats, fresh seafood, the medina ramparts, and argan oil cooperatives along the way.</p>
-            <div class="tour-highlights"><span class="tour-tag">⛵ Old Port</span><span class="tour-tag">🐟 Fresh Seafood</span><span class="tour-tag">🌰 Argan Oil</span></div>
-          </div>
-          <div class="tour-card-footer">
-            <div class="tour-rating"><span class="stars">★★★★★</span><span class="count">TripAdvisor rated</span></div>
-            <a href="https://wa.me/212689386063?text=Hello%20Beldia%20Tours!%20I%27m%20interested%20in%20the%20Essaouira%20Coast%20Day%20Trip." target="_blank" class="btn btn-primary btn-sm">Book Now</a>
-          </div>
-        </article>
-
-        <article class="tour-card" data-reveal>
-          <div class="tour-card-img">
-            <img src="img/jemaa-el-fna.jpg" alt="Jemaa el-Fna square in Marrakech — Morocco Grand Tour" loading="lazy"/>
-            <div class="tour-badge">🇲🇦 Complete</div>
-            <div class="tour-price">Contact Us</div>
-          </div>
-          <div class="tour-card-body">
-            <div class="tour-meta"><span><i class="fas fa-clock"></i> 10 days</span><span><i class="fas fa-users"></i> Private</span><span><i class="fas fa-star"></i> 5.0</span></div>
-            <h3>Morocco Grand Tour</h3>
-            <p>The full circle of Morocco in one journey — Marrakech, the Sahara dunes, Todra Gorge, Fes, Chefchaouen, Rabat, and the Atlantic coast. Every highlight, one unforgettable trip.</p>
-            <div class="tour-highlights"><span class="tour-tag">🏜️ Sahara</span><span class="tour-tag">🏛️ Imperial Cities</span><span class="tour-tag">🌊 Coast</span></div>
-          </div>
-          <div class="tour-card-footer">
-            <div class="tour-rating"><span class="stars">★★★★★</span><span class="count">TripAdvisor rated</span></div>
-            <a href="https://wa.me/212689386063?text=Hello%20Beldia%20Tours!%20I%27m%20interested%20in%20the%20Morocco%20Grand%20Tour%20(10%20days)." target="_blank" class="btn btn-primary btn-sm">Book Now</a>
-          </div>
-        </article>
-
-        <article class="tour-card" data-reveal>
-          <div class="tour-card-img">
-            <img src="img/hercules-cave-coast.jpg" alt="Romantic Moroccan coast — Honeymoon Package" loading="lazy"/>
-            <div class="tour-badge">💍 Romantic</div>
-            <div class="tour-price">Contact Us</div>
-          </div>
-          <div class="tour-card-body">
-            <div class="tour-meta"><span><i class="fas fa-clock"></i> Flexible</span><span><i class="fas fa-users"></i> Couples</span><span><i class="fas fa-star"></i> 5.0</span></div>
-            <h3>Honeymoon Package</h3>
-            <p>A romantic journey designed for two — a private luxury camp under the desert stars, candlelit dinners in handpicked riads, and Morocco's most beautiful hideaways at your own pace.</p>
-            <div class="tour-highlights"><span class="tour-tag">🌹 Romantic Riads</span><span class="tour-tag">⭐ Private Camp</span><span class="tour-tag">🥂 Special Touches</span></div>
-          </div>
-          <div class="tour-card-footer">
-            <div class="tour-rating"><span class="stars">★★★★★</span><span class="count">Made for two</span></div>
-            <a href="https://wa.me/212689386063?text=Hello%20Beldia%20Tours!%20We%20are%20planning%20our%20honeymoon%20in%20Morocco." target="_blank" class="btn btn-primary btn-sm">Book Now</a>
-          </div>
-        </article>
-
-
-      </div>
+    <!-- Intro -->
+    <div style="text-align:center;margin-bottom:3rem" data-reveal>
+      <span class="section-label">Our Experiences</span>
+      <h2 class="section-title">Choose Your Morocco Adventure</h2>
+      <div class="divider centered"></div>
+      <p style="max-width:600px;margin:0 auto;color:var(--text-mid)">All tours are 100% private — just you and your group with your expert local guide. Prices are per person and include everything listed.</p>
     </div>
-  </section>
 
-  <!-- Custom tour banner -->
-  <section class="section-pad" style="background:var(--navy)">
-    <div class="container">
-      <div class="text-center" data-reveal>
-        <span class="section-label">Tailor-Made</span>
-        <h2 class="section-title text-white">Dreaming of a Different Itinerary?</h2>
-        <div class="divider centered"></div>
-        <p style="max-width:600px;margin:1rem auto 2rem;color:rgba(255,255,255,.75)">Combine the desert with the coast, add extra days in Fes, travel at your own pace — we build every journey from scratch around you. Tell us your dream trip and we'll make it real.</p>
-        <a href="https://wa.me/212689386063?text=Hello%20Beldia%20Tours!%20I%27d%20like%20to%20plan%20a%20custom%20Morocco%20tour." target="_blank" class="btn btn-primary btn-lg"><i class="fab fa-whatsapp"></i> Plan My Custom Tour</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- TripAdvisor strip -->
-  <div style="background:var(--navy);padding:1.2rem 0;border-top:1px solid rgba(200,155,60,.2);border-bottom:1px solid rgba(200,155,60,.2)">
-    <div class="container">
-      <div style="display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap">
-        <div style="display:flex;align-items:center;gap:.8rem">
-          <svg viewBox="0 0 24 24" width="1.15em" height="1.15em" fill="#00AF87" style="vertical-align:middle;flex-shrink:0" xmlns="http://www.w3.org/2000/svg" aria-label="TripAdvisor"><path d="M12.006 4.295c-2.67 0-5.338.784-7.645 2.353H0l1.963 2.135a5.997 5.997 0 0 0 4.04 10.43 5.976 5.976 0 0 0 4.075-1.6L12 19.705l1.922-2.09a5.972 5.972 0 0 0 4.072 1.598 6 6 0 0 0 6-5.998 5.982 5.982 0 0 0-1.957-4.432L24 6.648h-4.35a13.573 13.573 0 0 0-7.644-2.353zM12 6.255c1.531 0 3.063.303 4.504.903C13.943 8.138 12 10.43 12 13.1c0-2.671-1.942-4.962-4.504-5.942A11.72 11.72 0 0 1 12 6.256zM6.002 9.157a4.059 4.059 0 1 1 0 8.118 4.059 4.059 0 0 1 0-8.118zm11.992.002a4.057 4.057 0 1 1 .003 8.115 4.057 4.057 0 0 1-.003-8.115zm-11.992 1.93a2.128 2.128 0 0 0 0 4.256 2.128 2.128 0 0 0 0-4.256zm11.992 0a2.128 2.128 0 0 0 0 4.256 2.128 2.128 0 0 0 0-4.256z"/></svg>
-          <div>
-            <div style="color:var(--gold-lt);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;font-family:'Cinzel',serif">Rated Excellent</div>
-            <div style="color:#00AF87;font-size:1rem">★★★★★</div>
+    <!-- ═══ TOUR 1 — 3-Day Sahara ═══ -->
+    <article class="tour-card-full" data-reveal>
+      <div class="tour-card-inner">
+        <div class="tour-img-wrap">
+          <img src="img/sahara-camel-sunset.jpg" alt="3-Day Sahara Desert Tour from Marrakech"/>
+          <div class="tour-badge-wrap">
+            <span class="tour-badge bestseller">⭐ Best Seller</span>
+            <span class="tour-badge">🏜️ Sahara Desert</span>
+          </div>
+          <div class="tour-price-tag">
+            <span class="from">From</span>
+            <span class="price">250€</span>
+            <span class="per">/ per person</span>
           </div>
         </div>
-        <div style="color:rgba(255,255,255,.7);font-size:.9rem;font-family:'Cormorant Garamond',serif;font-style:italic">"Verified reviews from travelers around the world"</div>
-        <a href="https://www.tripadvisor.fr/AttractionProductReview-g293734-d34114602-4_Day_Sahara_Desert_Tour_from_Marrakech-Marrakech_Marrakech_Safi.html" target="_blank"
-           style="color:var(--gold-lt);font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(200,155,60,.4);padding:.4rem 1rem;border-radius:2px;text-decoration:none">
-          Read Reviews <i class="fas fa-arrow-right" style="font-size:.65rem"></i>
+        <div class="tour-body">
+          <div>
+            <div class="tour-meta-row">
+              <span class="tour-meta-pill"><i class="fas fa-clock"></i> 3 Days / 2 Nights</span>
+              <span class="tour-meta-pill"><i class="fas fa-users"></i> Max 4 People</span>
+              <span class="tour-meta-pill"><i class="fas fa-lock"></i> 100% Private</span>
+              <span class="tour-meta-pill"><i class="fas fa-utensils"></i> Demi-Pension</span>
+            </div>
+            <div class="rating-row">
+              <span class="rating-stars">★★★★★</span>
+              <span class="rating-count">5.0 · 15 verified reviews</span>
+              <span style="background:#00AF87;color:white;padding:.15rem .6rem;border-radius:99px;font-size:.65rem;font-weight:700;margin-left:.3rem">T TripAdvisor</span>
+            </div>
+            <h2 class="tour-title">3-Day Private Sahara Desert Tour</h2>
+            <p class="tour-desc">Experience the magic of the Sahara on a fully private 3-day journey from Marrakech. Drive through the High Atlas Mountains, visit the UNESCO-listed Aït Ben Haddou kasbah, explore the Draa Valley, and reach the golden dunes of Erg Chebbi in Merzouga for a sunset camel trek and a magical night under the stars.</p>
+            <div class="tour-highlights">
+              <span class="highlight-tag">🏔️ Atlas Mountains</span>
+              <span class="highlight-tag">🏯 Aït Ben Haddou</span>
+              <span class="highlight-tag">🐪 Camel Trek</span>
+              <span class="highlight-tag">⭐ Desert Camp</span>
+              <span class="highlight-tag">🌅 Sahara Sunrise</span>
+              <span class="highlight-tag">🌹 Valley of Roses</span>
+            </div>
+            <div class="tour-includes">
+              <div class="tour-include-item"><i class="fas fa-check-circle"></i> Private air-conditioned vehicle</div>
+              <div class="tour-include-item"><i class="fas fa-check-circle"></i> Expert multilingual guide</div>
+              <div class="tour-include-item"><i class="fas fa-check-circle"></i> 2 nights accommodation</div>
+              <div class="tour-include-item"><i class="fas fa-check-circle"></i> Dinner & breakfast included</div>
+              <div class="tour-include-item"><i class="fas fa-check-circle"></i> Sunset camel trek</div>
+              <div class="tour-include-item"><i class="fas fa-check-circle"></i> Traditional desert camp</div>
+            </div>
+            <div class="tour-price-box">
+              <div style="font-size:.75rem;font-weight:700;color:var(--navy);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem">Pricing — Private Tour</div>
+              <div class="price-row">
+                <span class="label">👥 Group of 4 people</span>
+                <span class="amount highlight">250€ / person</span>
+              </div>
+              <div class="price-row">
+                <span class="label">👥 Group of 3 people</span>
+                <span class="amount">280€ / person</span>
+              </div>
+              <div class="price-row">
+                <span class="label">👤 2 people</span>
+                <span class="amount">350€ / person</span>
+              </div>
+              <div class="price-row">
+                <span class="label">👤 1 person</span>
+                <span class="amount">500€ / person</span>
+              </div>
+              <div style="font-size:.72rem;color:var(--text-lt);margin-top:.6rem">✅ Includes: transport, guide, 2 nights hotel, dinner & breakfast (demi-pension), camel trek</div>
+            </div>
+          </div>
+          <div class="tour-actions">
+            <a href="https://wa.me/212689386063?text=Hello%20Beldia%20Tours!%20I%20am%20interested%20in%20the%203-Day%20Sahara%20Desert%20Tour.%20Please%20send%20me%20more%20details." 
+               target="_blank" class="btn btn-primary">
+              <i class="fab fa-whatsapp"></i> Book on WhatsApp
+            </a>
+            <a href="contact.html" class="btn btn-outline-gold">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ═══ TOUR 2 — 4-Day Sahara ═══ -->
+    <article class="tour-card-full" data-reveal>
+      <div class="tour-card-inner">
+        <div class="tour-img-wrap">
+          <img src="img/sahara-camel-selfie.jpg" alt="4-Day Sahara Desert Tour from Marrakech"/>
+          <div class="tour-badge-wrap">
+            <span class="tour-badge" style="background:linear-gradient(135deg,#1a1a2e,#16213e);color:var(--gold-lt)">✨ Most Popular</span>
+            <span class="tour-badge">🏜️ Sahara Desert</span>
+          </div>
+          <div class="tour-price-tag">
+            <span class="from">From</span>
+            <span class="price">400€</span>
+            <span class="per">/ per person</span>
+          </div>
+        </div>
+        <div class="tour-body">
+          <div>
+            <div class="tour-meta-row">
+              <span class="tour-meta-pill"><i class="fas fa-clock"></i> 4 Days / 3 Nights</span>
+              <span class="tour-meta-pill"><i class="fas fa-users"></i> Max 4 People</span>
+              <span class="tour-meta-pill"><i class="fas fa-lock"></i> 100% Private</span>
+              <span class="tour-meta-pill"><i class="fas fa-utensils"></i> Demi-Pension</span>
+            </div>
+            <div class="rating-row">
+              <span class="rating-stars">★★★★★</span>
+              <span class="rating-count">5.0 · 15 verified reviews</span>
+              <span style="background:#00AF87;color:white;padding:.15rem .6rem;border-radius:99px;font-size:.65rem;font-weight:700;margin-left:.3rem">T TripAdvisor</span>
+            </div>
+            <h2 class="tour-title">4-Day Private Sahara Desert Tour</h2>
+            <p class="tour-desc">The ultimate Morocco desert experience. 4 days of pure adventure — more time in the Sahara, an extra night in the desert camp, and more stops along the way including Todra Gorge, the Valley of Roses, and the spectacular landscapes of southern Morocco.</p>
+            <div class="tour-highlights">
+              <span class="highlight-tag">🏔️ Atlas Mountains</span>
+              <span class="highlight-tag">🏯 Aït Ben Haddou</span>
+              <span class="highlight-tag">💧 Todra Gorge</span>
+              <span class="highlight-tag">🐪 Camel Trek</span>
+              <span class="highlight-tag">⭐ 2 Nights Desert</span>
+              <span class="highlight-tag">🌅 Sahara Sunrise</span>
+            </div>
+            <div class="tour-includes">
+              <div class="tour-include-item"><i class="fas fa-check-circle"></i> Private air-conditioned vehicle</div>
+              <div class="tour-include-item"><i class="fas fa-check-circle"></i> Expert multilingual guide</div>
+              <div class="tour-include-item"><i class="fas fa-check-circle"></i> 3 nights accommodation</div>
+              <div class="tour-include-item"><i class="fas fa-check-circle"></i> Dinner & breakfast included</div>
+              <div class="tour-include-item"><i class="fas fa-check-circle"></i> Sunset camel trek</div>
+              <div class="tour-include-item"><i class="fas fa-check-circle"></i> 2 nights in desert camp</div>
+            </div>
+            <div class="tour-price-box">
+              <div style="font-size:.75rem;font-weight:700;color:var(--navy);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem">Pricing — Private Tour</div>
+              <div class="price-row">
+                <span class="label">👥 Group of 4 people</span>
+                <span class="amount highlight">400€ / person</span>
+              </div>
+              <div class="price-row">
+                <span class="label">👥 Group of 3 people</span>
+                <span class="amount">450€ / person</span>
+              </div>
+              <div class="price-row">
+                <span class="label">👤 2 people</span>
+                <span class="amount">550€ / person</span>
+              </div>
+              <div class="price-row">
+                <span class="label">👤 1 person</span>
+                <span class="amount">700€ / person</span>
+              </div>
+              <div style="font-size:.72rem;color:var(--text-lt);margin-top:.6rem">✅ Includes: transport, guide, 3 nights hotel, dinner & breakfast (demi-pension), camel trek</div>
+            </div>
+          </div>
+          <div class="tour-actions">
+            <a href="https://wa.me/212689386063?text=Hello%20Beldia%20Tours!%20I%20am%20interested%20in%20the%204-Day%20Sahara%20Desert%20Tour.%20Please%20send%20me%20more%20details." 
+               target="_blank" class="btn btn-primary">
+              <i class="fab fa-whatsapp"></i> Book on WhatsApp
+            </a>
+            <a href="contact.html" class="btn btn-outline-gold">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ═══ TOUR 3 — Ourika Valley ═══ -->
+    <article class="tour-card-full" data-reveal>
+      <div class="tour-card-inner">
+        <div class="tour-img-wrap">
+          <img src="img/ait-benhaddou.jpg" alt="Ourika Valley Day Trip from Marrakech"/>
+          <div class="tour-badge-wrap">
+            <span class="tour-badge" style="background:linear-gradient(135deg,#1a6b3c,#145c32);color:white">🌿 Day Trip</span>
+            <span class="tour-badge">🏔️ Atlas Mountains</span>
+          </div>
+          <div class="tour-price-tag">
+            <span class="from">From</span>
+            <span class="price">320</span>
+            <span class="per">DH / person</span>
+          </div>
+        </div>
+        <div class="tour-body">
+          <div>
+            <div class="tour-meta-row">
+              <span class="tour-meta-pill"><i class="fas fa-clock"></i> 1 Day</span>
+              <span class="tour-meta-pill"><i class="fas fa-users"></i> Group</span>
+              <span class="tour-meta-pill"><i class="fas fa-utensils"></i> Lunch Included</span>
+              <span class="tour-meta-pill"><i class="fas fa-map-marker-alt"></i> From Marrakech</span>
+            </div>
+            <div class="rating-row">
+              <span class="rating-stars">★★★★★</span>
+              <span class="rating-count">Highly rated by our clients</span>
+            </div>
+            <h2 class="tour-title">Ourika Valley Day Trip</h2>
+            <p class="tour-desc">Escape the city and discover the stunning Ourika Valley — just 1 hour from Marrakech. Walk through traditional Berber villages, visit local markets, discover Moroccan herbs and spices, and enjoy the beautiful Atlas Mountain scenery with a delicious lunch included.</p>
+            <div class="tour-highlights">
+              <span class="highlight-tag">🏔️ Atlas Mountains</span>
+              <span class="highlight-tag">🏘️ Berber Villages</span>
+              <span class="highlight-tag">💧 Waterfalls</span>
+              <span class="highlight-tag">🌿 Herb Gardens</span>
+              <span class="highlight-tag">🍽️ Lunch Included</span>
+              <span class="highlight-tag">🛍️ Local Market</span>
+            </div>
+            <div class="tour-includes">
+              <div class="tour-include-item"><i class="fas fa-check-circle"></i> Transport from Marrakech</div>
+              <div class="tour-include-item"><i class="fas fa-check-circle"></i> Local guide</div>
+              <div class="tour-include-item"><i class="fas fa-check-circle"></i> Lunch at local restaurant</div>
+              <div class="tour-include-item"><i class="fas fa-check-circle"></i> Berber village visit</div>
+              <div class="tour-include-item"><i class="fas fa-check-circle"></i> Herb & spice garden</div>
+              <div class="tour-include-item"><i class="fas fa-check-circle"></i> Mountain scenery</div>
+            </div>
+            <div class="tour-price-box">
+              <div style="font-size:.75rem;font-weight:700;color:var(--navy);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem">Pricing</div>
+              <div class="price-row">
+                <span class="label">👤 Per person (group)</span>
+                <span class="amount highlight">320 DH</span>
+              </div>
+              <div class="dh-note">320 MAD ≈ 32€ per person · Lunch included</div>
+            </div>
+          </div>
+          <div class="tour-actions">
+            <a href="https://wa.me/212689386063?text=Hello%20Beldia%20Tours!%20I%20am%20interested%20in%20the%20Ourika%20Valley%20Day%20Trip.%20Please%20send%20me%20more%20details." 
+               target="_blank" class="btn btn-primary">
+              <i class="fab fa-whatsapp"></i> Book on WhatsApp
+            </a>
+            <a href="contact.html" class="btn btn-outline-gold">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ═══ TOUR 4 — Agafay Desert ═══ -->
+    <article class="tour-card-full" data-reveal>
+      <div class="tour-card-inner">
+        <div class="tour-img-wrap">
+          <img src="img/sahara-camel-sunset.jpg" alt="Agafay Desert Experience — Camel, Quad & Dinner"/>
+          <div class="tour-badge-wrap">
+            <span class="tour-badge" style="background:linear-gradient(135deg,#8B4513,#A0522D);color:white">🔥 Adventure</span>
+            <span class="tour-badge">🏜️ Agafay Desert</span>
+          </div>
+          <div class="tour-price-tag">
+            <span class="from">From</span>
+            <span class="price">95€</span>
+            <span class="per">/ per person</span>
+          </div>
+        </div>
+        <div class="tour-body">
+          <div>
+            <div class="tour-meta-row">
+              <span class="tour-meta-pill"><i class="fas fa-clock"></i> Half Day / Evening</span>
+              <span class="tour-meta-pill"><i class="fas fa-users"></i> Group</span>
+              <span class="tour-meta-pill"><i class="fas fa-utensils"></i> Dinner Included</span>
+              <span class="tour-meta-pill"><i class="fas fa-map-marker-alt"></i> 40min from Marrakech</span>
+            </div>
+            <div class="rating-row">
+              <span class="rating-stars">★★★★★</span>
+              <span class="rating-count">Highly rated by our clients</span>
+            </div>
+            <h2 class="tour-title">Agafay Desert — Camel 🐪 + Quad 🏍️ + Dinner 🍽️</h2>
+            <p class="tour-desc">The perfect Morocco desert experience near Marrakech! Explore the stunning Agafay rocky desert by camel and quad bike, then enjoy a traditional Moroccan dinner under the stars. Only 40 minutes from Marrakech — perfect for those with limited time.</p>
+            <div class="tour-highlights">
+              <span class="highlight-tag">🐪 Camel Ride</span>
+              <span class="highlight-tag">🏍️ Quad Biking (1 hour)</span>
+              <span class="highlight-tag">🌅 Desert Sunset</span>
+              <span class="highlight-tag">🍽️ Dinner Show</span>
+              <span class="highlight-tag">⭐ Stargazing</span>
+              <span class="highlight-tag">🚐 Transport</span>
+            </div>
+            <div class="tour-includes">
+              <div class="tour-include-item"><i class="fas fa-check-circle"></i> Transport from Marrakech</div>
+              <div class="tour-include-item"><i class="fas fa-check-circle"></i> Camel ride in desert</div>
+              <div class="tour-include-item"><i class="fas fa-check-circle"></i> Quad biking — 1 hour</div>
+              <div class="tour-include-item"><i class="fas fa-check-circle"></i> Traditional dinner show</div>
+              <div class="tour-include-item"><i class="fas fa-check-circle"></i> Sunset in the desert</div>
+              <div class="tour-include-item"><i class="fas fa-check-circle"></i> Return to Marrakech</div>
+            </div>
+            <div class="tour-price-box">
+              <div style="font-size:.75rem;font-weight:700;color:var(--navy);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem">Pricing</div>
+              <div class="price-row">
+                <span class="label">👤 Per person</span>
+                <span class="amount highlight">95€ / person</span>
+              </div>
+              <div style="font-size:.72rem;color:var(--text-lt);margin-top:.6rem">✅ Includes: transport, camel ride, quad 1h, dinner show</div>
+            </div>
+          </div>
+          <div class="tour-actions">
+            <a href="https://wa.me/212689386063?text=Hello%20Beldia%20Tours!%20I%20am%20interested%20in%20the%20Agafay%20Desert%20experience%20with%20camel%20and%20quad.%20Please%20send%20me%20more%20details." 
+               target="_blank" class="btn btn-primary">
+              <i class="fab fa-whatsapp"></i> Book on WhatsApp
+            </a>
+            <a href="contact.html" class="btn btn-outline-gold">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Custom Tours CTA -->
+    <div style="background:linear-gradient(135deg,var(--navy-dk),var(--navy));border-radius:16px;padding:3rem;text-align:center;border:1px solid rgba(200,155,60,.2)" data-reveal>
+      <span class="section-label" style="color:var(--gold-lt)">Can't Find What You're Looking For?</span>
+      <h2 style="color:var(--white);margin:.5rem 0 1rem">Custom & Personalized Tours</h2>
+      <p style="color:rgba(255,255,255,.7);max-width:520px;margin:0 auto 2rem">We create fully personalized itineraries — Imperial Cities, Chefchaouen, Essaouira, or any combination. Just tell us your dates and interests!</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <a href="https://wa.me/212689386063?text=Hello%20Beldia%20Tours!%20I%20would%20like%20a%20custom%20Morocco%20tour.%20Can%20you%20help%20me%20plan%20my%20itinerary%3F" 
+           target="_blank" class="btn btn-primary btn-lg">
+          <i class="fab fa-whatsapp"></i> WhatsApp Us
         </a>
+        <a href="contact.html" class="btn btn-outline btn-lg">Send Us Your Dates</a>
       </div>
     </div>
-  </div>
 
+  </div>
 </main>
 
 <footer id="footer">
@@ -276,30 +584,30 @@
     <div class="footer-top">
       <div class="footer-brand">
         <a href="index.html"><img src="img/beldia-logo.png" alt="Beldia Tours" class="logo-img"/></a>
-        <p>Your trusted Moroccan travel partner for authentic, personalized adventures across the Kingdom of Morocco.</p>
+        <p>Your trusted Moroccan travel partner for authentic, personalized adventures.</p>
         <div class="footer-social">
           <a href="https://www.facebook.com/share/14iQym7R4vB/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
           <a href="https://www.instagram.com/beldiatours" target="_blank"><i class="fab fa-instagram"></i></a>
           <a href="https://tiktok.com/@beldiatours" target="_blank"><i class="fab fa-tiktok"></i></a>
-          <a href="https://www.tripadvisor.fr/AttractionProductReview-g293734-d34114602-4_Day_Sahara_Desert_Tour_from_Marrakech-Marrakech_Marrakech_Safi.html" target="_blank"><svg viewBox="0 0 24 24" width="1.15em" height="1.15em" fill="#00AF87" style="vertical-align:middle;flex-shrink:0" xmlns="http://www.w3.org/2000/svg" aria-label="TripAdvisor"><path d="M12.006 4.295c-2.67 0-5.338.784-7.645 2.353H0l1.963 2.135a5.997 5.997 0 0 0 4.04 10.43 5.976 5.976 0 0 0 4.075-1.6L12 19.705l1.922-2.09a5.972 5.972 0 0 0 4.072 1.598 6 6 0 0 0 6-5.998 5.982 5.982 0 0 0-1.957-4.432L24 6.648h-4.35a13.573 13.573 0 0 0-7.644-2.353zM12 6.255c1.531 0 3.063.303 4.504.903C13.943 8.138 12 10.43 12 13.1c0-2.671-1.942-4.962-4.504-5.942A11.72 11.72 0 0 1 12 6.256zM6.002 9.157a4.059 4.059 0 1 1 0 8.118 4.059 4.059 0 0 1 0-8.118zm11.992.002a4.057 4.057 0 1 1 .003 8.115 4.057 4.057 0 0 1-.003-8.115zm-11.992 1.93a2.128 2.128 0 0 0 0 4.256 2.128 2.128 0 0 0 0-4.256zm11.992 0a2.128 2.128 0 0 0 0 4.256 2.128 2.128 0 0 0 0-4.256z"/></svg></a>
+          <a href="https://www.tripadvisor.fr/AttractionProductReview-g293734-d34114602-4_Day_Sahara_Desert_Tour_from_Marrakech-Marrakech_Marrakech_Safi.html" target="_blank">
+            <span style="display:inline-flex;align-items:center;justify-content:center;width:1em;height:1em;background:#00AF87;border-radius:50%;color:white;font-size:.7em;font-weight:900">T</span>
+          </a>
           <a href="https://wa.me/212689386063" target="_blank"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
+      <div class="footer-col"><h4>Our Tours</h4><ul>
+        <li><a href="tours.html"><i class="fas fa-chevron-right"></i> 3-Day Sahara Tour</a></li>
+        <li><a href="tours.html"><i class="fas fa-chevron-right"></i> 4-Day Sahara Tour</a></li>
+        <li><a href="tours.html"><i class="fas fa-chevron-right"></i> Ourika Valley Day Trip</a></li>
+        <li><a href="tours.html"><i class="fas fa-chevron-right"></i> Agafay Desert Experience</a></li>
+        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Custom Tours</a></li>
+      </ul></div>
       <div class="footer-col"><h4>Quick Links</h4><ul>
         <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
         <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
-        <li><a href="tours.html"><i class="fas fa-chevron-right"></i> Tours</a></li>
         <li><a href="destinations.html"><i class="fas fa-chevron-right"></i> Destinations</a></li>
-        <li><a href="gallery.html"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+        <li><a href="testimonials.html"><i class="fas fa-chevron-right"></i> Reviews</a></li>
         <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact</a></li>
-        <li><a href="privacy.html"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
-      </ul></div>
-      <div class="footer-col"><h4>Our Tours</h4><ul>
-        <li><a href="tours.html"><i class="fas fa-chevron-right"></i> Marrakech to Merzouga</a></li>
-        <li><a href="tours.html"><i class="fas fa-chevron-right"></i> Imperial Cities Tour</a></li>
-        <li><a href="tours.html"><i class="fas fa-chevron-right"></i> Sahara Luxury</a></li>
-        <li><a href="tours.html"><i class="fas fa-chevron-right"></i> Atlas Mountains</a></li>
-        <li><a href="tours.html"><i class="fas fa-chevron-right"></i> Chefchaouen Tour</a></li>
       </ul></div>
       <div class="footer-col"><h4>Contact</h4>
         <div class="footer-contact-item"><i class="fas fa-phone"></i><p>+212 6 89 38 60 63</p></div>
@@ -321,12 +629,13 @@
 <script src="js/translations.js"></script>
 <script src="js/main.js"></script>
 <script>
-document.addEventListener('click', function(e){
-  var a = e.target.closest ? e.target.closest('a[href*="wa.me"]') : null;
-  if (a && typeof gtag === 'function') {
-    gtag('event', 'whatsapp_click', { link_url: a.href, page_path: location.pathname });
-  }
-});
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('revealed'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('[data-reveal]').forEach(el => observer.observe(el));
+const btt = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => btt.classList.toggle('visible', scrollY > 400));
+btt.addEventListener('click', () => scrollTo({top:0,behavior:'smooth'}));
 </script>
 </body>
 </html>
