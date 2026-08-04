@@ -38,31 +38,26 @@
     gtag('config', 'G-GPKRBTHXY6');
   </script>
   <style>
-    /* ===== Logo: bigger, brighter, always visible ===== */
-    .nav-logo { display:flex; align-items:center; }
-    .nav-logo .logo-img {
-      height: 58px; width: auto; max-width: none;
-      object-fit: contain;
-      filter: drop-shadow(0 1px 3px rgba(0,0,0,.45)) brightness(1.12) contrast(1.06);
-      transition: transform .3s ease;
+    /* ===== Brand mark: B monogram + wordmark ===== */
+    .nav-logo { display:flex; align-items:center; gap:.6rem; text-decoration:none; }
+    .nav-logo .logo-img { height:50px; width:50px; object-fit:contain; transition:transform .3s ease; }
+    .nav-logo:hover .logo-img { transform:rotate(-4deg) scale(1.05); }
+    .brand-word {
+      font-family:'Cinzel',serif; font-weight:700; letter-spacing:.08em; line-height:1;
+      font-size:1.02rem; color:#fff; text-transform:uppercase; white-space:nowrap;
     }
-    .nav-logo:hover .logo-img { transform: scale(1.04); }
-    #footer .logo-img {
-      height: 68px; width: auto; object-fit: contain;
-      filter: brightness(1.12) contrast(1.06);
-    }
-    @media (max-width: 900px) {
-      .nav-logo .logo-img { height: 46px; }
-    }
-    @media (max-width: 480px) {
-      .nav-logo .logo-img { height: 40px; }
-    }
+    .brand-word span { display:block; font-size:.62rem; letter-spacing:.34em; color:#C89B3C; margin-top:.28rem; }
+    #footer .footer-brand .logo-img { height:64px; width:64px; object-fit:contain; }
+    #footer .brand-word { font-size:1.15rem; }
+    @media (max-width:1050px){ .brand-word { display:none; } }
+    @media (max-width:900px){ .nav-logo .logo-img { height:42px; width:42px; } }
+    @media (max-width:480px){ .nav-logo .logo-img { height:38px; width:38px; } }
   </style>
 </head>
 <body>
 <nav id="main-nav">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo"><img src="img/beldia-logo.png" alt="Beldia Tours" class="logo-img"/></a>
+    <a href="index.html" class="nav-logo"><img src="img/beldia-b-logo.svg" alt="Beldia Tours" class="logo-img"/><span class="brand-word">Beldia<span>Tours</span></span></a>
     <nav class="nav-links">
       <a href="index.html">Home</a><a href="tours.html">Tours</a>
       <a href="destinations.html">Destinations</a><a href="gallery.html">Gallery</a>
@@ -220,7 +215,7 @@
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="index.html"><img src="img/beldia-logo.png" alt="Beldia Tours" class="logo-img"/></a>
+        <a href="index.html"><img src="img/beldia-b-logo.svg" alt="Beldia Tours" class="logo-img"/><span class="brand-word">Beldia<span>Tours</span></span></a>
         <p>Your trusted Moroccan travel partner for authentic, personalized adventures.</p>
         <div class="footer-social">
           <a href="https://www.facebook.com/share/14iQym7R4vB/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -309,7 +304,7 @@ document.getElementById('newsletter-form')?.addEventListener('submit', function(
   <div id="wa-popup" style="display:none;background:white;border-radius:16px;box-shadow:0 8px 40px rgba(0,0,0,.15);width:300px;overflow:hidden;animation:fadeInUp .3s ease">
     <!-- Header -->
     <div style="background:#25D366;padding:1.2rem;display:flex;align-items:center;gap:.8rem">
-      <img src="img/beldia-logo.png" alt="Beldia Tours" style="width:44px;height:44px;border-radius:50%;object-fit:cover;background:white;padding:2px"/>
+      <img src="img/beldia-b-logo.svg" alt="Beldia Tours" style="width:44px;height:44px;border-radius:50%;object-fit:contain;background:#0F2747;padding:3px"/>
       <div>
         <div style="color:white;font-weight:700;font-size:.92rem;font-family:'Cinzel',serif">Beldia Tours</div>
         <div style="color:rgba(255,255,255,.85);font-size:.75rem;display:flex;align-items:center;gap:.3rem">
