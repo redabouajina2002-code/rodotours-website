@@ -60,6 +60,27 @@
       [style*="height:280px"] { height: 170px !important; }
     }
   </style>
+  <style>
+    /* ===== Logo: bigger, brighter, always visible ===== */
+    .nav-logo { display:flex; align-items:center; }
+    .nav-logo .logo-img {
+      height: 58px; width: auto; max-width: none;
+      object-fit: contain;
+      filter: drop-shadow(0 1px 3px rgba(0,0,0,.45)) brightness(1.12) contrast(1.06);
+      transition: transform .3s ease;
+    }
+    .nav-logo:hover .logo-img { transform: scale(1.04); }
+    #footer .logo-img {
+      height: 68px; width: auto; object-fit: contain;
+      filter: brightness(1.12) contrast(1.06);
+    }
+    @media (max-width: 900px) {
+      .nav-logo .logo-img { height: 46px; }
+    }
+    @media (max-width: 480px) {
+      .nav-logo .logo-img { height: 40px; }
+    }
+  </style>
 </head>
 <body>
 <nav id="main-nav">
