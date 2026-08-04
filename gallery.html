@@ -10,26 +10,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gallery – Beldia Tours</title>
   <meta name="theme-color" content="#0F2747"/>
-  <style>
-:root {
-  --navy: #0F2747;
-  --navy-dk: #0A1929;
-  --navy-md: #1a3a5c;
-  --gold: #C89B3C;
-  --gold-dk: #A67C28;
-  --gold-lt: #E8C46A;
-  --white: #FFFFFF;
-  --off-white: #F8F9FC;
-  --cream: #FDF8F0;
-  --cream-lt: #fef9f2;
-  --text-mid: #4A6080;
-  --text-lt: #8A9BB0;
-  --border: rgba(200,155,60,.2);
-}
-</style>
+  <!-- Social sharing preview -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="Beldia Tours"/>
+  <meta property="og:title" content="Gallery – Real Moments with Beldia Tours"/>
+  <meta property="og:description" content="Real photos from our tours — travelers on the dunes, in the medinas, and across the Atlas. See Morocco through our guests' eyes."/>
+  <meta property="og:image" content="https://beldiatours.com/img/tour-merzouga.jpg"/>
+  <meta property="og:url" content="https://beldiatours.com/gallery.html"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Gallery – Real Moments with Beldia Tours"/>
+  <meta name="twitter:description" content="Real photos from our tours — travelers on the dunes, in the medinas, and across the Atlas. See Morocco through our guests' eyes."/>
+  <meta name="twitter:image" content="https://beldiatours.com/img/tour-merzouga.jpg"/>
+
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="stylesheet" href="css/style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>emailjs.init({ publicKey: "o1zypBZCC6ohDqn3J" });</script>
+
   <!-- Google Analytics G-GPKRBTHXY6 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPKRBTHXY6"></script>
   <script>
@@ -38,6 +36,30 @@
     gtag('js', new Date());
     gtag('config', 'G-GPKRBTHXY6');
   </script>
+  <style>
+    /* ===== Mobile responsive fixes for inline grid layouts ===== */
+    @media (max-width: 900px) {
+      [style*="grid-template-columns:1fr 380px"] { grid-template-columns: 1fr !important; }
+    }
+    @media (max-width: 768px) {
+      [style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; gap: 2rem !important; }
+      [style*="grid-template-columns:repeat(3,1fr)"] { grid-template-columns: repeat(2,1fr) !important; }
+      [style*="height:500px"] { height: 380px !important; }
+      /* floating badges: keep inside the screen */
+      [style*="bottom:-20px;right:-20px"] { right: 10px !important; bottom: 10px !important; padding: 1rem !important; }
+      [style*="top:20px;left:-20px"] { left: 10px !important; }
+    }
+    @media (max-width: 560px) {
+      [style*="grid-template-columns:repeat(3,1fr)"] { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <style>
+    /* Gallery keeps 2 photo columns on phones */
+    @media (max-width: 560px) {
+      [style*="grid-template-columns:repeat(3,1fr)"] { grid-template-columns: 1fr 1fr !important; }
+      [style*="height:280px"] { height: 170px !important; }
+    }
+  </style>
 </head>
 <body>
 <nav id="main-nav">
@@ -46,8 +68,7 @@
     <nav class="nav-links">
       <a href="index.html">Home</a><a href="tours.html">Tours</a>
       <a href="destinations.html">Destinations</a><a href="gallery.html">Gallery</a>
-      <a href="testimonials.html">Testimonials</a><a href="about.html">About</a>
-      <a href="blog.html">Blog</a>
+      <a href="testimonials.html">Testimonials</a><a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="nav-actions">
@@ -64,8 +85,7 @@
 <div class="mobile-nav" style="display:none">
   <a href="index.html">Home</a><a href="tours.html">Tours</a>
   <a href="destinations.html">Destinations</a><a href="gallery.html">Gallery</a>
-  <a href="testimonials.html">Testimonials</a><a href="about.html">About</a>
-  <a href="blog.html">Blog</a>
+  <a href="testimonials.html">Testimonials</a><a href="blog.html">Blog</a>
   <a href="contact.html">Contact</a>
 </div>
 <header class="page-header" style="background-image:url('img/sahara-camel-selfie.jpg')">
@@ -80,45 +100,64 @@
   <div class="container">
     <div class="text-center" style="margin-bottom:3rem" data-reveal>
       <span class="section-label">Our Photos</span>
-      <h2 class="section-title">Moments from Morocco</h2>
+      <h2 class="section-title">Real Moments with Our Travelers</h2>
+      <div class="divider centered"></div>
+    </div>
+    <!-- Real Moments with Our Travelers -->
+    <p style="text-align:center;max-width:640px;margin:-1.5rem auto 2.5rem;color:var(--text-mid)">Every photo below is from a real Beldia Tours journey — no stock images, no strangers. These are our guests, our guide, and the moments we shared across Morocco.</p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem" data-reveal>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/about-founder.jpg" alt="Abdelaziz, founder of Beldia Tours, with travelers on a camel trek" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/tour-merzouga.jpg" alt="Our travelers on the Erg Chebbi dunes at sunset, Merzouga" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/gallery-camel-trek-camp.jpg" alt="Camel trek arriving at the desert camp with our guide" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/tour-sahara-luxury.jpg" alt="Dinner with our guests inside the Sahara desert camp" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/gallery-desert-drums.jpg" alt="Berber drum night under the stars at the desert camp" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/gallery-quads-dunes.jpg" alt="Quad biking over the dunes of Erg Chebbi" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/gallery-quad-agafay.jpg" alt="Quad biking adventure in the Agafay desert" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/gallery-blue-turbans.jpg" alt="Blue turbans in the Draa Valley palm oasis" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/gallery-nomad-tea.jpg" alt="Mint tea with travelers in a nomad tent" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/gallery-traditional-dress.jpg" alt="Travelers dressed in traditional Moroccan clothing" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/gallery-traditional-family.jpg" alt="Family in traditional Moroccan dress by the palm oasis" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/gallery-ait-benhaddou-group.jpg" alt="Happy travelers at the gate of Ait Benhaddou kasbah" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/gallery-ait-benhaddou-top.jpg" alt="Celebrating at the top of Ait Benhaddou kasbah" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/gallery-kasbah-stairs.jpg" alt="Exploring the ancient stairs of the kasbah" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/gallery-kasbah-bridge.jpg" alt="Crossing the bridge to Ait Benhaddou" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/gallery-guide-souk.jpg" alt="Our guide leading the way through the souk of Ait Benhaddou" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/tour-imperial-cities.jpg" alt="Our travelers at the Chellah gate in Rabat" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/tour-chefchaouen.jpg" alt="Our guide in the blue streets of Chefchaouen" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/tour-atlas.jpg" alt="Sharing a tagine lunch with a view of the High Atlas" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/gallery-atlas-viewpoint.jpg" alt="Panoramic viewpoint over the High Atlas mountains" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/gallery-atlas-snow.jpg" alt="Crossing the snowy High Atlas pass in winter" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/gallery-monkeys-azrou.jpg" alt="Meeting the Barbary monkeys in the cedar forest of Azrou" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/gallery-olive-grove.jpg" alt="Walking through the olive groves with our group" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/gallery-marrakech-souk.jpg" alt="Street food tour in the Marrakech medina" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/gallery-group-lunch.jpg" alt="Group lunch in a Moroccan garden" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/gallery-riad-checkin.jpg" alt="Checking in at a handpicked riad" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/gallery-guide-desert.jpg" alt="On the road to the Sahara" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/gallery-airport-welcome.jpg" alt="Welcoming travelers at Marrakech airport" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/gallery-airport-arrival.jpg" alt="Greeting our guests on arrival" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+    </div>
+
+    <div class="text-center" style="margin:4rem 0 3rem" data-reveal>
+      <span class="section-label">Morocco's Beauty</span>
+      <h2 class="section-title">Landscapes &amp; Places</h2>
       <div class="divider centered"></div>
     </div>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem" data-reveal>
-      <div style="border-radius:4px;overflow:hidden;height:280px"><img src="img/sahara-camel-sunset.jpg" alt="Sahara sunset" style="width:100%;height:100%;object-fit:cover;transition:transform .5s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
-      <div style="border-radius:4px;overflow:hidden;height:280px"><img src="img/marrakech-souks.jpg" alt="Marrakech souks" style="width:100%;height:100%;object-fit:cover;transition:transform .5s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
-      <div style="border-radius:4px;overflow:hidden;height:280px"><img src="img/ait-benhaddou.jpg" alt="Ait Benhaddou" style="width:100%;height:100%;object-fit:cover;transition:transform .5s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
-      <div style="border-radius:4px;overflow:hidden;height:280px"><img src="img/essaouira-port.jpg" alt="Essaouira port" style="width:100%;height:100%;object-fit:cover;transition:transform .5s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
-      <div style="border-radius:4px;overflow:hidden;height:280px"><img src="img/jemaa-el-fna.jpg" alt="Jemaa el Fna" style="width:100%;height:100%;object-fit:cover;transition:transform .5s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
-      <div style="border-radius:4px;overflow:hidden;height:280px"><img src="img/casablanca-tajine.jpg" alt="Moroccan food" style="width:100%;height:100%;object-fit:cover;transition:transform .5s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
-      <div style="border-radius:4px;overflow:hidden;height:280px"><img src="img/hercules-cave-coast.jpg" alt="Morocco Coast"/>
-          </div>
-          <div class="gallery-item" data-category="desert">
-            <img src="img/gallery-1.jpg" alt="Beldia Tours Morocco"/>
-            <div class="gallery-overlay"><div class="gallery-info"><h4>Morocco Tours</h4><span>Beldia Tours</span></div></div>
-          </div>
-          <div class="gallery-item" data-category="cities">
-            <img src="img/gallery-2.jpg" alt="Morocco Experience"/>
-            <div class="gallery-overlay"><div class="gallery-info"><h4>Morocco Experience</h4><span>Authentic Morocco</span></div></div>
-          </div>
-          <div class="gallery-item" data-category="desert">
-            <img src="img/gallery-3.jpg" alt="Desert Adventure"/>
-            <div class="gallery-overlay"><div class="gallery-info"><h4>Desert Adventure</h4><span>Sahara Morocco</span></div></div>
-          </div>
-          <div class="gallery-item" data-category="mountains">
-            <img src="img/gallery-4.jpg" alt="Morocco Mountains"/>
-            <div class="gallery-overlay"><div class="gallery-info"><h4>Atlas Mountains</h4><span>Morocco</span></div></div>
-          </div>
-          <div class="gallery-item" data-category="cities">
-            <img src="img/gallery-5.jpg" alt="Morocco Culture"/>
-            <div class="gallery-overlay"><div class="gallery-info"><h4>Moroccan Culture</h4><span>Marrakech</span></div></div>
-          </div>
-          <div class="gallery-item" data-category="desert">
-            <img src="img/gallery-6.jpg" alt="Morocco coast" style="width:100%;height:100%;object-fit:cover;transition:transform .5s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
-      <div style="border-radius:4px;overflow:hidden;height:280px"><img src="img/sahara-camel-selfie.jpg" alt="Sahara experience" style="width:100%;height:100%;object-fit:cover;transition:transform .5s" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/sahara-camel-sunset.jpg" alt="Camel caravan at sunset on the Sahara dunes" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/tour-chefchaouen-blue.jpg" alt="The blue streets of Chefchaouen, the Blue Pearl of Morocco" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/dest-marrakech.jpg" alt="Jemaa el-Fna square at sunset with the Koutoubia mosque" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/dest-fes.jpg" alt="The Chouara tanneries in the ancient medina of Fes" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/ait-benhaddou.jpg" alt="The kasbah of Ait Benhaddou, a UNESCO World Heritage site" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/essaouira-port.jpg" alt="The old fishing port of Essaouira on the Atlantic coast" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/jemaa-el-fna.jpg" alt="Jemaa el-Fna, the beating heart of Marrakech" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/hercules-cave-coast.jpg" alt="The Caves of Hercules on Morocco's northern coast" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/casablanca-tajine.jpg" alt="Traditional Moroccan tagine" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
+      <div style="border-radius:4px;overflow:hidden;height:280px"><img class="g-tile" src="img/sahara-camel-selfie.jpg" alt="The endless dunes of the Moroccan Sahara" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform .5s;cursor:zoom-in" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'"/></div>
       <div style="border-radius:4px;overflow:hidden;height:280px;background:linear-gradient(135deg,var(--navy),var(--navy-md));display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem">
-        <div><i class="fab fa-instagram" style="font-size:2rem;color:var(--gold-lt);margin-bottom:1rem;display:block"></i><p style="color:var(--white);margin:0;font-size:.9rem">Follow us on Instagram</p><a href="https://www.instagram.com/beldiatours" target="_blank" style="color:var(--gold-lt);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600">@beldiatours</a></div>
+        <div><i class="fab fa-instagram" style="font-size:2rem;color:var(--gold-lt);margin-bottom:1rem;display:block"></i><p style="color:var(--white);margin:0;font-size:.9rem">More photos every week</p><a href="https://www.instagram.com/beldiatours" target="_blank" style="color:var(--gold-lt);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600">@beldiatours</a></div>
       </div>
     </div>
+
     <div class="text-center" style="margin-top:3rem" data-reveal>
       <p style="font-size:1rem;color:var(--text-mid);margin-bottom:1.5rem">Want to experience Morocco yourself? Book your tour today!</p>
       <a href="contact.html" class="btn btn-primary btn-lg">Book Your Tour</a>
@@ -135,7 +174,7 @@
           <a href="https://www.facebook.com/share/14iQym7R4vB/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook-f"></i></a>
           <a href="https://www.instagram.com/beldiatours" target="_blank"><i class="fab fa-instagram"></i></a>
           <a href="https://tiktok.com/@beldiatours" target="_blank"><i class="fab fa-tiktok"></i></a>
-          <a href="https://www.tripadvisor.fr/AttractionProductReview-g293734-d34114602-4_Day_Sahara_Desert_Tour_from_Marrakech-Marrakech_Marrakech_Safi.html" target="_blank"><span style="display:inline-flex;align-items:center;justify-content:center;width:1em;height:1em;background:#00AF87;border-radius:50%;color:white;font-weight:900;font-size:.75em;font-family:Arial,sans-serif;vertical-align:middle">T</span></a>
+          <a href="https://www.tripadvisor.fr/AttractionProductReview-g293734-d34114602-4_Day_Sahara_Desert_Tour_from_Marrakech-Marrakech_Marrakech_Safi.html" target="_blank"><svg viewBox="0 0 24 24" width="1.15em" height="1.15em" fill="#00AF87" style="vertical-align:middle;flex-shrink:0" xmlns="http://www.w3.org/2000/svg" aria-label="TripAdvisor"><path d="M12.006 4.295c-2.67 0-5.338.784-7.645 2.353H0l1.963 2.135a5.997 5.997 0 0 0 4.04 10.43 5.976 5.976 0 0 0 4.075-1.6L12 19.705l1.922-2.09a5.972 5.972 0 0 0 4.072 1.598 6 6 0 0 0 6-5.998 5.982 5.982 0 0 0-1.957-4.432L24 6.648h-4.35a13.573 13.573 0 0 0-7.644-2.353zM12 6.255c1.531 0 3.063.303 4.504.903C13.943 8.138 12 10.43 12 13.1c0-2.671-1.942-4.962-4.504-5.942A11.72 11.72 0 0 1 12 6.256zM6.002 9.157a4.059 4.059 0 1 1 0 8.118 4.059 4.059 0 0 1 0-8.118zm11.992.002a4.057 4.057 0 1 1 .003 8.115 4.057 4.057 0 0 1-.003-8.115zm-11.992 1.93a2.128 2.128 0 0 0 0 4.256 2.128 2.128 0 0 0 0-4.256zm11.992 0a2.128 2.128 0 0 0 0 4.256 2.128 2.128 0 0 0 0-4.256z"/></svg></a>
           <a href="https://wa.me/212689386063?text=Hello%20Beldia%20Tours!%20I%20would%20like%20to%20inquire%20about%20a%20Morocco%20tour." target="_blank"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
@@ -177,7 +216,7 @@
           <div id="newsletter-msg" style="display:none;margin-top:.5rem;font-size:.75rem;color:var(--gold-lt)"></div>
         </div>
     </div>
-    <div class="footer-bottom"><p>© <span id="year"></span> Beldia Tours. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | Your Journey, Our Passion</p></div>
+    <div class="footer-bottom"><p>© <span id="year">2026</span> Beldia Tours. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | Your Journey, Our Passion</p></div>
   </div>
 </footer>
 <button id="back-to-top"><i class="fas fa-chevron-up"></i></button>
@@ -191,14 +230,25 @@ document.getElementById('newsletter-form')?.addEventListener('submit', function(
   const email = document.getElementById('newsletter-email').value;
   const msg = document.getElementById('newsletter-msg');
   if (!email) return;
-  // Save to localStorage as simple solution
-  const subs = JSON.parse(localStorage.getItem('beldia_subscribers') || '[]');
-  if (!subs.includes(email)) subs.push(email);
-  localStorage.setItem('beldia_subscribers', JSON.stringify(subs));
-  msg.style.display = 'block';
-  msg.textContent = '✅ Thank you! You will receive our Morocco travel tips.';
-  document.getElementById('newsletter-email').value = '';
-  setTimeout(() => { msg.style.display = 'none'; }, 4000);
+  if (typeof emailjs !== 'undefined') {
+    emailjs.send('service_u5dz0qm','template_newsletter',{subscriber_email: email, page: window.location.pathname})
+      .then(function(){
+        msg.style.display = 'block';
+        if (typeof gtag === 'function') gtag('event','newsletter_signup');
+        msg.textContent = '✅ Thank you! You will receive our Morocco travel tips.';
+        document.getElementById('newsletter-email').value = '';
+        setTimeout(() => { msg.style.display = 'none'; }, 4000);
+      }, function(){
+        msg.style.display = 'block';
+        msg.textContent = '⚠️ Could not subscribe right now — please try again later.';
+        setTimeout(() => { msg.style.display = 'none'; }, 4000);
+      });
+  } else {
+    msg.style.display = 'block';
+    msg.textContent = '✅ Thank you! You will receive our Morocco travel tips.';
+    document.getElementById('newsletter-email').value = '';
+    setTimeout(() => { msg.style.display = 'none'; }, 4000);
+  }
 });
 </script>
 
@@ -257,4 +307,54 @@ document.getElementById('newsletter-form')?.addEventListener('submit', function(
   to { opacity:1; transform:translateY(0); }
 }
 </style>
+<script>
+document.addEventListener('click', function(e){
+  var a = e.target.closest ? e.target.closest('a[href*="wa.me"]') : null;
+  if (a && typeof gtag === 'function') {
+    gtag('event', 'whatsapp_click', { link_url: a.href, page_path: location.pathname });
+  }
+});
+</script>
+<!-- Photo lightbox -->
+<div id="lb" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(8,18,35,.96);align-items:center;justify-content:center">
+  <button id="lb-close" aria-label="Close" style="position:absolute;top:18px;right:22px;background:none;border:none;color:#fff;font-size:2.2rem;line-height:1;cursor:pointer;opacity:.85">&times;</button>
+  <button id="lb-prev" aria-label="Previous" style="position:absolute;left:12px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.12);border:none;color:#fff;font-size:1.6rem;width:48px;height:48px;border-radius:50%;cursor:pointer">&#8249;</button>
+  <button id="lb-next" aria-label="Next" style="position:absolute;right:12px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.12);border:none;color:#fff;font-size:1.6rem;width:48px;height:48px;border-radius:50%;cursor:pointer">&#8250;</button>
+  <figure style="margin:0;max-width:92vw;max-height:88vh;text-align:center">
+    <img id="lb-img" src="" alt="" style="max-width:92vw;max-height:78vh;object-fit:contain;border-radius:4px"/>
+    <figcaption id="lb-cap" style="color:#E2E8F0;font-size:.9rem;margin-top:.9rem;font-family:'Montserrat',sans-serif"></figcaption>
+  </figure>
+</div>
+<script>
+(function(){
+  var tiles = Array.prototype.slice.call(document.querySelectorAll('.g-tile'));
+  var lb = document.getElementById('lb'), img = document.getElementById('lb-img'), cap = document.getElementById('lb-cap');
+  var i = 0;
+  function show(n){
+    i = (n + tiles.length) % tiles.length;
+    img.src = tiles[i].src; img.alt = tiles[i].alt; cap.textContent = tiles[i].alt;
+  }
+  function open(n){ show(n); lb.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
+  function close(){ lb.style.display = 'none'; document.body.style.overflow = ''; }
+  tiles.forEach(function(t, n){ t.addEventListener('click', function(){ open(n); }); });
+  document.getElementById('lb-close').addEventListener('click', close);
+  document.getElementById('lb-next').addEventListener('click', function(e){ e.stopPropagation(); show(i+1); });
+  document.getElementById('lb-prev').addEventListener('click', function(e){ e.stopPropagation(); show(i-1); });
+  lb.addEventListener('click', function(e){ if (e.target === lb) close(); });
+  document.addEventListener('keydown', function(e){
+    if (lb.style.display !== 'flex') return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowRight') show(i+1);
+    if (e.key === 'ArrowLeft') show(i-1);
+  });
+  var x0 = null;
+  lb.addEventListener('touchstart', function(e){ x0 = e.changedTouches[0].clientX; }, {passive:true});
+  lb.addEventListener('touchend', function(e){
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 50) show(dx < 0 ? i+1 : i-1);
+    x0 = null;
+  }, {passive:true});
+})();
+</script>
 </body></html>
