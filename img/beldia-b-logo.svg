@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Beldia Tours">
+  <defs>
+    <linearGradient id="bGold" x1="0" y1="0" x2="0.85" y2="1">
+      <stop offset="0%" stop-color="#EBCB81"/>
+      <stop offset="50%" stop-color="#C89B3C"/>
+      <stop offset="100%" stop-color="#A87F28"/>
+    </linearGradient>
+    <linearGradient id="rGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E3BE6B"/>
+      <stop offset="100%" stop-color="#B08A2F"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="93" fill="none" stroke="url(#rGold)" stroke-width="3.2"/>
+  <circle cx="100" cy="100" r="85.5" fill="none" stroke="url(#rGold)" stroke-width="1.1" opacity=".55"/>
+  <g transform="translate(43.75 149.00) scale(0.06564 -0.06564)">
+    <path d="M96 0V121H287V1372H96V1493H981Q1254 1493 1391.0 1401.0Q1528 1309 1528 1124Q1528 991 1433.5 913.0Q1339 835 1153 815Q1378 794 1498.0 695.0Q1618 596 1618 432Q1618 210 1450.5 105.0Q1283 0 926 0ZM672 870H803Q975 870 1058.0 932.5Q1141 995 1141 1124Q1141 1254 1060.5 1313.0Q980 1372 803 1372H672ZM672 121H815Q1006 121 1098.0 197.0Q1190 273 1190 432Q1190 592 1097.0 671.0Q1004 750 815 750H672Z" fill="url(#bGold)"/>
+  </g>
+</svg>
