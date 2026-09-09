@@ -8,16 +8,17 @@ const LANG_DATA = {
     page_title: "Beldia Tours – Authentic Morocco Travel Experiences",
 
     // NAV
-    nav: ["Home","Tours","Destinations","Gallery","Testimonials","Blog","Contact"],
+    nav: ["Home","Tours","Destinations","Gallery","Testimonials","About","Blog","Contact"],
     nav_whatsapp: "WhatsApp",
     nav_book: "Book Now",
 
     // HERO
-    hero_badge: "✨ Authentic Moroccan Experiences",
+    hero_badge: "Private Morocco Journeys",
     hero_tagline: "Your Journey, Our Passion",
-    hero_title: "Discover the Magic of",
-    hero_accent: "Morocco",
-    hero_sub: "Explore ancient medinas, golden deserts, and majestic mountains with your trusted local guide. Personalized tours crafted for unforgettable memories.",
+    hero_title: "Discover the",
+    hero_accent: "Soul",
+    hero_title_after: "of Morocco",
+    hero_sub: "From the medinas of Marrakech to the golden dunes of the Sahara, travel privately, slowly, and with people who call Morocco home.",
     hero_book: "Book Your Tour",
     hero_contact: "Contact Us",
 
@@ -118,14 +119,15 @@ const LANG_DATA = {
 
   es: {
     page_title: "Beldia Tours – Experiencias Auténticas en Marruecos",
-    nav: ["Inicio","Tours","Destinos","Galería","Testimonios","Blog","Contacto"],
+    nav: ["Inicio","Tours","Destinos","Galería","Testimonios","Sobre Nosotros","Blog","Contacto"],
     nav_whatsapp: "WhatsApp",
     nav_book: "Reservar",
-    hero_badge: "✨ Experiencias Auténticas de Marruecos",
+    hero_badge: "Viajes Privados por Marruecos",
     hero_tagline: "Tu Viaje, Nuestra Pasión",
-    hero_title: "Descubre la Magia de",
-    hero_accent: "Marruecos",
-    hero_sub: "Explora antiguas medinas, desiertos dorados y majestuosas montañas con tu guía local de confianza. Tours personalizados para recuerdos inolvidables.",
+    hero_title: "Descubre el",
+    hero_accent: "Alma",
+    hero_title_after: "de Marruecos",
+    hero_sub: "De las medinas de Marrakech a las dunas doradas del Sahara, viaja en privado, sin prisas y con quienes llaman hogar a Marruecos.",
     hero_book: "Reserva Tu Tour",
     hero_contact: "Contáctanos",
     trip_rated: "Calificado Excelente",
@@ -206,14 +208,15 @@ const LANG_DATA = {
 
   fr: {
     page_title: "Beldia Tours – Expériences Authentiques au Maroc",
-    nav: ["Accueil","Tours","Destinations","Galerie","Témoignages","Blog","Contact"],
+    nav: ["Accueil","Tours","Destinations","Galerie","Témoignages","À propos","Blog","Contact"],
     nav_whatsapp: "WhatsApp",
     nav_book: "Réserver",
-    hero_badge: "✨ Expériences Marocaines Authentiques",
+    hero_badge: "Voyages Privés au Maroc",
     hero_tagline: "Votre Voyage, Notre Passion",
-    hero_title: "Découvrez la Magie du",
-    hero_accent: "Maroc",
-    hero_sub: "Explorez les médinas anciennes, les déserts dorés et les montagnes majestueuses avec votre guide local de confiance. Des tours personnalisés pour des souvenirs inoubliables.",
+    hero_title: "Découvrez l’",
+    hero_accent: "Âme",
+    hero_title_after: "du Maroc",
+    hero_sub: "Des médinas de Marrakech aux dunes dorées du Sahara, voyagez en privé, à votre rythme, avec ceux qui connaissent le Maroc comme leur maison.",
     hero_book: "Réservez Votre Tour",
     hero_contact: "Nous Contacter",
     trip_rated: "Noté Excellent",
@@ -319,26 +322,37 @@ function translatePage(lang) {
   // PAGE TITLE
   document.title = t.page_title;
 
-  // NAV
-  const navLinks = document.querySelectorAll('.nav-links a');
-  navLinks.forEach((a, i) => { if (t.nav[i]) a.textContent = t.nav[i]; });
-  const mobileLinks = document.querySelectorAll('.mobile-nav a:not(.btn)');
-  mobileLinks.forEach((a, i) => { if (t.nav[i]) a.textContent = t.nav[i]; });
+  // NAV — translate by destination, not DOM order, so every page keeps the correct labels.
+  const navMap = {
+    'index.html': t.nav[0],
+    'tours.html': t.nav[1],
+    'destinations.html': t.nav[2],
+    'gallery.html': t.nav[3],
+    'testimonials.html': t.nav[4],
+    'about.html': t.nav[5],
+    'blog.html': t.nav[6],
+    'contact.html': t.nav[7]
+  };
+  document.querySelectorAll('.nav-links a, .mobile-nav a:not(.btn)').forEach(a => {
+    const href = (a.getAttribute('href') || '').split('#')[0];
+    if (navMap[href] !== undefined) a.textContent = navMap[href];
+  });
 
   // LANG BUTTONS
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
   });
 
-  // HERO
+  // HERO — preserve the Luxury V2 markup and only swap the language strings.
   setText('.hero-badge', t.hero_badge);
   setText('.hero-tagline', t.hero_tagline);
-  setText('.hero-title', t.hero_title + ' ');
-  const accent = document.querySelector('.hero-title .accent');
-  if (accent) accent.textContent = t.hero_accent;
+  const heroTitle = document.querySelector('.hero-title');
+  if (heroTitle) {
+    heroTitle.innerHTML = `${t.hero_title} <span class="accent">${t.hero_accent}</span><br/>${t.hero_title_after || ''}`;
+  }
   setText('.hero-sub', t.hero_sub);
   const heroBtns = document.querySelectorAll('.hero-actions .btn');
-  if (heroBtns[0]) heroBtns[0].textContent = t.hero_book;
+  if (heroBtns[0]) heroBtns[0].innerHTML = `<span>${t.hero_book}</span><i class="fas fa-arrow-right"></i>`;
   if (heroBtns[1]) heroBtns[1].textContent = t.hero_contact;
 
   // TRIPADVISOR STRIP
